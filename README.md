@@ -5,4 +5,4 @@ The primary goal of this work is to address class imbalance in unsupervised fede
 
 ## Acknowledgements
 
-This codebase is heavily adapted from the work of [euphoria0-0/Active-Client-Selection-for-Communication-efficient-Federated-Learning](https://github.com/euphoria0-0/Active-Client-Selection-for-Communication-efficient-Federated-Learning). We extend our sincere gratitude to the original authors for their foundational work.
+The client selection part of the codebase is heavily adapted from the work of [euphoria0-0/Active-Client-Selection-for-Communication-efficient-Federated-Learning](https://github.com/euphoria0-0/Active-Client-Selection-for-Communication-efficient-Federated-Learning). We extend our gratitude to the original authors for their foundational work. Implementation of Pow-d and Cluster2 is incomplete.
