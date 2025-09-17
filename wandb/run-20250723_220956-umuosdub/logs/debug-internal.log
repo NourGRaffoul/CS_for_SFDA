@@ -1,0 +1,20 @@
+{"time":"2025-07-23T22:09:56.1824835+02:00","level":"INFO","msg":"using version","core version":"0.18.7"}
+{"time":"2025-07-23T22:09:56.1828453+02:00","level":"INFO","msg":"created symlink","path":"wandb\\run-20250723_220956-umuosdub\\logs\\debug-core.log"}
+{"time":"2025-07-23T22:09:56.3075328+02:00","level":"INFO","msg":"created new stream","id":"umuosdub"}
+{"time":"2025-07-23T22:09:56.3075328+02:00","level":"INFO","msg":"stream: started","id":"umuosdub"}
+{"time":"2025-07-23T22:09:56.3086225+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"umuosdub"}
+{"time":"2025-07-23T22:09:56.3086225+02:00","level":"INFO","msg":"handler: started","stream_id":"umuosdub"}
+{"time":"2025-07-23T22:09:56.3086225+02:00","level":"INFO","msg":"sender: started","stream_id":"umuosdub"}
+{"time":"2025-07-23T22:09:56.8230444+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-07-23T22:09:56.823567+02:00","level":"WARN","msg":"handleCodeSave: program relative path is empty"}
+{"time":"2025-07-23T22:09:56.823567+02:00","level":"ERROR","msg":"git repo not found","error":"repository does not exist"}
+{"time":"2025-07-23T22:11:13.3847969+02:00","level":"INFO","msg":"stream: closing","id":"umuosdub"}
+{"time":"2025-07-23T22:11:13.3847969+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-07-23T22:11:13.3853646+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-07-23T22:11:13.600779+02:00","level":"WARN","msg":"No program path found, not creating job artifact. See https://docs.wandb.ai/guides/launch/create-job"}
+{"time":"2025-07-23T22:11:13.600779+02:00","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2025-07-23T22:11:14.0490275+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-07-23T22:11:14.3561719+02:00","level":"INFO","msg":"handler: closed","stream_id":"umuosdub"}
+{"time":"2025-07-23T22:11:14.3561719+02:00","level":"INFO","msg":"sender: closed","stream_id":"umuosdub"}
+{"time":"2025-07-23T22:11:14.3561719+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"umuosdub"}
+{"time":"2025-07-23T22:11:14.3566753+02:00","level":"INFO","msg":"stream: closed","id":"umuosdub"}

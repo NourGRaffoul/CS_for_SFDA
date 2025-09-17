@@ -1,0 +1,21 @@
+{"time":"2025-09-06T14:20:51.9590909+03:00","level":"INFO","msg":"using version","core version":"0.18.7"}
+{"time":"2025-09-06T14:20:51.9590909+03:00","level":"INFO","msg":"created symlink","path":"wandb\\run-20250906_142051-hy7d7lpk\\logs\\debug-core.log"}
+{"time":"2025-09-06T14:20:52.0790151+03:00","level":"INFO","msg":"created new stream","id":"hy7d7lpk"}
+{"time":"2025-09-06T14:20:52.0790151+03:00","level":"INFO","msg":"stream: started","id":"hy7d7lpk"}
+{"time":"2025-09-06T14:20:52.0790151+03:00","level":"INFO","msg":"writer: Do: started","stream_id":"hy7d7lpk"}
+{"time":"2025-09-06T14:20:52.0790151+03:00","level":"INFO","msg":"sender: started","stream_id":"hy7d7lpk"}
+{"time":"2025-09-06T14:20:52.0790151+03:00","level":"INFO","msg":"handler: started","stream_id":"hy7d7lpk"}
+{"time":"2025-09-06T14:21:11.7957327+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 10.2.0.2:55607->35.186.228.49:443: wsarecv: An existing connection was forcibly closed by the remote host."}
+{"time":"2025-09-06T14:21:14.749997+03:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-09-06T14:21:14.7505027+03:00","level":"WARN","msg":"handleCodeSave: program relative path is empty"}
+{"time":"2025-09-06T14:21:14.7505621+03:00","level":"ERROR","msg":"git repo not found","error":"repository does not exist"}
+{"time":"2025-09-06T14:21:15.7048453+03:00","level":"INFO","msg":"stream: closing","id":"hy7d7lpk"}
+{"time":"2025-09-06T14:21:15.7048453+03:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-09-06T14:21:15.7053547+03:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-09-06T14:21:18.9158137+03:00","level":"WARN","msg":"No program path found, not creating job artifact. See https://docs.wandb.ai/guides/launch/create-job"}
+{"time":"2025-09-06T14:21:18.9158137+03:00","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2025-09-06T14:21:18.9664853+03:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-09-06T14:21:19.9190664+03:00","level":"INFO","msg":"handler: closed","stream_id":"hy7d7lpk"}
+{"time":"2025-09-06T14:21:19.9190664+03:00","level":"INFO","msg":"writer: Close: closed","stream_id":"hy7d7lpk"}
+{"time":"2025-09-06T14:21:19.920124+03:00","level":"INFO","msg":"sender: closed","stream_id":"hy7d7lpk"}
+{"time":"2025-09-06T14:21:19.920124+03:00","level":"INFO","msg":"stream: closed","id":"hy7d7lpk"}

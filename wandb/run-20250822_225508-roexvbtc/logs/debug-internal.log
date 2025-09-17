@@ -1,0 +1,20 @@
+{"time":"2025-08-22T22:55:09.0085925+02:00","level":"INFO","msg":"using version","core version":"0.18.7"}
+{"time":"2025-08-22T22:55:09.0091237+02:00","level":"INFO","msg":"created symlink","path":"wandb\\run-20250822_225508-roexvbtc\\logs\\debug-core.log"}
+{"time":"2025-08-22T22:55:09.4243871+02:00","level":"INFO","msg":"created new stream","id":"roexvbtc"}
+{"time":"2025-08-22T22:55:09.4243871+02:00","level":"INFO","msg":"stream: started","id":"roexvbtc"}
+{"time":"2025-08-22T22:55:09.4249689+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"roexvbtc"}
+{"time":"2025-08-22T22:55:09.4271686+02:00","level":"INFO","msg":"handler: started","stream_id":"roexvbtc"}
+{"time":"2025-08-22T22:55:09.4271686+02:00","level":"INFO","msg":"sender: started","stream_id":"roexvbtc"}
+{"time":"2025-08-22T22:55:09.4399881+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-08-22T22:55:11.6435436+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-08-22T22:55:16.3211031+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-08-22T22:55:25.5250707+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-08-22T22:55:43.8820716+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-08-22T22:56:23.5061107+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-08-22T22:56:39.9490003+02:00","level":"INFO","msg":"stream: closing","id":"roexvbtc"}
+{"time":"2025-08-22T22:56:39.9490003+02:00","level":"ERROR","msg":"sender: upsertRun:","error":"failed to upsert bucket: api: failed sending: context canceled"}
+{"time":"2025-08-22T22:56:39.9490003+02:00","level":"INFO","msg":"handler: closed","stream_id":"roexvbtc"}
+{"time":"2025-08-22T22:56:39.9490003+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"roexvbtc"}
+{"time":"2025-08-22T22:56:39.9490003+02:00","level":"WARN","msg":"runwork: ignoring record after close","work":{"Record":{"RecordType":{"Request":{"RequestType":{"Defer":{}}}},"control":{"always_send":true}}}}
+{"time":"2025-08-22T22:56:39.9495106+02:00","level":"INFO","msg":"sender: closed","stream_id":"roexvbtc"}
+{"time":"2025-08-22T22:56:39.9495106+02:00","level":"INFO","msg":"stream: closed","id":"roexvbtc"}

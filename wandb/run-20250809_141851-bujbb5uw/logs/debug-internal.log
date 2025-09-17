@@ -1,0 +1,20 @@
+{"time":"2025-08-09T14:18:51.6193538+02:00","level":"INFO","msg":"using version","core version":"0.18.7"}
+{"time":"2025-08-09T14:18:51.6193538+02:00","level":"INFO","msg":"created symlink","path":"wandb\\run-20250809_141851-bujbb5uw\\logs\\debug-core.log"}
+{"time":"2025-08-09T14:18:52.1254976+02:00","level":"INFO","msg":"created new stream","id":"bujbb5uw"}
+{"time":"2025-08-09T14:18:52.1257791+02:00","level":"INFO","msg":"stream: started","id":"bujbb5uw"}
+{"time":"2025-08-09T14:18:52.1262898+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"bujbb5uw"}
+{"time":"2025-08-09T14:18:52.1268752+02:00","level":"INFO","msg":"handler: started","stream_id":"bujbb5uw"}
+{"time":"2025-08-09T14:18:52.1273865+02:00","level":"INFO","msg":"sender: started","stream_id":"bujbb5uw"}
+{"time":"2025-08-09T14:18:52.5810102+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-08-09T14:18:52.5810102+02:00","level":"WARN","msg":"handleCodeSave: program relative path is empty"}
+{"time":"2025-08-09T14:18:52.5815434+02:00","level":"ERROR","msg":"git repo not found","error":"repository does not exist"}
+{"time":"2025-08-09T16:13:18.9283209+02:00","level":"INFO","msg":"stream: closing","id":"bujbb5uw"}
+{"time":"2025-08-09T16:13:18.9286128+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-08-09T16:13:18.9294881+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-08-09T16:13:19.1527533+02:00","level":"WARN","msg":"No program path found, not creating job artifact. See https://docs.wandb.ai/guides/launch/create-job"}
+{"time":"2025-08-09T16:13:19.1527533+02:00","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2025-08-09T16:13:19.7146121+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-08-09T16:13:20.0158434+02:00","level":"INFO","msg":"handler: closed","stream_id":"bujbb5uw"}
+{"time":"2025-08-09T16:13:20.0158434+02:00","level":"INFO","msg":"sender: closed","stream_id":"bujbb5uw"}
+{"time":"2025-08-09T16:13:20.0158434+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"bujbb5uw"}
+{"time":"2025-08-09T16:13:20.0163496+02:00","level":"INFO","msg":"stream: closed","id":"bujbb5uw"}

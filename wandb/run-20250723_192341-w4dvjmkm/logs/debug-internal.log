@@ -1,0 +1,20 @@
+{"time":"2025-07-23T19:23:41.4467235+02:00","level":"INFO","msg":"using version","core version":"0.18.7"}
+{"time":"2025-07-23T19:23:41.4467235+02:00","level":"INFO","msg":"created symlink","path":"wandb\\run-20250723_192341-w4dvjmkm\\logs\\debug-core.log"}
+{"time":"2025-07-23T19:23:41.5702876+02:00","level":"INFO","msg":"created new stream","id":"w4dvjmkm"}
+{"time":"2025-07-23T19:23:41.5702876+02:00","level":"INFO","msg":"stream: started","id":"w4dvjmkm"}
+{"time":"2025-07-23T19:23:41.5702876+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"w4dvjmkm"}
+{"time":"2025-07-23T19:23:41.5711932+02:00","level":"INFO","msg":"handler: started","stream_id":"w4dvjmkm"}
+{"time":"2025-07-23T19:23:41.5711932+02:00","level":"INFO","msg":"sender: started","stream_id":"w4dvjmkm"}
+{"time":"2025-07-23T19:23:42.0315672+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-07-23T19:23:42.0315672+02:00","level":"WARN","msg":"handleCodeSave: program relative path is empty"}
+{"time":"2025-07-23T19:23:42.0318359+02:00","level":"ERROR","msg":"git repo not found","error":"repository does not exist"}
+{"time":"2025-07-23T19:24:21.4949334+02:00","level":"INFO","msg":"stream: closing","id":"w4dvjmkm"}
+{"time":"2025-07-23T19:24:21.4949334+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-07-23T19:24:21.4956549+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-07-23T19:24:21.7332795+02:00","level":"WARN","msg":"No program path found, not creating job artifact. See https://docs.wandb.ai/guides/launch/create-job"}
+{"time":"2025-07-23T19:24:21.7332795+02:00","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2025-07-23T19:24:22.3423174+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-07-23T19:24:22.6289264+02:00","level":"INFO","msg":"handler: closed","stream_id":"w4dvjmkm"}
+{"time":"2025-07-23T19:24:22.6289264+02:00","level":"INFO","msg":"sender: closed","stream_id":"w4dvjmkm"}
+{"time":"2025-07-23T19:24:22.6289264+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"w4dvjmkm"}
+{"time":"2025-07-23T19:24:22.6300672+02:00","level":"INFO","msg":"stream: closed","id":"w4dvjmkm"}

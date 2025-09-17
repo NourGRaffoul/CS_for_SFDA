@@ -1,0 +1,20 @@
+{"time":"2025-07-18T18:31:48.0721432+02:00","level":"INFO","msg":"using version","core version":"0.18.7"}
+{"time":"2025-07-18T18:31:48.0721432+02:00","level":"INFO","msg":"created symlink","path":"wandb\\run-20250718_183148-s3lzjxwd\\logs\\debug-core.log"}
+{"time":"2025-07-18T18:31:48.9194419+02:00","level":"INFO","msg":"created new stream","id":"s3lzjxwd"}
+{"time":"2025-07-18T18:31:48.9194419+02:00","level":"INFO","msg":"stream: started","id":"s3lzjxwd"}
+{"time":"2025-07-18T18:31:48.9194419+02:00","level":"INFO","msg":"handler: started","stream_id":"s3lzjxwd"}
+{"time":"2025-07-18T18:31:48.9199461+02:00","level":"INFO","msg":"sender: started","stream_id":"s3lzjxwd"}
+{"time":"2025-07-18T18:31:48.9199461+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"s3lzjxwd"}
+{"time":"2025-07-18T18:31:49.7722194+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-07-18T18:31:49.7722194+02:00","level":"WARN","msg":"handleCodeSave: program relative path is empty"}
+{"time":"2025-07-18T18:31:49.7729232+02:00","level":"ERROR","msg":"git repo not found","error":"repository does not exist"}
+{"time":"2025-07-18T18:31:55.8269847+02:00","level":"INFO","msg":"stream: closing","id":"s3lzjxwd"}
+{"time":"2025-07-18T18:31:55.8269847+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-07-18T18:31:55.8275663+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-07-18T18:31:56.0868243+02:00","level":"WARN","msg":"No program path found, not creating job artifact. See https://docs.wandb.ai/guides/launch/create-job"}
+{"time":"2025-07-18T18:31:56.0868243+02:00","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2025-07-18T18:31:56.6235104+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-07-18T18:31:57.1336861+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"s3lzjxwd"}
+{"time":"2025-07-18T18:31:57.1336861+02:00","level":"INFO","msg":"handler: closed","stream_id":"s3lzjxwd"}
+{"time":"2025-07-18T18:31:57.1341928+02:00","level":"INFO","msg":"sender: closed","stream_id":"s3lzjxwd"}
+{"time":"2025-07-18T18:31:57.1350439+02:00","level":"INFO","msg":"stream: closed","id":"s3lzjxwd"}

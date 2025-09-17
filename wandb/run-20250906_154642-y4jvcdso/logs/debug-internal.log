@@ -1,0 +1,21 @@
+{"time":"2025-09-06T15:46:42.1136147+03:00","level":"INFO","msg":"using version","core version":"0.18.7"}
+{"time":"2025-09-06T15:46:42.1136147+03:00","level":"INFO","msg":"created symlink","path":"wandb\\run-20250906_154642-y4jvcdso\\logs\\debug-core.log"}
+{"time":"2025-09-06T15:46:42.2344127+03:00","level":"INFO","msg":"created new stream","id":"y4jvcdso"}
+{"time":"2025-09-06T15:46:42.2344127+03:00","level":"INFO","msg":"stream: started","id":"y4jvcdso"}
+{"time":"2025-09-06T15:46:42.2344127+03:00","level":"INFO","msg":"writer: Do: started","stream_id":"y4jvcdso"}
+{"time":"2025-09-06T15:46:42.2349314+03:00","level":"INFO","msg":"sender: started","stream_id":"y4jvcdso"}
+{"time":"2025-09-06T15:46:42.2349314+03:00","level":"INFO","msg":"handler: started","stream_id":"y4jvcdso"}
+{"time":"2025-09-06T15:47:12.2459511+03:00","level":"ERROR","msg":"sender: upsertRun:","error":"failed to upsert bucket: context deadline exceeded (Client.Timeout or context cancellation while reading body)"}
+{"time":"2025-09-06T15:47:12.2567085+03:00","level":"INFO","msg":"stream: closing","id":"y4jvcdso"}
+{"time":"2025-09-06T15:47:12.2572188+03:00","level":"ERROR","msg":"sender: upsertConfig: RunRecord is nil"}
+{"time":"2025-09-06T15:47:12.2572188+03:00","level":"WARN","msg":"No requirements.txt found, not creating job artifact. See https://docs.wandb.ai/guides/launch/create-job"}
+{"time":"2025-09-06T15:47:12.2572188+03:00","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2025-09-06T15:47:42.3080542+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-09-06T15:48:14.7953927+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": net/http: request canceled (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-09-06T15:48:19.3873987+03:00","level":"ERROR","msg":"HTTP error","status":404,"method":"POST","url":"https://api.wandb.ai/graphql"}
+{"time":"2025-09-06T15:48:19.3873987+03:00","level":"ERROR","msg":"runfiles: CreateRunFiles returned error: returned error 404 Not Found: {\"errors\":[{\"message\":\"project /AFL-HAR-5-None-20 not found during createRunFiles\",\"path\":[\"createRunFiles\"]}],\"data\":{\"createRunFiles\":null}}"}
+{"time":"2025-09-06T15:48:19.3897389+03:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-09-06T15:48:19.3897389+03:00","level":"INFO","msg":"handler: closed","stream_id":"y4jvcdso"}
+{"time":"2025-09-06T15:48:19.3897389+03:00","level":"INFO","msg":"sender: closed","stream_id":"y4jvcdso"}
+{"time":"2025-09-06T15:48:19.3897389+03:00","level":"INFO","msg":"writer: Close: closed","stream_id":"y4jvcdso"}
+{"time":"2025-09-06T15:48:19.3902603+03:00","level":"INFO","msg":"stream: closed","id":"y4jvcdso"}

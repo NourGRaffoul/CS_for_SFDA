@@ -1,0 +1,88 @@
+2025-09-06 14:55:15,265 INFO    MainThread:21488 [wandb_setup.py:_flush():79] Current SDK version is 0.18.7
+2025-09-06 14:55:15,265 INFO    MainThread:21488 [wandb_setup.py:_flush():79] Configure stats pid to 21488
+2025-09-06 14:55:15,265 INFO    MainThread:21488 [wandb_setup.py:_flush():79] Loading settings from C:\Users\owner\AppData\Roaming\SPB_Data\.config\wandb\settings
+2025-09-06 14:55:15,265 INFO    MainThread:21488 [wandb_setup.py:_flush():79] Loading settings from C:\Users\owner\Downloads\Benchmark_Stage_backup2\Benchmark_Stage\system_shot_imbalance\wandb\settings
+2025-09-06 14:55:15,265 INFO    MainThread:21488 [wandb_setup.py:_flush():79] Loading settings from environment variables: {}
+2025-09-06 14:55:15,265 INFO    MainThread:21488 [wandb_setup.py:_flush():79] Applying setup settings: {'mode': None, '_disable_service': None}
+2025-09-06 14:55:15,276 WARNING MainThread:21488 [wandb_setup.py:_flush():79] Could not find program at -m main
+2025-09-06 14:55:15,276 INFO    MainThread:21488 [wandb_setup.py:_flush():79] Inferring run settings from compute environment: {'program_relpath': None, 'program': '-m main'}
+2025-09-06 14:55:15,276 INFO    MainThread:21488 [wandb_setup.py:_flush():79] Applying login settings: {}
+2025-09-06 14:55:15,276 INFO    MainThread:21488 [wandb_init.py:_log_setup():533] Logging user logs to .\wandb\run-20250906_145515-sp9zklsc\logs\debug.log
+2025-09-06 14:55:15,276 INFO    MainThread:21488 [wandb_init.py:_log_setup():534] Logging internal logs to .\wandb\run-20250906_145515-sp9zklsc\logs\debug-internal.log
+2025-09-06 14:55:15,276 INFO    MainThread:21488 [wandb_init.py:init():619] calling init triggers
+2025-09-06 14:55:15,276 INFO    MainThread:21488 [wandb_init.py:init():627] wandb.init called with sweep_config: {}
+config: {'goal': 'test', 'device': 'cuda', 'device_id': '0', 'dataset': 'HAR', 'num_classes': 6, 'model': 'CNN', 'batch_size': 10, 'local_learning_rate': 0.01, 'learning_rate_decay': False, 'learning_rate_decay_gamma': 0.99, 'global_rounds': 60, 'top_cnt': 100, 'local_epochs': 10, 'algorithm': 'FedAvg', 'join_ratio': 0.25, 'random_join_ratio': False, 'num_clients': 20, 'prev': 0, 'times': 1, 'eval_gap': 1, 'save_folder_name': 'items', 'auto_break': False, 'dlg_eval': False, 'dlg_gap': 100, 'batch_num_per_client': 2, 'num_new_clients': 0, 'fine_tuning_epoch_new': 0, 'feature_dim': 512, 'vocab_size': 80, 'max_len': 200, 'few_shot': 0, 'client_drop_rate': 0.0, 'train_slow_rate': 0.0, 'send_slow_rate': 0.0, 'time_select': False, 'time_threthold': 10000, 'beta': 0.0, 'lamda': 1.0, 'mu': 0.0, 'K': 5, 'p_learning_rate': 0.01, 'M': 5, 'itk': 4000, 'alphaK': 1.0, 'sigma': 1.0, 'alpha': 1.0, 'plocal_epochs': 1, 'tau': 1.0, 'fine_tuning_epochs': 10, 'dr_learning_rate': 0.0, 'L': 1.0, 'noise_dim': 512, 'generator_learning_rate': 0.005, 'hidden_dim': 512, 'server_epochs': 1000, 'localize_feature_extractor': False, 'server_learning_rate': 0.1, 'eta': 1.0, 'rand_percent': 80, 'layer_idx': 2, 'mentee_learning_rate': 0.005, 'T_start': 0.95, 'T_end': 0.98, 'momentum': 0.1, 'kl_weight': 0.0, 'num_candidates': 10, 'method': 'AFL', 'comment': 'NRC', 'num_clients_per_round': 5, 'num_available': None, 'loss_div_sqrt': False, 'loss_sum': False, 'subset_ratio': 0.1, 'alpha1': 0.75, 'alpha2': 1, 'alpha3': 0.1, 'save_probs': False, 'no_save_results': False, 'src_id': 1, 'imbalance_factor': 1.0, 'total_num_clients': 20, 'num_epoch': 10, 'wandb': True}
+2025-09-06 14:55:15,276 INFO    MainThread:21488 [wandb_init.py:init():669] starting backend
+2025-09-06 14:55:15,276 INFO    MainThread:21488 [wandb_init.py:init():673] sending inform_init request
+2025-09-06 14:55:15,276 INFO    MainThread:21488 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=spawn, using: spawn
+2025-09-06 14:55:15,280 INFO    MainThread:21488 [wandb_init.py:init():686] backend started and connected
+2025-09-06 14:55:15,284 INFO    MainThread:21488 [wandb_init.py:init():781] updated telemetry
+2025-09-06 14:55:15,285 INFO    MainThread:21488 [wandb_init.py:init():814] communicating run to backend with 90.0 second timeout
+2025-09-06 14:55:23,479 INFO    MainThread:21488 [wandb_init.py:init():867] starting run threads in backend
+2025-09-06 14:55:23,554 INFO    MainThread:21488 [wandb_run.py:_console_start():2456] atexit reg
+2025-09-06 14:55:23,554 INFO    MainThread:21488 [wandb_run.py:_redirect():2305] redirect: wrap_raw
+2025-09-06 14:55:23,554 INFO    MainThread:21488 [wandb_run.py:_redirect():2370] Wrapping output streams.
+2025-09-06 14:55:23,554 INFO    MainThread:21488 [wandb_run.py:_redirect():2395] Redirects installed.
+2025-09-06 14:55:23,556 INFO    MainThread:21488 [wandb_init.py:init():911] run started, returning control to user process
+2025-09-06 14:56:02,749 WARNING MsgRouterThr:21488 [router.py:message_loop():75] message_loop has been closed
+2025-09-06 14:56:16,924 INFO    Thread-5  :21488 [retry.py:__call__():172] Retry attempt failed:
+Traceback (most recent call last):
+  File "C:\Users\owner\AppData\Roaming\Python\Python37\site-packages\urllib3\connectionpool.py", line 404, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\owner\AppData\Roaming\Python\Python37\site-packages\urllib3\connectionpool.py", line 1061, in _validate_conn
+    conn.connect()
+  File "C:\Users\owner\AppData\Roaming\Python\Python37\site-packages\urllib3\connection.py", line 429, in connect
+    tls_in_tls=tls_in_tls,
+  File "C:\Users\owner\AppData\Roaming\Python\Python37\site-packages\urllib3\util\ssl_.py", line 459, in ssl_wrap_socket
+    sock, context, tls_in_tls, server_hostname=server_hostname
+  File "C:\Users\owner\AppData\Roaming\Python\Python37\site-packages\urllib3\util\ssl_.py", line 502, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "C:\Program Files\Python37\lib\ssl.py", line 412, in wrap_socket
+    session=session
+  File "C:\Program Files\Python37\lib\ssl.py", line 850, in _create
+    self.do_handshake()
+  File "C:\Program Files\Python37\lib\ssl.py", line 1108, in do_handshake
+    self._sslobj.do_handshake()
+socket.timeout: _ssl.c:1029: The handshake operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\owner\AppData\Roaming\Python\Python37\site-packages\requests\adapters.py", line 497, in send
+    chunked=chunked,
+  File "C:\Users\owner\AppData\Roaming\Python\Python37\site-packages\urllib3\connectionpool.py", line 803, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "C:\Users\owner\AppData\Roaming\Python\Python37\site-packages\urllib3\util\retry.py", line 552, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "C:\Users\owner\AppData\Roaming\Python\Python37\site-packages\urllib3\packages\six.py", line 770, in reraise
+    raise value
+  File "C:\Users\owner\AppData\Roaming\Python\Python37\site-packages\urllib3\connectionpool.py", line 723, in urlopen
+    chunked=chunked,
+  File "C:\Users\owner\AppData\Roaming\Python\Python37\site-packages\urllib3\connectionpool.py", line 407, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=conn.timeout)
+  File "C:\Users\owner\AppData\Roaming\Python\Python37\site-packages\urllib3\connectionpool.py", line 359, in _raise_timeout
+    self, url, "Read timed out. (read timeout=%s)" % timeout_value
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Read timed out. (read timeout=20)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\owner\AppData\Roaming\Python\Python37\site-packages\wandb\sdk\lib\retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "C:\Users\owner\AppData\Roaming\Python\Python37\site-packages\wandb\sdk\internal\internal_api.py", line 400, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "C:\Users\owner\AppData\Roaming\Python\Python37\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "C:\Users\owner\AppData\Roaming\Python\Python37\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "C:\Users\owner\AppData\Roaming\Python\Python37\site-packages\wandb\sdk\lib\gql_request.py", line 58, in execute
+    request = self.session.post(self.url, **post_args)
+  File "C:\Users\owner\AppData\Roaming\Python\Python37\site-packages\requests\sessions.py", line 637, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+  File "C:\Users\owner\AppData\Roaming\Python\Python37\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\owner\AppData\Roaming\Python\Python37\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\owner\AppData\Roaming\Python\Python37\site-packages\requests\adapters.py", line 532, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='api.wandb.ai', port=443): Read timed out. (read timeout=20)

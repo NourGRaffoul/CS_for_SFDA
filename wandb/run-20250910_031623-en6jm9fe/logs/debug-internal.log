@@ -1,0 +1,40 @@
+{"time":"2025-09-10T03:16:23.5547529+03:00","level":"INFO","msg":"using version","core version":"0.18.7"}
+{"time":"2025-09-10T03:16:23.5547529+03:00","level":"INFO","msg":"created symlink","path":"wandb\\run-20250910_031623-en6jm9fe\\logs\\debug-core.log"}
+{"time":"2025-09-10T03:16:23.6671226+03:00","level":"INFO","msg":"created new stream","id":"en6jm9fe"}
+{"time":"2025-09-10T03:16:23.6676566+03:00","level":"INFO","msg":"handler: started","stream_id":"en6jm9fe"}
+{"time":"2025-09-10T03:16:23.6677358+03:00","level":"INFO","msg":"stream: started","id":"en6jm9fe"}
+{"time":"2025-09-10T03:16:23.6677358+03:00","level":"INFO","msg":"sender: started","stream_id":"en6jm9fe"}
+{"time":"2025-09-10T03:16:23.6677358+03:00","level":"INFO","msg":"writer: Do: started","stream_id":"en6jm9fe"}
+{"time":"2025-09-10T03:16:43.3332159+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 10.2.0.2:50319->35.186.228.49:443: wsarecv: An existing connection was forcibly closed by the remote host."}
+{"time":"2025-09-10T03:17:05.0889111+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 10.2.0.2:53472->35.186.228.49:443: wsarecv: An existing connection was forcibly closed by the remote host."}
+{"time":"2025-09-10T03:17:28.6399944+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 10.2.0.2:53512->35.186.228.49:443: wsarecv: An existing connection was forcibly closed by the remote host."}
+{"time":"2025-09-10T03:17:38.760144+03:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-09-10T03:17:38.760144+03:00","level":"WARN","msg":"handleCodeSave: program relative path is empty"}
+{"time":"2025-09-10T03:17:38.760144+03:00","level":"ERROR","msg":"git repo not found","error":"repository does not exist"}
+{"time":"2025-09-10T03:18:14.2190772+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/nourgraffoul-american-university-of-beirut/AFL-HAR-5-None-20/en6jm9fe/file_stream\": read tcp 10.2.0.2:53631->35.186.228.49:443: wsarecv: An existing connection was forcibly closed by the remote host."}
+{"time":"2025-09-10T03:18:23.9374689+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded"}
+{"time":"2025-09-10T03:18:35.9701311+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/nourgraffoul-american-university-of-beirut/AFL-HAR-5-None-20/en6jm9fe/file_stream\": read tcp 10.2.0.2:53812->35.186.228.49:443: wsarecv: An existing connection was forcibly closed by the remote host."}
+{"time":"2025-09-10T03:18:56.1043586+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": net/http: request canceled (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-09-10T03:22:10.8107916+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/nourgraffoul-american-university-of-beirut/AFL-HAR-5-None-20/en6jm9fe/file_stream\": unexpected EOF"}
+{"time":"2025-09-10T03:22:24.5709772+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded"}
+{"time":"2025-09-10T03:22:32.7609345+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/nourgraffoul-american-university-of-beirut/AFL-HAR-5-None-20/en6jm9fe/file_stream\": read tcp 10.2.0.2:54397->35.186.228.49:443: wsarecv: An existing connection was forcibly closed by the remote host."}
+{"time":"2025-09-10T03:26:08.3166067+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/nourgraffoul-american-university-of-beirut/AFL-HAR-5-None-20/en6jm9fe/file_stream\": read tcp 10.2.0.2:54926->35.186.228.49:443: wsarecv: An existing connection was forcibly closed by the remote host."}
+{"time":"2025-09-10T03:26:58.3322981+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/nourgraffoul-american-university-of-beirut/AFL-HAR-5-None-20/en6jm9fe/file_stream\": read tcp 10.2.0.2:54977->35.186.228.49:443: wsarecv: An existing connection was forcibly closed by the remote host."}
+{"time":"2025-09-10T03:27:10.0341535+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded"}
+{"time":"2025-09-10T03:30:02.5484631+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/nourgraffoul-american-university-of-beirut/AFL-HAR-5-None-20/en6jm9fe/file_stream\": read tcp 10.2.0.2:55451->35.186.228.49:443: wsarecv: An existing connection was forcibly closed by the remote host."}
+{"time":"2025-09-10T03:30:10.2792069+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": net/http: request canceled (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-09-10T03:30:24.3059007+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/nourgraffoul-american-university-of-beirut/AFL-HAR-5-None-20/en6jm9fe/file_stream\": read tcp 10.2.0.2:55479->35.186.228.49:443: wsarecv: An existing connection was forcibly closed by the remote host."}
+{"time":"2025-09-10T03:31:38.0279741+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/nourgraffoul-american-university-of-beirut/AFL-HAR-5-None-20/en6jm9fe/file_stream\": read tcp 10.2.0.2:55623->35.186.228.49:443: wsarecv: An existing connection was forcibly closed by the remote host."}
+{"time":"2025-09-10T03:31:40.6666561+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded"}
+{"time":"2025-09-10T03:34:10.3480309+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/nourgraffoul-american-university-of-beirut/AFL-HAR-5-None-20/en6jm9fe/file_stream\": read tcp 10.2.0.2:55950->35.186.228.49:443: wsarecv: An existing connection was forcibly closed by the remote host."}
+{"time":"2025-09-10T03:35:26.9868128+03:00","level":"INFO","msg":"stream: closing","id":"en6jm9fe"}
+{"time":"2025-09-10T03:35:26.9868128+03:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-09-10T03:35:26.9873164+03:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-09-10T03:35:27.3344513+03:00","level":"WARN","msg":"No program path found, not creating job artifact. See https://docs.wandb.ai/guides/launch/create-job"}
+{"time":"2025-09-10T03:35:27.3349688+03:00","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2025-09-10T03:35:28.4844729+03:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-09-10T03:35:29.4464781+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/nourgraffoul-american-university-of-beirut/AFL-HAR-5-None-20/en6jm9fe/file_stream\": read tcp 10.2.0.2:56145->35.186.228.49:443: wsarecv: An existing connection was forcibly closed by the remote host."}
+{"time":"2025-09-10T03:35:33.0933017+03:00","level":"INFO","msg":"handler: closed","stream_id":"en6jm9fe"}
+{"time":"2025-09-10T03:35:33.0938066+03:00","level":"INFO","msg":"sender: closed","stream_id":"en6jm9fe"}
+{"time":"2025-09-10T03:35:33.0938066+03:00","level":"INFO","msg":"writer: Close: closed","stream_id":"en6jm9fe"}
+{"time":"2025-09-10T03:35:33.094193+03:00","level":"INFO","msg":"stream: closed","id":"en6jm9fe"}

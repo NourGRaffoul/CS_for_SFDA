@@ -1,0 +1,36 @@
+{"time":"2025-08-09T12:29:00.0504646+02:00","level":"INFO","msg":"using version","core version":"0.18.7"}
+{"time":"2025-08-09T12:29:00.0504646+02:00","level":"INFO","msg":"created symlink","path":"wandb\\run-20250809_122859-ynwh37mu\\logs\\debug-core.log"}
+{"time":"2025-08-09T12:29:00.2266741+02:00","level":"INFO","msg":"created new stream","id":"ynwh37mu"}
+{"time":"2025-08-09T12:29:00.2271899+02:00","level":"INFO","msg":"stream: started","id":"ynwh37mu"}
+{"time":"2025-08-09T12:29:00.2271899+02:00","level":"INFO","msg":"handler: started","stream_id":"ynwh37mu"}
+{"time":"2025-08-09T12:29:00.2271899+02:00","level":"INFO","msg":"sender: started","stream_id":"ynwh37mu"}
+{"time":"2025-08-09T12:29:00.2271899+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"ynwh37mu"}
+{"time":"2025-08-09T12:29:00.6636592+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-08-09T12:29:00.6636592+02:00","level":"WARN","msg":"handleCodeSave: program relative path is empty"}
+{"time":"2025-08-09T12:29:00.6641719+02:00","level":"ERROR","msg":"git repo not found","error":"repository does not exist"}
+{"time":"2025-08-10T00:02:37.052725+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 192.168.1.4:59009->35.186.228.49:443: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond."}
+{"time":"2025-08-10T03:11:58.4365282+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 192.168.1.4:62156->35.186.228.49:443: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond."}
+{"time":"2025-08-10T05:23:17.7373404+02:00","level":"INFO","msg":"api: retrying HTTP error","status":500,"url":"https://api.wandb.ai/files/nourgraffoul-american-university-of-beirut/AFL-HAR-5-None-20/ynwh37mu/file_stream"}
+{"time":"2025-08-10T05:23:21.4177046+02:00","level":"INFO","msg":"api: retrying HTTP error","status":500,"url":"https://api.wandb.ai/files/nourgraffoul-american-university-of-beirut/AFL-HAR-5-None-20/ynwh37mu/file_stream"}
+{"time":"2025-08-10T05:23:26.7032114+02:00","level":"INFO","msg":"api: retrying HTTP error","status":500,"url":"https://api.wandb.ai/files/nourgraffoul-american-university-of-beirut/AFL-HAR-5-None-20/ynwh37mu/file_stream"}
+{"time":"2025-08-10T05:23:30.6174558+02:00","level":"INFO","msg":"api: retrying HTTP error","status":500,"url":"https://api.wandb.ai/graphql"}
+{"time":"2025-08-10T05:23:33.0975976+02:00","level":"INFO","msg":"api: retrying HTTP error","status":500,"url":"https://api.wandb.ai/graphql"}
+{"time":"2025-08-10T05:24:07.5761025+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": net/http: request canceled (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-08-10T05:24:30.2261741+02:00","level":"INFO","msg":"api: retrying HTTP error","status":500,"url":"https://api.wandb.ai/files/nourgraffoul-american-university-of-beirut/AFL-HAR-5-None-20/ynwh37mu/file_stream"}
+{"time":"2025-08-10T05:24:47.5405749+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-08-10T05:25:36.081636+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded"}
+{"time":"2025-08-10T05:25:42.2122772+02:00","level":"INFO","msg":"api: retrying HTTP error","status":500,"url":"https://api.wandb.ai/files/nourgraffoul-american-university-of-beirut/AFL-HAR-5-None-20/ynwh37mu/file_stream"}
+{"time":"2025-08-10T05:26:38.5735854+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded"}
+{"time":"2025-08-10T05:27:10.8523588+02:00","level":"INFO","msg":"api: retrying HTTP error","status":500,"url":"https://api.wandb.ai/files/nourgraffoul-american-university-of-beirut/AFL-HAR-5-None-20/ynwh37mu/file_stream"}
+{"time":"2025-08-10T05:28:08.5743719+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": net/http: request canceled (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-08-10T05:29:06.2597706+02:00","level":"INFO","msg":"api: retrying HTTP error","status":500,"url":"https://api.wandb.ai/files/nourgraffoul-american-university-of-beirut/AFL-HAR-5-None-20/ynwh37mu/file_stream"}
+{"time":"2025-08-10T05:29:38.5748889+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": net/http: request canceled (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-08-10T05:31:01.6246731+02:00","level":"INFO","msg":"api: retrying HTTP error","status":500,"url":"https://api.wandb.ai/files/nourgraffoul-american-university-of-beirut/AFL-HAR-5-None-20/ynwh37mu/file_stream"}
+{"time":"2025-08-10T05:31:08.5757836+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded"}
+{"time":"2025-08-10T19:05:12.3153964+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 192.168.1.4:57647->35.186.228.49:443: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond."}
+{"time":"2025-08-21T11:01:13.5510227+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/nourgraffoul-american-university-of-beirut/AFL-HAR-5-None-20/ynwh37mu/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-08-21T11:01:15.6678855+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/nourgraffoul-american-university-of-beirut/AFL-HAR-5-None-20/ynwh37mu/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-08-21T11:01:20.1287765+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/nourgraffoul-american-university-of-beirut/AFL-HAR-5-None-20/ynwh37mu/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-08-21T11:01:20.5981283+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-08-21T11:01:22.812913+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-08-21T11:15:44.0938219+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/nourgraffoul-american-university-of-beirut/AFL-HAR-5-None-20/ynwh37mu/file_stream\": unexpected EOF"}

@@ -1,0 +1,1 @@
+{"_timestamp":1.757160464678526e+09,"Test/Accuracy":0.7609137055837564,"Test/AUC (Std)":0.09322000873797563,"Train/Loss":1.0343536584402624,"_step":0,"_wandb":{"runtime":71},"_runtime":71.2697754,"Test/AUC":0.8797386052230766,"Test/Loss":1.0069548040288052,"Test/Accuracy (Std)":0.16632159258103266}

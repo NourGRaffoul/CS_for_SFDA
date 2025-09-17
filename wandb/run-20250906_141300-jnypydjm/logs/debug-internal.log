@@ -1,0 +1,20 @@
+{"time":"2025-09-06T14:13:00.5886735+03:00","level":"INFO","msg":"using version","core version":"0.18.7"}
+{"time":"2025-09-06T14:13:00.5886735+03:00","level":"INFO","msg":"created symlink","path":"wandb\\run-20250906_141300-jnypydjm\\logs\\debug-core.log"}
+{"time":"2025-09-06T14:13:01.0013244+03:00","level":"INFO","msg":"created new stream","id":"jnypydjm"}
+{"time":"2025-09-06T14:13:01.0018457+03:00","level":"INFO","msg":"stream: started","id":"jnypydjm"}
+{"time":"2025-09-06T14:13:01.0018457+03:00","level":"INFO","msg":"sender: started","stream_id":"jnypydjm"}
+{"time":"2025-09-06T14:13:01.0018457+03:00","level":"INFO","msg":"writer: Do: started","stream_id":"jnypydjm"}
+{"time":"2025-09-06T14:13:01.0018457+03:00","level":"INFO","msg":"handler: started","stream_id":"jnypydjm"}
+{"time":"2025-09-06T14:13:01.4728461+03:00","level":"ERROR","msg":"HTTP error","status":403,"method":"POST","url":"https://api.wandb.ai/graphql"}
+{"time":"2025-09-06T14:13:01.473414+03:00","level":"ERROR","msg":"sender: upsertRun:","error":"failed to upsert bucket: returned error 403 Forbidden: <!doctype html><meta charset=\"utf-8\"><meta name=viewport content=\"width=device-width, initial-scale=1\"><title>403</title>403 Forbidden"}
+{"time":"2025-09-06T14:13:01.5251453+03:00","level":"INFO","msg":"stream: closing","id":"jnypydjm"}
+{"time":"2025-09-06T14:13:01.5257894+03:00","level":"ERROR","msg":"sender: upsertConfig: RunRecord is nil"}
+{"time":"2025-09-06T14:13:01.525855+03:00","level":"WARN","msg":"No requirements.txt found, not creating job artifact. See https://docs.wandb.ai/guides/launch/create-job"}
+{"time":"2025-09-06T14:13:01.525855+03:00","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2025-09-06T14:13:01.908715+03:00","level":"ERROR","msg":"HTTP error","status":403,"method":"POST","url":"https://api.wandb.ai/graphql"}
+{"time":"2025-09-06T14:13:01.908715+03:00","level":"ERROR","msg":"runfiles: CreateRunFiles returned error: returned error 403 Forbidden: <!doctype html><meta charset=\"utf-8\"><meta name=viewport content=\"width=device-width, initial-scale=1\"><title>403</title>403 Forbidden"}
+{"time":"2025-09-06T14:13:01.9093304+03:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-09-06T14:13:01.9094662+03:00","level":"INFO","msg":"handler: closed","stream_id":"jnypydjm"}
+{"time":"2025-09-06T14:13:01.9094662+03:00","level":"INFO","msg":"writer: Close: closed","stream_id":"jnypydjm"}
+{"time":"2025-09-06T14:13:01.909579+03:00","level":"INFO","msg":"sender: closed","stream_id":"jnypydjm"}
+{"time":"2025-09-06T14:13:01.9097936+03:00","level":"INFO","msg":"stream: closed","id":"jnypydjm"}

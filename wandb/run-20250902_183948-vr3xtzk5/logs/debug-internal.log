@@ -1,0 +1,20 @@
+{"time":"2025-09-02T18:39:48.9565922+03:00","level":"INFO","msg":"using version","core version":"0.18.7"}
+{"time":"2025-09-02T18:39:48.9571135+03:00","level":"INFO","msg":"created symlink","path":"wandb\\run-20250902_183948-vr3xtzk5\\logs\\debug-core.log"}
+{"time":"2025-09-02T18:39:49.0817401+03:00","level":"INFO","msg":"created new stream","id":"vr3xtzk5"}
+{"time":"2025-09-02T18:39:49.0822459+03:00","level":"INFO","msg":"stream: started","id":"vr3xtzk5"}
+{"time":"2025-09-02T18:39:49.0822459+03:00","level":"INFO","msg":"writer: Do: started","stream_id":"vr3xtzk5"}
+{"time":"2025-09-02T18:39:49.0822459+03:00","level":"INFO","msg":"handler: started","stream_id":"vr3xtzk5"}
+{"time":"2025-09-02T18:39:49.0822459+03:00","level":"INFO","msg":"sender: started","stream_id":"vr3xtzk5"}
+{"time":"2025-09-02T18:39:49.5549727+03:00","level":"ERROR","msg":"HTTP error","status":403,"method":"POST","url":"https://api.wandb.ai/graphql"}
+{"time":"2025-09-02T18:39:49.5549727+03:00","level":"ERROR","msg":"sender: upsertRun:","error":"failed to upsert bucket: returned error 403 Forbidden: <!doctype html><meta charset=\"utf-8\"><meta name=viewport content=\"width=device-width, initial-scale=1\"><title>403</title>403 Forbidden"}
+{"time":"2025-09-02T18:39:49.5754973+03:00","level":"INFO","msg":"stream: closing","id":"vr3xtzk5"}
+{"time":"2025-09-02T18:39:49.5761612+03:00","level":"ERROR","msg":"sender: upsertConfig: RunRecord is nil"}
+{"time":"2025-09-02T18:39:49.5761612+03:00","level":"WARN","msg":"No requirements.txt found, not creating job artifact. See https://docs.wandb.ai/guides/launch/create-job"}
+{"time":"2025-09-02T18:39:49.5761612+03:00","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2025-09-02T18:39:49.911817+03:00","level":"ERROR","msg":"HTTP error","status":403,"method":"POST","url":"https://api.wandb.ai/graphql"}
+{"time":"2025-09-02T18:39:49.911817+03:00","level":"ERROR","msg":"runfiles: CreateRunFiles returned error: returned error 403 Forbidden: <!doctype html><meta charset=\"utf-8\"><meta name=viewport content=\"width=device-width, initial-scale=1\"><title>403</title>403 Forbidden"}
+{"time":"2025-09-02T18:39:49.9133734+03:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-09-02T18:39:49.9134854+03:00","level":"INFO","msg":"handler: closed","stream_id":"vr3xtzk5"}
+{"time":"2025-09-02T18:39:49.9134854+03:00","level":"INFO","msg":"writer: Close: closed","stream_id":"vr3xtzk5"}
+{"time":"2025-09-02T18:39:49.9134854+03:00","level":"INFO","msg":"sender: closed","stream_id":"vr3xtzk5"}
+{"time":"2025-09-02T18:39:49.9141866+03:00","level":"INFO","msg":"stream: closed","id":"vr3xtzk5"}

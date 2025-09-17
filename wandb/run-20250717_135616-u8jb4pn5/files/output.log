@@ -1,0 +1,1638 @@
+
+cuda is not avaiable.
+
+==================================================
+goal = test
+device = cpu
+device_id = 0
+dataset = HAR
+num_classes = 10
+model = HARCNN
+batch_size = 10
+local_learning_rate = 0.01
+learning_rate_decay = False
+learning_rate_decay_gamma = 0.99
+global_rounds = 100
+top_cnt = 100
+local_epochs = 10
+algorithm = FedAvg
+join_ratio = 0.2
+random_join_ratio = False
+num_clients = 20
+prev = 0
+times = 1
+eval_gap = 1
+save_folder_name = items
+auto_break = False
+dlg_eval = False
+dlg_gap = 100
+batch_num_per_client = 2
+num_new_clients = 0
+fine_tuning_epoch_new = 0
+feature_dim = 512
+vocab_size = 80
+max_len = 200
+few_shot = 0
+client_drop_rate = 0.0
+train_slow_rate = 0.0
+send_slow_rate = 0.0
+time_select = False
+time_threthold = 10000
+beta = 0.0
+lamda = 1.0
+mu = 0.0
+K = 5
+p_learning_rate = 0.01
+M = 5
+itk = 4000
+alphaK = 1.0
+sigma = 1.0
+alpha = 1.0
+plocal_epochs = 1
+tau = 1.0
+fine_tuning_epochs = 10
+dr_learning_rate = 0.0
+L = 1.0
+noise_dim = 512
+generator_learning_rate = 0.005
+hidden_dim = 512
+server_epochs = 1000
+localize_feature_extractor = False
+server_learning_rate = 0.1
+eta = 1.0
+rand_percent = 80
+layer_idx = 2
+mentee_learning_rate = 0.005
+T_start = 0.95
+T_end = 0.98
+momentum = 0.1
+kl_weight = 0.0
+num_candidates = 0
+method = Cluster1
+comment =
+num_clients_per_round = 4
+num_available = None
+loss_div_sqrt = False
+loss_sum = False
+subset_ratio = 0.1
+alpha1 = 0.75
+alpha2 = 1
+alpha3 = 0.1
+save_probs = False
+no_save_results = False
+total_num_clients = 20
+num_epoch = 10
+wandb = True
+==================================================
+
+============= Running time: 0th =============
+Creating server and clients ...
+HARCNN(
+  (conv1): Sequential(
+    (0): Conv2d(9, 32, kernel_size=(1, 9), stride=(1, 1))
+    (1): ReLU()
+    (2): MaxPool2d(kernel_size=(1, 2), stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (conv2): Sequential(
+    (0): Conv2d(32, 64, kernel_size=(1, 9), stride=(1, 1))
+    (1): ReLU()
+    (2): MaxPool2d(kernel_size=(1, 2), stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (fc): Sequential(
+    (0): Linear(in_features=1664, out_features=1024, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=1024, out_features=512, bias=True)
+    (3): ReLU()
+    (4): Linear(in_features=512, out_features=10, bias=True)
+  )
+)
+Initializing client selection method: Cluster1
+
+Join ratio / total clients: 0.2 / 20
+Finished creating server and clients.
+
+------------- Round 0-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 2.3169
+Averaged Test Accurancy: 0.0000
+Averaged Test AUC: 0.2801
+Std Test Accurancy: 0.0000
+Std Test AUC: 0.0148
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [1, 11, 14, 17]
+------------------------- time cost ------------------------- 65.51900053024292
+
+------------- Round 1-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 2.1970
+Averaged Test Accurancy: 0.3381
+Averaged Test AUC: 0.7942
+Std Test Accurancy: 0.0628
+Std Test AUC: 0.0111
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [5, 8, 12, 19]
+------------------------- time cost ------------------------- 62.35812520980835
+
+------------- Round 2-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 2.0748
+Averaged Test Accurancy: 0.2838
+Averaged Test AUC: 0.7899
+Std Test Accurancy: 0.0742
+Std Test AUC: 0.0110
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [4, 11, 12, 16]
+------------------------- time cost ------------------------- 44.16914367675781
+
+------------- Round 3-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.9446
+Averaged Test Accurancy: 0.4269
+Averaged Test AUC: 0.8443
+Std Test Accurancy: 0.0722
+Std Test AUC: 0.0230
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [2, 3, 7, 18]
+------------------------- time cost ------------------------- 40.70857906341553
+
+------------- Round 4-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.7973
+Averaged Test Accurancy: 0.3056
+Averaged Test AUC: 0.7964
+Std Test Accurancy: 0.0706
+Std Test AUC: 0.0107
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [0, 4, 11, 16]
+------------------------- time cost ------------------------- 59.87271571159363
+
+------------- Round 5-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.6976
+Averaged Test Accurancy: 0.3457
+Averaged Test AUC: 0.8596
+Std Test Accurancy: 0.0433
+Std Test AUC: 0.0243
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [0, 9, 13, 18]
+------------------------- time cost ------------------------- 67.306072473526
+
+------------- Round 6-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.5770
+Averaged Test Accurancy: 0.3706
+Averaged Test AUC: 0.8422
+Std Test Accurancy: 0.0974
+Std Test AUC: 0.0240
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [4, 13, 14, 16]
+------------------------- time cost ------------------------- 58.06455683708191
+
+------------- Round 7-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.4774
+Averaged Test Accurancy: 0.3360
+Averaged Test AUC: 0.8863
+Std Test Accurancy: 0.0378
+Std Test AUC: 0.0233
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [7, 11, 14, 15]
+------------------------- time cost ------------------------- 57.87699890136719
+
+------------- Round 8-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.3605
+Averaged Test Accurancy: 0.5137
+Averaged Test AUC: 0.8840
+Std Test Accurancy: 0.1372
+Std Test AUC: 0.0364
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [1, 3, 17, 19]
+------------------------- time cost ------------------------- 62.22649359703064
+
+------------- Round 9-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.2539
+Averaged Test Accurancy: 0.5523
+Averaged Test AUC: 0.9009
+Std Test Accurancy: 0.1110
+Std Test AUC: 0.0345
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [9, 13, 18, 19]
+------------------------- time cost ------------------------- 62.52385401725769
+
+------------- Round 10-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.1680
+Averaged Test Accurancy: 0.6284
+Averaged Test AUC: 0.9154
+Std Test Accurancy: 0.1581
+Std Test AUC: 0.0348
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [7, 10, 14, 16]
+------------------------- time cost ------------------------- 60.08777618408203
+
+------------- Round 11-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.0921
+Averaged Test Accurancy: 0.4919
+Averaged Test AUC: 0.9198
+Std Test Accurancy: 0.0846
+Std Test AUC: 0.0326
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [1, 5, 15, 19]
+------------------------- time cost ------------------------- 64.82994437217712
+
+------------- Round 12-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.9914
+Averaged Test Accurancy: 0.5706
+Averaged Test AUC: 0.9175
+Std Test Accurancy: 0.1020
+Std Test AUC: 0.0365
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [9, 11, 14, 18]
+------------------------- time cost ------------------------- 58.28064846992493
+
+------------- Round 13-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.9415
+Averaged Test Accurancy: 0.4924
+Averaged Test AUC: 0.8774
+Std Test Accurancy: 0.0802
+Std Test AUC: 0.0355
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [0, 1, 5, 16]
+------------------------- time cost ------------------------- 60.888453006744385
+
+------------- Round 14-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.8566
+Averaged Test Accurancy: 0.4853
+Averaged Test AUC: 0.9018
+Std Test Accurancy: 0.0596
+Std Test AUC: 0.0303
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [2, 7, 13, 17]
+------------------------- time cost ------------------------- 60.94088888168335
+
+------------- Round 15-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.8015
+Averaged Test Accurancy: 0.4919
+Averaged Test AUC: 0.8769
+Std Test Accurancy: 0.1298
+Std Test AUC: 0.0419
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [1, 5, 12, 17]
+------------------------- time cost ------------------------- 58.84199619293213
+
+------------- Round 16-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.7276
+Averaged Test Accurancy: 0.5061
+Averaged Test AUC: 0.8958
+Std Test Accurancy: 0.0880
+Std Test AUC: 0.0511
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [0, 1, 11, 15]
+------------------------- time cost ------------------------- 61.949992179870605
+
+------------- Round 17-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.6894
+Averaged Test Accurancy: 0.5046
+Averaged Test AUC: 0.8879
+Std Test Accurancy: 0.0813
+Std Test AUC: 0.0451
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [0, 6, 7, 16]
+------------------------- time cost ------------------------- 59.82628321647644
+
+------------- Round 18-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.6360
+Averaged Test Accurancy: 0.5112
+Averaged Test AUC: 0.8987
+Std Test Accurancy: 0.0726
+Std Test AUC: 0.0309
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [0, 6, 8, 16]
+------------------------- time cost ------------------------- 59.634448528289795
+
+------------- Round 19-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.5849
+Averaged Test Accurancy: 0.4655
+Averaged Test AUC: 0.8907
+Std Test Accurancy: 0.0679
+Std Test AUC: 0.0288
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [2, 4, 10, 15]
+------------------------- time cost ------------------------- 60.10005807876587
+
+------------- Round 20-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.5132
+Averaged Test Accurancy: 0.4376
+Averaged Test AUC: 0.8824
+Std Test Accurancy: 0.1481
+Std Test AUC: 0.0321
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [0, 7, 11, 18]
+------------------------- time cost ------------------------- 74.80428457260132
+
+------------- Round 21-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.5035
+Averaged Test Accurancy: 0.6523
+Averaged Test AUC: 0.9050
+Std Test Accurancy: 0.1583
+Std Test AUC: 0.0461
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [7, 12, 13, 18]
+------------------------- time cost ------------------------- 70.78151750564575
+
+------------- Round 22-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.4838
+Averaged Test Accurancy: 0.5467
+Averaged Test AUC: 0.8800
+Std Test Accurancy: 0.1273
+Std Test AUC: 0.0549
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [0, 5, 8, 16]
+------------------------- time cost ------------------------- 69.28851389884949
+
+------------- Round 23-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.4617
+Averaged Test Accurancy: 0.5492
+Averaged Test AUC: 0.9061
+Std Test Accurancy: 0.0807
+Std Test AUC: 0.0314
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [4, 11, 15, 19]
+------------------------- time cost ------------------------- 61.57822799682617
+
+------------- Round 24-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.4218
+Averaged Test Accurancy: 0.6066
+Averaged Test AUC: 0.9054
+Std Test Accurancy: 0.1318
+Std Test AUC: 0.0522
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [2, 7, 10, 17]
+------------------------- time cost ------------------------- 61.089322566986084
+
+------------- Round 25-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.3648
+Averaged Test Accurancy: 0.4954
+Averaged Test AUC: 0.8808
+Std Test Accurancy: 0.1441
+Std Test AUC: 0.0564
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [5, 8, 16, 19]
+------------------------- time cost ------------------------- 53.60185885429382
+
+------------- Round 26-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.3431
+Averaged Test Accurancy: 0.6274
+Averaged Test AUC: 0.9089
+Std Test Accurancy: 0.1350
+Std Test AUC: 0.0473
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [0, 9, 13, 15]
+------------------------- time cost ------------------------- 61.59315633773804
+
+------------- Round 27-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.3136
+Averaged Test Accurancy: 0.5015
+Averaged Test AUC: 0.8909
+Std Test Accurancy: 0.1035
+Std Test AUC: 0.0424
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [6, 11, 12, 18]
+------------------------- time cost ------------------------- 66.94112801551819
+
+------------- Round 28-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.3083
+Averaged Test Accurancy: 0.6030
+Averaged Test AUC: 0.9031
+Std Test Accurancy: 0.1565
+Std Test AUC: 0.0557
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [1, 3, 12, 17]
+------------------------- time cost ------------------------- 59.488520860672
+
+------------- Round 29-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.2507
+Averaged Test Accurancy: 0.5513
+Averaged Test AUC: 0.8805
+Std Test Accurancy: 0.1495
+Std Test AUC: 0.0767
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [0, 9, 10, 15]
+------------------------- time cost ------------------------- 61.02512574195862
+
+------------- Round 30-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.2332
+Averaged Test Accurancy: 0.4944
+Averaged Test AUC: 0.8894
+Std Test Accurancy: 0.1288
+Std Test AUC: 0.0258
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [9, 11, 12, 15]
+------------------------- time cost ------------------------- 70.86728262901306
+
+------------- Round 31-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.2212
+Averaged Test Accurancy: 0.6264
+Averaged Test AUC: 0.9228
+Std Test Accurancy: 0.0922
+Std Test AUC: 0.0318
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [5, 6, 12, 16]
+------------------------- time cost ------------------------- 115.1406581401825
+
+------------- Round 32-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.1994
+Averaged Test Accurancy: 0.6208
+Averaged Test AUC: 0.9034
+Std Test Accurancy: 0.1265
+Std Test AUC: 0.0599
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [4, 5, 13, 19]
+------------------------- time cost ------------------------- 108.01976585388184
+
+------------- Round 33-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.2500
+Averaged Test Accurancy: 0.6218
+Averaged Test AUC: 0.9130
+Std Test Accurancy: 0.1585
+Std Test AUC: 0.0478
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [8, 11, 16, 19]
+------------------------- time cost ------------------------- 102.33914113044739
+
+------------- Round 34-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.2511
+Averaged Test Accurancy: 0.6619
+Averaged Test AUC: 0.8982
+Std Test Accurancy: 0.1417
+Std Test AUC: 0.0583
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [0, 7, 11, 17]
+------------------------- time cost ------------------------- 106.64033365249634
+
+------------- Round 35-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.2568
+Averaged Test Accurancy: 0.6376
+Averaged Test AUC: 0.9046
+Std Test Accurancy: 0.1582
+Std Test AUC: 0.0626
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [9, 11, 12, 17]
+------------------------- time cost ------------------------- 106.6676938533783
+
+------------- Round 36-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.2432
+Averaged Test Accurancy: 0.6914
+Averaged Test AUC: 0.9132
+Std Test Accurancy: 0.1268
+Std Test AUC: 0.0663
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [2, 6, 10, 18]
+------------------------- time cost ------------------------- 105.06353712081909
+
+------------- Round 37-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.2230
+Averaged Test Accurancy: 0.5523
+Averaged Test AUC: 0.8919
+Std Test Accurancy: 0.1506
+Std Test AUC: 0.0529
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [0, 8, 11, 16]
+------------------------- time cost ------------------------- 103.2132716178894
+
+------------- Round 38-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.2064
+Averaged Test Accurancy: 0.5909
+Averaged Test AUC: 0.9005
+Std Test Accurancy: 0.1010
+Std Test AUC: 0.0456
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [8, 12, 13, 15]
+------------------------- time cost ------------------------- 110.6290876865387
+
+------------- Round 39-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.2070
+Averaged Test Accurancy: 0.5310
+Averaged Test AUC: 0.8794
+Std Test Accurancy: 0.1402
+Std Test AUC: 0.0683
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [3, 9, 14, 17]
+------------------------- time cost ------------------------- 607.6386580467224
+
+------------- Round 40-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.1831
+Averaged Test Accurancy: 0.3594
+Averaged Test AUC: 0.8692
+Std Test Accurancy: 0.0372
+Std Test AUC: 0.0360
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [2, 6, 11, 17]
+------------------------- time cost ------------------------- 105.55828642845154
+
+------------- Round 41-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.1754
+Averaged Test Accurancy: 0.6675
+Averaged Test AUC: 0.9029
+Std Test Accurancy: 0.2010
+Std Test AUC: 0.0788
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [4, 10, 12, 16]
+------------------------- time cost ------------------------- 106.52591133117676
+
+------------- Round 42-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0993
+Averaged Test Accurancy: 0.5386
+Averaged Test AUC: 0.8946
+Std Test Accurancy: 0.0929
+Std Test AUC: 0.0555
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [1, 10, 12, 17]
+------------------------- time cost ------------------------- 110.91651248931885
+
+------------- Round 43-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0955
+Averaged Test Accurancy: 0.6411
+Averaged Test AUC: 0.8860
+Std Test Accurancy: 0.1610
+Std Test AUC: 0.0799
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [3, 8, 14, 15]
+------------------------- time cost ------------------------- 105.26244831085205
+
+------------- Round 44-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0742
+Averaged Test Accurancy: 0.2838
+Averaged Test AUC: 0.8621
+Std Test Accurancy: 0.1029
+Std Test AUC: 0.0297
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [3, 5, 8, 18]
+------------------------- time cost ------------------------- 100.09273838996887
+
+------------- Round 45-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0640
+Averaged Test Accurancy: 0.5980
+Averaged Test AUC: 0.9087
+Std Test Accurancy: 0.1104
+Std Test AUC: 0.0392
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [2, 5, 7, 15]
+------------------------- time cost ------------------------- 88.1556625366211
+
+------------- Round 46-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0622
+Averaged Test Accurancy: 0.6056
+Averaged Test AUC: 0.9082
+Std Test Accurancy: 0.1491
+Std Test AUC: 0.0462
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [0, 4, 6, 18]
+------------------------- time cost ------------------------- 87.64939093589783
+
+------------- Round 47-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0521
+Averaged Test Accurancy: 0.5599
+Averaged Test AUC: 0.9043
+Std Test Accurancy: 0.1285
+Std Test AUC: 0.0413
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [2, 4, 5, 19]
+------------------------- time cost ------------------------- 91.32162165641785
+
+------------- Round 48-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0616
+Averaged Test Accurancy: 0.6594
+Averaged Test AUC: 0.9040
+Std Test Accurancy: 0.1536
+Std Test AUC: 0.0626
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [0, 1, 5, 15]
+------------------------- time cost ------------------------- 88.4306652545929
+
+------------- Round 49-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0628
+Averaged Test Accurancy: 0.6081
+Averaged Test AUC: 0.9205
+Std Test Accurancy: 0.1211
+Std Test AUC: 0.0421
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [1, 10, 12, 18]
+------------------------- time cost ------------------------- 91.4883303642273
+
+------------- Round 50-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0609
+Averaged Test Accurancy: 0.6147
+Averaged Test AUC: 0.8956
+Std Test Accurancy: 0.1599
+Std Test AUC: 0.0652
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [3, 5, 7, 18]
+------------------------- time cost ------------------------- 90.9335081577301
+
+------------- Round 51-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0700
+Averaged Test Accurancy: 0.5883
+Averaged Test AUC: 0.8985
+Std Test Accurancy: 0.1070
+Std Test AUC: 0.0415
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [2, 5, 9, 17]
+------------------------- time cost ------------------------- 94.85377907752991
+
+------------- Round 52-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0676
+Averaged Test Accurancy: 0.6508
+Averaged Test AUC: 0.9181
+Std Test Accurancy: 0.0895
+Std Test AUC: 0.0486
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [7, 10, 12, 18]
+------------------------- time cost ------------------------- 92.19826602935791
+
+------------- Round 53-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0668
+Averaged Test Accurancy: 0.5939
+Averaged Test AUC: 0.8939
+Std Test Accurancy: 0.1493
+Std Test AUC: 0.0537
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [2, 3, 7, 16]
+------------------------- time cost ------------------------- 90.7769718170166
+
+------------- Round 54-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0488
+Averaged Test Accurancy: 0.6330
+Averaged Test AUC: 0.8916
+Std Test Accurancy: 0.1526
+Std Test AUC: 0.0592
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [1, 5, 14, 15]
+------------------------- time cost ------------------------- 90.29873991012573
+
+------------- Round 55-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0491
+Averaged Test Accurancy: 0.4741
+Averaged Test AUC: 0.8970
+Std Test Accurancy: 0.1006
+Std Test AUC: 0.0378
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [1, 13, 14, 16]
+------------------------- time cost ------------------------- 92.01563334465027
+
+------------- Round 56-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0481
+Averaged Test Accurancy: 0.4030
+Averaged Test AUC: 0.8804
+Std Test Accurancy: 0.1060
+Std Test AUC: 0.0514
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [5, 6, 7, 16]
+------------------------- time cost ------------------------- 93.32577657699585
+
+------------- Round 57-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0459
+Averaged Test Accurancy: 0.6909
+Averaged Test AUC: 0.9189
+Std Test Accurancy: 0.1491
+Std Test AUC: 0.0489
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [0, 5, 8, 18]
+------------------------- time cost ------------------------- 95.37260437011719
+
+------------- Round 58-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0461
+Averaged Test Accurancy: 0.6173
+Averaged Test AUC: 0.9200
+Std Test Accurancy: 0.1158
+Std Test AUC: 0.0365
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [9, 11, 16, 19]
+------------------------- time cost ------------------------- 98.43200421333313
+
+------------- Round 59-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0497
+Averaged Test Accurancy: 0.6320
+Averaged Test AUC: 0.9174
+Std Test Accurancy: 0.1091
+Std Test AUC: 0.0441
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [2, 5, 7, 15]
+------------------------- time cost ------------------------- 92.24655842781067
+
+------------- Round 60-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0491
+Averaged Test Accurancy: 0.5939
+Averaged Test AUC: 0.9066
+Std Test Accurancy: 0.1539
+Std Test AUC: 0.0470
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [6, 10, 17, 19]
+------------------------- time cost ------------------------- 95.82536888122559
+
+------------- Round 61-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0483
+Averaged Test Accurancy: 0.6173
+Averaged Test AUC: 0.8925
+Std Test Accurancy: 0.1170
+Std Test AUC: 0.0757
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [4, 10, 12, 15]
+------------------------- time cost ------------------------- 91.37809181213379
+
+------------- Round 62-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0375
+Averaged Test Accurancy: 0.5173
+Averaged Test AUC: 0.9065
+Std Test Accurancy: 0.1463
+Std Test AUC: 0.0448
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [4, 11, 14, 15]
+------------------------- time cost ------------------------- 791.7341113090515
+
+------------- Round 63-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0369
+Averaged Test Accurancy: 0.5645
+Averaged Test AUC: 0.9003
+Std Test Accurancy: 0.1363
+Std Test AUC: 0.0455
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [0, 4, 6, 19]
+------------------------- time cost ------------------------- 69.90122628211975
+
+------------- Round 64-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0377
+Averaged Test Accurancy: 0.5924
+Averaged Test AUC: 0.9075
+Std Test Accurancy: 0.1376
+Std Test AUC: 0.0487
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [0, 4, 10, 16]
+------------------------- time cost ------------------------- 95.86691546440125
+
+------------- Round 65-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0346
+Averaged Test Accurancy: 0.5218
+Averaged Test AUC: 0.8921
+Std Test Accurancy: 0.0896
+Std Test AUC: 0.0449
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [3, 4, 14, 19]
+------------------------- time cost ------------------------- 53.4089720249176
+
+------------- Round 66-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0310
+Averaged Test Accurancy: 0.6350
+Averaged Test AUC: 0.8910
+Std Test Accurancy: 0.1400
+Std Test AUC: 0.0683
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [7, 11, 14, 18]
+------------------------- time cost ------------------------- 57.19025015830994
+
+------------- Round 67-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0314
+Averaged Test Accurancy: 0.6284
+Averaged Test AUC: 0.8945
+Std Test Accurancy: 0.1068
+Std Test AUC: 0.0491
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [8, 10, 14, 15]
+------------------------- time cost ------------------------- 71.20660257339478
+
+------------- Round 68-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0321
+Averaged Test Accurancy: 0.3096
+Averaged Test AUC: 0.8636
+Std Test Accurancy: 0.1098
+Std Test AUC: 0.0268
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [6, 10, 12, 15]
+------------------------- time cost ------------------------- 62.390602111816406
+
+------------- Round 69-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0305
+Averaged Test Accurancy: 0.5939
+Averaged Test AUC: 0.9085
+Std Test Accurancy: 0.1190
+Std Test AUC: 0.0547
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [7, 11, 14, 15]
+------------------------- time cost ------------------------- 62.7291738986969
+
+------------- Round 70-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0303
+Averaged Test Accurancy: 0.5985
+Averaged Test AUC: 0.9003
+Std Test Accurancy: 0.1065
+Std Test AUC: 0.0354
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [1, 3, 14, 16]
+------------------------- time cost ------------------------- 2508.3411655426025
+
+------------- Round 71-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0293
+Averaged Test Accurancy: 0.4213
+Averaged Test AUC: 0.8818
+Std Test Accurancy: 0.0586
+Std Test AUC: 0.0611
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [2, 6, 7, 16]
+------------------------- time cost ------------------------- 67301.90322995186
+
+------------- Round 72-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0284
+Averaged Test Accurancy: 0.6081
+Averaged Test AUC: 0.8899
+Std Test Accurancy: 0.1556
+Std Test AUC: 0.0661
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [5, 6, 13, 15]
+------------------------- time cost ------------------------- 64.7210476398468
+
+------------- Round 73-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0306
+Averaged Test Accurancy: 0.5619
+Averaged Test AUC: 0.9059
+Std Test Accurancy: 0.1211
+Std Test AUC: 0.0516
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [0, 8, 11, 17]
+------------------------- time cost ------------------------- 58.89375066757202
+
+------------- Round 74-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0289
+Averaged Test Accurancy: 0.6513
+Averaged Test AUC: 0.9085
+Std Test Accurancy: 0.1748
+Std Test AUC: 0.0610
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [1, 3, 18, 19]
+------------------------- time cost ------------------------- 58.8536958694458
+
+------------- Round 75-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0281
+Averaged Test Accurancy: 0.6487
+Averaged Test AUC: 0.8957
+Std Test Accurancy: 0.1581
+Std Test AUC: 0.0728
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [5, 6, 12, 16]
+------------------------- time cost ------------------------- 56.61807703971863
+
+------------- Round 76-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0276
+Averaged Test Accurancy: 0.6761
+Averaged Test AUC: 0.9081
+Std Test Accurancy: 0.1438
+Std Test AUC: 0.0653
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [5, 7, 18, 19]
+------------------------- time cost ------------------------- 52.72738766670227
+
+------------- Round 77-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0272
+Averaged Test Accurancy: 0.6721
+Averaged Test AUC: 0.9103
+Std Test Accurancy: 0.1374
+Std Test AUC: 0.0479
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [0, 3, 7, 18]
+------------------------- time cost ------------------------- 53.69328474998474
+
+------------- Round 78-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0286
+Averaged Test Accurancy: 0.5447
+Averaged Test AUC: 0.8982
+Std Test Accurancy: 0.1115
+Std Test AUC: 0.0441
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [9, 11, 14, 18]
+------------------------- time cost ------------------------- 52.493560552597046
+
+------------- Round 79-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0305
+Averaged Test Accurancy: 0.4878
+Averaged Test AUC: 0.8853
+Std Test Accurancy: 0.1010
+Std Test AUC: 0.0352
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [0, 9, 11, 15]
+------------------------- time cost ------------------------- 53.986494064331055
+
+------------- Round 80-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0231
+Averaged Test Accurancy: 0.5929
+Averaged Test AUC: 0.9221
+Std Test Accurancy: 0.1259
+Std Test AUC: 0.0281
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [2, 8, 10, 19]
+------------------------- time cost ------------------------- 55.78605818748474
+
+------------- Round 81-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0235
+Averaged Test Accurancy: 0.6132
+Averaged Test AUC: 0.8940
+Std Test Accurancy: 0.1543
+Std Test AUC: 0.0626
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [5, 5, 6, 19]
+------------------------- time cost ------------------------- 51.04759669303894
+
+------------- Round 82-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0235
+Averaged Test Accurancy: 0.7086
+Averaged Test AUC: 0.9264
+Std Test Accurancy: 0.1095
+Std Test AUC: 0.0581
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [2, 7, 13, 19]
+------------------------- time cost ------------------------- 53.949424266815186
+
+------------- Round 83-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0234
+Averaged Test Accurancy: 0.5934
+Averaged Test AUC: 0.8767
+Std Test Accurancy: 0.1683
+Std Test AUC: 0.0707
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [2, 6, 11, 16]
+------------------------- time cost ------------------------- 58.945558309555054
+
+------------- Round 84-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0233
+Averaged Test Accurancy: 0.6254
+Averaged Test AUC: 0.8935
+Std Test Accurancy: 0.1517
+Std Test AUC: 0.0739
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [4, 5, 6, 18]
+------------------------- time cost ------------------------- 53.64042663574219
+
+------------- Round 85-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0221
+Averaged Test Accurancy: 0.6122
+Averaged Test AUC: 0.9140
+Std Test Accurancy: 0.1346
+Std Test AUC: 0.0402
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [0, 8, 13, 18]
+------------------------- time cost ------------------------- 54.621586322784424
+
+------------- Round 86-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0229
+Averaged Test Accurancy: 0.5477
+Averaged Test AUC: 0.8900
+Std Test Accurancy: 0.1280
+Std Test AUC: 0.0502
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [0, 9, 11, 16]
+------------------------- time cost ------------------------- 63.30833864212036
+
+------------- Round 87-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0222
+Averaged Test Accurancy: 0.6269
+Averaged Test AUC: 0.9252
+Std Test Accurancy: 0.0940
+Std Test AUC: 0.0293
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [3, 7, 12, 18]
+------------------------- time cost ------------------------- 52.62907385826111
+
+------------- Round 88-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0215
+Averaged Test Accurancy: 0.6051
+Averaged Test AUC: 0.8950
+Std Test Accurancy: 0.1696
+Std Test AUC: 0.0617
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [8, 12, 13, 18]
+------------------------- time cost ------------------------- 53.94562602043152
+
+------------- Round 89-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0206
+Averaged Test Accurancy: 0.5822
+Averaged Test AUC: 0.8900
+Std Test Accurancy: 0.1422
+Std Test AUC: 0.0639
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [7, 13, 14, 15]
+------------------------- time cost ------------------------- 55.90441870689392
+
+------------- Round 90-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0197
+Averaged Test Accurancy: 0.5127
+Averaged Test AUC: 0.8628
+Std Test Accurancy: 0.1476
+Std Test AUC: 0.0555
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [7, 10, 14, 18]
+------------------------- time cost ------------------------- 56.59889602661133
+
+------------- Round 91-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0200
+Averaged Test Accurancy: 0.4350
+Averaged Test AUC: 0.8801
+Std Test Accurancy: 0.1139
+Std Test AUC: 0.0451
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [9, 11, 16, 19]
+------------------------- time cost ------------------------- 57.320629835128784
+
+------------- Round 92-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0237
+Averaged Test Accurancy: 0.6213
+Averaged Test AUC: 0.9192
+Std Test Accurancy: 0.1140
+Std Test AUC: 0.0429
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [7, 13, 15, 19]
+------------------------- time cost ------------------------- 56.47986054420471
+
+------------- Round 93-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0237
+Averaged Test Accurancy: 0.4772
+Averaged Test AUC: 0.8563
+Std Test Accurancy: 0.1315
+Std Test AUC: 0.0698
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [5, 9, 12, 18]
+------------------------- time cost ------------------------- 56.32826375961304
+
+------------- Round 94-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0197
+Averaged Test Accurancy: 0.5832
+Averaged Test AUC: 0.9192
+Std Test Accurancy: 0.1010
+Std Test AUC: 0.0350
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [1, 2, 10, 19]
+------------------------- time cost ------------------------- 55.43903613090515
+
+------------- Round 95-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0190
+Averaged Test Accurancy: 0.6386
+Averaged Test AUC: 0.8817
+Std Test Accurancy: 0.1579
+Std Test AUC: 0.0824
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [4, 5, 19, 19]
+------------------------- time cost ------------------------- 59.84287118911743
+
+------------- Round 96-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0190
+Averaged Test Accurancy: 0.6746
+Averaged Test AUC: 0.9057
+Std Test Accurancy: 0.1578
+Std Test AUC: 0.0653
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [1, 5, 6, 15]
+------------------------- time cost ------------------------- 56.24576926231384
+
+------------- Round 97-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0197
+Averaged Test Accurancy: 0.6533
+Averaged Test AUC: 0.9283
+Std Test Accurancy: 0.1085
+Std Test AUC: 0.0492
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [1, 13, 14, 18]
+------------------------- time cost ------------------------- 56.39975571632385
+
+------------- Round 98-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0194
+Averaged Test Accurancy: 0.4858
+Averaged Test AUC: 0.8870
+Std Test Accurancy: 0.1419
+Std Test AUC: 0.0485
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [2, 3, 8, 19]
+------------------------- time cost ------------------------- 53.7032573223114
+
+------------- Round 99-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0220
+Averaged Test Accurancy: 0.6264
+Averaged Test AUC: 0.8998
+Std Test Accurancy: 0.1701
+Std Test AUC: 0.0691
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [7, 10, 14, 17]
+------------------------- time cost ------------------------- 56.888254165649414
+
+------------- Round 100-------------
+> Pre-training selection: choosing 4 clients.
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0216
+Averaged Test Accurancy: 0.5274
+Averaged Test AUC: 0.8836
+Std Test Accurancy: 0.1223
+Std Test AUC: 0.0580
+--- Training 4 clients ---
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [2, 7, 11, 17]
+------------------------- time cost ------------------------- 54.751763343811035
+
+Average time cost: 78158.31s.
+Length:  101
+std for best accurancy: 0.0
+mean for best accurancy: 0.9165861513687601
+All done!
+
+Storage on cpu
+-------------------------------------------------------------------------------
+Total Tensors: 94752420 	Used Memory: 361.51M
+-------------------------------------------------------------------------------

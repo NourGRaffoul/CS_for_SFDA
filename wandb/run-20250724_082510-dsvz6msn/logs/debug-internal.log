@@ -1,0 +1,20 @@
+{"time":"2025-07-24T08:25:10.2729927+02:00","level":"INFO","msg":"using version","core version":"0.18.7"}
+{"time":"2025-07-24T08:25:10.2729927+02:00","level":"INFO","msg":"created symlink","path":"wandb\\run-20250724_082510-dsvz6msn\\logs\\debug-core.log"}
+{"time":"2025-07-24T08:25:10.4145761+02:00","level":"INFO","msg":"created new stream","id":"dsvz6msn"}
+{"time":"2025-07-24T08:25:10.4145761+02:00","level":"INFO","msg":"stream: started","id":"dsvz6msn"}
+{"time":"2025-07-24T08:25:10.4153911+02:00","level":"INFO","msg":"handler: started","stream_id":"dsvz6msn"}
+{"time":"2025-07-24T08:25:10.4153911+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"dsvz6msn"}
+{"time":"2025-07-24T08:25:10.4153911+02:00","level":"INFO","msg":"sender: started","stream_id":"dsvz6msn"}
+{"time":"2025-07-24T08:25:10.9092266+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-07-24T08:25:10.9097585+02:00","level":"WARN","msg":"handleCodeSave: program relative path is empty"}
+{"time":"2025-07-24T08:25:10.9102778+02:00","level":"ERROR","msg":"git repo not found","error":"repository does not exist"}
+{"time":"2025-07-24T08:25:37.034711+02:00","level":"INFO","msg":"stream: closing","id":"dsvz6msn"}
+{"time":"2025-07-24T08:25:37.034711+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-07-24T08:25:37.0467763+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-07-24T08:25:37.248754+02:00","level":"WARN","msg":"No program path found, not creating job artifact. See https://docs.wandb.ai/guides/launch/create-job"}
+{"time":"2025-07-24T08:25:37.248754+02:00","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2025-07-24T08:25:38.0944016+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-07-24T08:25:38.3831695+02:00","level":"INFO","msg":"handler: closed","stream_id":"dsvz6msn"}
+{"time":"2025-07-24T08:25:38.3831695+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"dsvz6msn"}
+{"time":"2025-07-24T08:25:38.3836729+02:00","level":"INFO","msg":"sender: closed","stream_id":"dsvz6msn"}
+{"time":"2025-07-24T08:25:38.3836729+02:00","level":"INFO","msg":"stream: closed","id":"dsvz6msn"}

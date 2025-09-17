@@ -1,0 +1,30 @@
+wandb_version: 1
+
+algorithm:
+  value: FedAvg
+batch_num_per_client:
+  value: 3
+batch_size:
+  value: 5
+comment:
+  value: ''
+dataset:
+  value: HAR
+fine_tuning_epochs:
+  value: 6
+join_ratio:
+  value: 0.17450408455106836
+learning_rate_decay:
+  value: 'true'
+learning_rate_decay_gamma:
+  value: 1.0841996992325449
+local_learning_rate:
+  value: 0.013082251010050353
+localize_feature_extractor:
+  value: 'true'
+method:
+  value: RandomSelect
+model:
+  value: HARCNN
+total_num_clients:
+  value: 28

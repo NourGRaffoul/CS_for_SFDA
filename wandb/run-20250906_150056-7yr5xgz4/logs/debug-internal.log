@@ -1,0 +1,16 @@
+{"time":"2025-09-06T15:00:56.2132267+03:00","level":"INFO","msg":"using version","core version":"0.18.7"}
+{"time":"2025-09-06T15:00:56.2137357+03:00","level":"INFO","msg":"created symlink","path":"wandb\\run-20250906_150056-7yr5xgz4\\logs\\debug-core.log"}
+{"time":"2025-09-06T15:00:56.3270235+03:00","level":"INFO","msg":"created new stream","id":"7yr5xgz4"}
+{"time":"2025-09-06T15:00:56.3275347+03:00","level":"INFO","msg":"stream: started","id":"7yr5xgz4"}
+{"time":"2025-09-06T15:00:56.3275347+03:00","level":"INFO","msg":"writer: Do: started","stream_id":"7yr5xgz4"}
+{"time":"2025-09-06T15:00:56.3275347+03:00","level":"INFO","msg":"handler: started","stream_id":"7yr5xgz4"}
+{"time":"2025-09-06T15:00:56.3275347+03:00","level":"INFO","msg":"sender: started","stream_id":"7yr5xgz4"}
+{"time":"2025-09-06T15:01:26.3383957+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-09-06T15:01:58.7119113+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded"}
+{"time":"2025-09-06T15:02:27.0622193+03:00","level":"INFO","msg":"stream: closing","id":"7yr5xgz4"}
+{"time":"2025-09-06T15:02:27.0622193+03:00","level":"ERROR","msg":"sender: upsertRun:","error":"failed to upsert bucket: api: failed sending: POST https://api.wandb.ai/graphql giving up after 3 attempt(s): context canceled"}
+{"time":"2025-09-06T15:02:27.0624355+03:00","level":"INFO","msg":"handler: closed","stream_id":"7yr5xgz4"}
+{"time":"2025-09-06T15:02:27.0624355+03:00","level":"INFO","msg":"writer: Close: closed","stream_id":"7yr5xgz4"}
+{"time":"2025-09-06T15:02:27.0624355+03:00","level":"WARN","msg":"runwork: ignoring record after close","work":{"Record":{"RecordType":{"Request":{"RequestType":{"Defer":{}}}},"control":{"always_send":true}}}}
+{"time":"2025-09-06T15:02:27.0624355+03:00","level":"INFO","msg":"sender: closed","stream_id":"7yr5xgz4"}
+{"time":"2025-09-06T15:02:27.0624355+03:00","level":"INFO","msg":"stream: closed","id":"7yr5xgz4"}

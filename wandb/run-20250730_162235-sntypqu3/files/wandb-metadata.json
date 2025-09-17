@@ -1,0 +1,42 @@
+{
+    "os": "Windows-10-10.0.22621-SP0",
+    "python": "3.7.0",
+    "heartbeatAt": "2025-07-30T14:22:35.669939",
+    "startedAt": "2025-07-30T14:22:35.075683",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--imbalance_factor=10",
+        "--method=AFL"
+    ],
+    "state": "running",
+    "program": "main.py",
+    "codePathLocal": "main.py",
+    "codePath": "main.py",
+    "host": "LAPTOP-TL2LVGS2",
+    "username": "owner",
+    "executable": "C:\\Program Files\\Python37\\python.exe",
+    "cpu_count": 4,
+    "cpu_count_logical": 8,
+    "cpu_freq": {
+        "current": 2803.0,
+        "min": 0.0,
+        "max": 2803.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2803.0,
+            "min": 0.0,
+            "max": 2803.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 237.09667587280273,
+            "used": 236.38263320922852
+        }
+    },
+    "memory": {
+        "total": 15.746696472167969
+    }
+}

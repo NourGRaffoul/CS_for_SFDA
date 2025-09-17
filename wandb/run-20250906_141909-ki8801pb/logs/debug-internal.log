@@ -1,0 +1,31 @@
+{"time":"2025-09-06T14:19:09.3367659+03:00","level":"INFO","msg":"using version","core version":"0.18.7"}
+{"time":"2025-09-06T14:19:09.3367659+03:00","level":"INFO","msg":"created symlink","path":"wandb\\run-20250906_141909-ki8801pb\\logs\\debug-core.log"}
+{"time":"2025-09-06T14:19:09.4530953+03:00","level":"INFO","msg":"created new stream","id":"ki8801pb"}
+{"time":"2025-09-06T14:19:09.4531554+03:00","level":"INFO","msg":"stream: started","id":"ki8801pb"}
+{"time":"2025-09-06T14:19:09.4531554+03:00","level":"INFO","msg":"writer: Do: started","stream_id":"ki8801pb"}
+{"time":"2025-09-06T14:19:09.4531554+03:00","level":"INFO","msg":"handler: started","stream_id":"ki8801pb"}
+{"time":"2025-09-06T14:19:09.4531554+03:00","level":"INFO","msg":"sender: started","stream_id":"ki8801pb"}
+{"time":"2025-09-06T14:19:17.3669921+03:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-09-06T14:19:17.3669921+03:00","level":"WARN","msg":"handleCodeSave: program relative path is empty"}
+{"time":"2025-09-06T14:19:17.3675017+03:00","level":"ERROR","msg":"git repo not found","error":"repository does not exist"}
+{"time":"2025-09-06T14:19:47.4184943+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": net/http: request canceled (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-09-06T14:19:47.4524266+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": net/http: request canceled (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-09-06T14:19:47.502027+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": net/http: request canceled (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-09-06T14:20:11.2725802+03:00","level":"INFO","msg":"stream: closing","id":"ki8801pb"}
+{"time":"2025-09-06T14:20:11.2725802+03:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-09-06T14:20:11.2783716+03:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-09-06T14:20:11.7813718+03:00","level":"WARN","msg":"No program path found, not creating job artifact. See https://docs.wandb.ai/guides/launch/create-job"}
+{"time":"2025-09-06T14:20:11.7813718+03:00","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2025-09-06T14:20:12.4836924+03:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-09-06T14:20:13.0210131+03:00","level":"INFO","msg":"handler: closed","stream_id":"ki8801pb"}
+{"time":"2025-09-06T14:20:13.0210131+03:00","level":"INFO","msg":"sender: closed","stream_id":"ki8801pb"}
+{"time":"2025-09-06T14:20:13.0210131+03:00","level":"INFO","msg":"writer: Close: closed","stream_id":"ki8801pb"}
+{"time":"2025-09-06T14:20:13.0218841+03:00","level":"INFO","msg":"stream: closed","id":"ki8801pb"}
+{"time":"2025-09-06T14:20:13.0224341+03:00","level":"WARN","msg":"runwork: ignoring record after close","work":{"Record":{"RecordType":{"Request":{"RequestType":{"Keepalive":{}}}},"control":{"local":true,"connection_id":"127.0.0.1:55436"},"_info":{"stream_id":"ki8801pb"}}}}
+{"time":"2025-09-06T14:20:13.0229636+03:00","level":"WARN","msg":"runwork: ignoring record after close","work":{"Record":{"RecordType":{"Request":{"RequestType":{"Keepalive":{}}}},"control":{"local":true,"connection_id":"127.0.0.1:55436"},"_info":{"stream_id":"ki8801pb"}}}}
+{"time":"2025-09-06T14:20:13.0229636+03:00","level":"WARN","msg":"runwork: ignoring record after close","work":{"Record":{"RecordType":{"Request":{"RequestType":{"InternalMessages":{}}}},"control":{"local":true,"mailbox_slot":"d9i1zisa6e3s","connection_id":"127.0.0.1:55436"},"_info":{"stream_id":"ki8801pb"}}}}
+{"time":"2025-09-06T14:20:13.023015+03:00","level":"WARN","msg":"runwork: ignoring record after close","work":{"Record":{"RecordType":{"Request":{"RequestType":{"Keepalive":{}}}},"control":{"local":true,"connection_id":"127.0.0.1:55436"},"_info":{"stream_id":"ki8801pb"}}}}
+{"time":"2025-09-06T14:20:13.023015+03:00","level":"WARN","msg":"runwork: ignoring record after close","work":{"Record":{"RecordType":{"Request":{"RequestType":{"Keepalive":{}}}},"control":{"local":true,"connection_id":"127.0.0.1:55436"},"_info":{"stream_id":"ki8801pb"}}}}
+{"time":"2025-09-06T14:20:13.023015+03:00","level":"WARN","msg":"runwork: ignoring record after close","work":{"Record":{"RecordType":{"Request":{"RequestType":{"Keepalive":{}}}},"control":{"local":true,"connection_id":"127.0.0.1:55436"},"_info":{"stream_id":"ki8801pb"}}}}
+{"time":"2025-09-06T14:20:13.023015+03:00","level":"WARN","msg":"runwork: ignoring record after close","work":{"Record":{"RecordType":{"OutputRaw":{"timestamp":{"seconds":1757157606,"nanos":923233000},"line":"\u001b[34m\u001b[1mwandb\u001b[0m: Network error (ConnectionError), entering retry loop.\n"}},"control":{"connection_id":"127.0.0.1:55436"},"_info":{"stream_id":"ki8801pb"}}}}
+{"time":"2025-09-06T14:20:13.023015+03:00","level":"WARN","msg":"runwork: ignoring record after close","work":{"Record":{"RecordType":{"Request":{"RequestType":{"Keepalive":{}}}},"control":{"local":true,"connection_id":"127.0.0.1:55436"},"_info":{"stream_id":"ki8801pb"}}}}

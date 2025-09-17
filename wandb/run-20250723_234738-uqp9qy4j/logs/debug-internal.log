@@ -1,0 +1,69 @@
+2025-07-23 23:47:38,990 INFO    StreamThr :15452 [internal.py:wandb_internal():86] W&B internal server running at pid: 15452, started at: 2025-07-23 23:47:38.990158
+2025-07-23 23:47:39,000 DEBUG   HandlerThread:15452 [handler.py:handle_request():159] handle_request: status
+2025-07-23 23:47:39,031 INFO    WriterThread:15452 [datastore.py:open_for_write():87] open: .\wandb\run-20250723_234738-uqp9qy4j\run-uqp9qy4j.wandb
+2025-07-23 23:47:39,034 DEBUG   SenderThread:15452 [sender.py:send():388] send: header
+2025-07-23 23:47:39,037 DEBUG   SenderThread:15452 [sender.py:send():388] send: run
+2025-07-23 23:47:39,817 INFO    SenderThread:15452 [dir_watcher.py:__init__():211] watching files in: .\wandb\run-20250723_234738-uqp9qy4j\files
+2025-07-23 23:47:39,818 INFO    SenderThread:15452 [sender.py:_start_run_threads():1158] run started: uqp9qy4j with start time 1753307258.990158
+2025-07-23 23:47:39,869 DEBUG   HandlerThread:15452 [handler.py:handle_request():159] handle_request: run_start
+2025-07-23 23:47:39,898 DEBUG   HandlerThread:15452 [system_info.py:__init__():26] System info init
+2025-07-23 23:47:39,898 DEBUG   HandlerThread:15452 [system_info.py:__init__():41] System info init done
+2025-07-23 23:47:39,899 INFO    HandlerThread:15452 [system_monitor.py:start():194] Starting system monitor
+2025-07-23 23:47:39,901 INFO    SystemMonitor:15452 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2025-07-23 23:47:39,902 INFO    HandlerThread:15452 [system_monitor.py:probe():214] Collecting system info
+2025-07-23 23:47:39,917 INFO    SystemMonitor:15452 [interfaces.py:start():188] Started cpu monitoring
+2025-07-23 23:47:39,917 DEBUG   HandlerThread:15452 [system_info.py:probe():152] Probing system
+2025-07-23 23:47:39,918 INFO    SystemMonitor:15452 [interfaces.py:start():188] Started disk monitoring
+2025-07-23 23:47:39,933 INFO    SystemMonitor:15452 [interfaces.py:start():188] Started memory monitoring
+2025-07-23 23:47:39,936 DEBUG   HandlerThread:15452 [gitlib.py:_init_repo():56] git repository is invalid
+2025-07-23 23:47:39,936 DEBUG   HandlerThread:15452 [system_info.py:probe():200] Probing system done
+2025-07-23 23:47:39,958 INFO    SystemMonitor:15452 [interfaces.py:start():188] Started network monitoring
+2025-07-23 23:47:39,958 DEBUG   HandlerThread:15452 [system_monitor.py:probe():223] {'os': 'Windows-10-10.0.22621-SP0', 'python': '3.7.0', 'heartbeatAt': '2025-07-23T21:47:39.918235', 'startedAt': '2025-07-23T21:47:38.949534', 'docker': None, 'cuda': None, 'args': ('--algorithm=FedAvg', '--comment=SHOT', '--dataset=HAR', '--join_ratio=0.2', '--method=AFL', '--num_classes=6', '--total_num_clients=30'), 'state': 'running', 'program': 'main.py', 'codePathLocal': 'main.py', 'codePath': 'main.py', 'host': 'LAPTOP-TL2LVGS2', 'username': 'owner', 'executable': 'C:\\Program Files\\Python37\\python.exe', 'cpu_count': 4, 'cpu_count_logical': 8, 'cpu_freq': {'current': 2803.0, 'min': 0.0, 'max': 2803.0}, 'cpu_freq_per_core': [{'current': 2803.0, 'min': 0.0, 'max': 2803.0}], 'disk': {'/': {'total': 237.09667587280273, 'used': 234.44233322143555}}, 'memory': {'total': 15.746696472167969}}
+2025-07-23 23:47:39,959 INFO    HandlerThread:15452 [system_monitor.py:probe():224] Finished collecting system info
+2025-07-23 23:47:39,959 INFO    HandlerThread:15452 [system_monitor.py:probe():227] Publishing system info
+2025-07-23 23:47:39,959 DEBUG   HandlerThread:15452 [system_info.py:_save_code():44] Saving code
+2025-07-23 23:47:39,962 DEBUG   HandlerThread:15452 [system_info.py:_save_code():67] Saving code done
+2025-07-23 23:47:39,965 INFO    HandlerThread:15452 [system_monitor.py:probe():229] Finished publishing system info
+2025-07-23 23:47:39,973 DEBUG   SenderThread:15452 [sender.py:send():388] send: files
+2025-07-23 23:47:39,973 INFO    SenderThread:15452 [sender.py:_save_file():1421] saving file wandb-metadata.json with policy now
+2025-07-23 23:47:39,973 INFO    SenderThread:15452 [sender.py:_save_file():1421] saving file code\main.py with policy now
+2025-07-23 23:47:40,155 DEBUG   HandlerThread:15452 [handler.py:handle_request():159] handle_request: python_packages
+2025-07-23 23:47:40,155 DEBUG   SenderThread:15452 [sender.py:send_request():415] send_request: python_packages
+2025-07-23 23:47:40,156 DEBUG   HandlerThread:15452 [handler.py:handle_request():159] handle_request: stop_status
+2025-07-23 23:47:40,157 DEBUG   HandlerThread:15452 [handler.py:handle_request():159] handle_request: internal_messages
+2025-07-23 23:47:40,165 DEBUG   SenderThread:15452 [sender.py:send_request():415] send_request: stop_status
+2025-07-23 23:47:40,630 DEBUG   SenderThread:15452 [sender.py:send():388] send: telemetry
+2025-07-23 23:47:40,661 DEBUG   HandlerThread:15452 [handler.py:handle_request():159] handle_request: log_artifact
+2025-07-23 23:47:40,661 DEBUG   SenderThread:15452 [sender.py:send_request():415] send_request: log_artifact
+2025-07-23 23:47:40,677 INFO    wandb-upload_0:15452 [upload_job.py:push():130] Uploaded file C:\Users\owner\AppData\Local\Temp\tmp2c16u4_nwandb\hajqyouw-wandb-metadata.json
+2025-07-23 23:47:40,836 INFO    Thread-16 :15452 [dir_watcher.py:_on_file_created():271] file/dir created: .\wandb\run-20250723_234738-uqp9qy4j\files\code\main.py
+2025-07-23 23:47:40,837 INFO    Thread-16 :15452 [dir_watcher.py:_on_file_created():271] file/dir created: .\wandb\run-20250723_234738-uqp9qy4j\files\requirements.txt
+2025-07-23 23:47:40,838 INFO    Thread-16 :15452 [dir_watcher.py:_on_file_created():271] file/dir created: .\wandb\run-20250723_234738-uqp9qy4j\files\wandb-metadata.json
+2025-07-23 23:47:40,838 INFO    Thread-16 :15452 [dir_watcher.py:_on_file_created():271] file/dir created: .\wandb\run-20250723_234738-uqp9qy4j\files\code
+2025-07-23 23:47:40,974 INFO    wandb-upload_1:15452 [upload_job.py:push():130] Uploaded file C:\Users\owner\AppData\Local\Temp\tmp2c16u4_nwandb\lxccxhrh-code/main.py
+2025-07-23 23:47:42,465 INFO    wandb-upload_0:15452 [upload_job.py:push():88] Uploaded file C:\Users\owner\AppData\Local\wandb\wandb\artifacts\staging\tmpy9n6nliw
+2025-07-23 23:47:43,352 INFO    SenderThread:15452 [sender.py:send_request_log_artifact():1505] logged artifact source-AFL-HAR-4-None-20-main.py - {'id': 'QXJ0aWZhY3Q6MTkwMTAyNTYwMQ==', 'state': 'PENDING', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjY5MDkyNTEyOQ==', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MTg4OTI3NzY2MQ==', 'versionIndex': 0}}}
+2025-07-23 23:47:43,852 INFO    Thread-16 :15452 [dir_watcher.py:_on_file_created():271] file/dir created: .\wandb\run-20250723_234738-uqp9qy4j\files\output.log
+2025-07-23 23:47:44,433 DEBUG   HandlerThread:15452 [handler.py:handle_request():159] handle_request: status_report
+2025-07-23 23:47:45,883 INFO    Thread-16 :15452 [dir_watcher.py:_on_file_modified():288] file/dir modified: .\wandb\run-20250723_234738-uqp9qy4j\files\output.log
+2025-07-23 23:47:50,171 DEBUG   HandlerThread:15452 [handler.py:handle_request():159] handle_request: internal_messages
+2025-07-23 23:47:50,172 DEBUG   HandlerThread:15452 [handler.py:handle_request():159] handle_request: status_report
+2025-07-23 23:47:55,169 DEBUG   HandlerThread:15452 [handler.py:handle_request():159] handle_request: stop_status
+2025-07-23 23:47:55,169 DEBUG   SenderThread:15452 [sender.py:send_request():415] send_request: stop_status
+2025-07-23 23:47:55,419 DEBUG   HandlerThread:15452 [handler.py:handle_request():159] handle_request: status_report
+2025-07-23 23:48:00,179 DEBUG   HandlerThread:15452 [handler.py:handle_request():159] handle_request: internal_messages
+2025-07-23 23:48:01,217 DEBUG   HandlerThread:15452 [handler.py:handle_request():159] handle_request: status_report
+2025-07-23 23:48:06,229 DEBUG   HandlerThread:15452 [handler.py:handle_request():159] handle_request: status_report
+2025-07-23 23:48:10,171 DEBUG   HandlerThread:15452 [handler.py:handle_request():159] handle_request: stop_status
+2025-07-23 23:48:10,171 DEBUG   SenderThread:15452 [sender.py:send_request():415] send_request: stop_status
+2025-07-23 23:48:10,187 DEBUG   HandlerThread:15452 [handler.py:handle_request():159] handle_request: internal_messages
+2025-07-23 23:48:11,408 DEBUG   HandlerThread:15452 [handler.py:handle_request():159] handle_request: status_report
+2025-07-23 23:48:12,158 INFO    Thread-16 :15452 [dir_watcher.py:_on_file_modified():288] file/dir modified: .\wandb\run-20250723_234738-uqp9qy4j\files\config.yaml
+2025-07-23 23:48:17,266 DEBUG   HandlerThread:15452 [handler.py:handle_request():159] handle_request: status_report
+2025-07-23 23:48:20,216 DEBUG   HandlerThread:15452 [handler.py:handle_request():159] handle_request: internal_messages
+2025-07-23 23:48:22,297 DEBUG   HandlerThread:15452 [handler.py:handle_request():159] handle_request: status_report
+2025-07-23 23:48:25,178 DEBUG   HandlerThread:15452 [handler.py:handle_request():159] handle_request: stop_status
+2025-07-23 23:48:25,178 DEBUG   SenderThread:15452 [sender.py:send_request():415] send_request: stop_status
+2025-07-23 23:48:27,509 DEBUG   HandlerThread:15452 [handler.py:handle_request():159] handle_request: status_report
+2025-07-23 23:48:30,265 DEBUG   HandlerThread:15452 [handler.py:handle_request():159] handle_request: internal_messages
+2025-07-23 23:48:32,522 DEBUG   HandlerThread:15452 [handler.py:handle_request():159] handle_request: status_report

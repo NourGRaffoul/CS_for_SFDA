@@ -1,0 +1,19 @@
+2025-07-29 17:54:59,749 INFO    StreamThr :23824 [internal.py:wandb_internal():86] W&B internal server running at pid: 23824, started at: 2025-07-29 17:54:59.747159
+2025-07-29 17:54:59,757 DEBUG   HandlerThread:23824 [handler.py:handle_request():159] handle_request: status
+2025-07-29 17:54:59,783 INFO    WriterThread:23824 [datastore.py:open_for_write():87] open: .\wandb\run-20250729_175459-e4ei7omm\run-e4ei7omm.wandb
+2025-07-29 17:54:59,783 DEBUG   SenderThread:23824 [sender.py:send():388] send: header
+2025-07-29 17:54:59,790 DEBUG   SenderThread:23824 [sender.py:send():388] send: run
+2025-07-29 17:55:00,393 INFO    SenderThread:23824 [dir_watcher.py:__init__():211] watching files in: .\wandb\run-20250729_175459-e4ei7omm\files
+2025-07-29 17:55:00,394 INFO    SenderThread:23824 [sender.py:_start_run_threads():1158] run started: e4ei7omm with start time 1753804499.747159
+2025-07-29 17:55:00,777 WARNING StreamThr :23824 [internal.py:is_dead():400] Internal process exiting, parent pid 10060 disappeared
+2025-07-29 17:55:00,777 ERROR   StreamThr :23824 [internal.py:wandb_internal():145] Internal process shutdown.
+2025-07-29 17:55:00,800 INFO    HandlerThread:23824 [handler.py:finish():873] shutting down handler
+2025-07-29 17:55:00,801 INFO    WriterThread:23824 [datastore.py:close():296] close: .\wandb\run-20250729_175459-e4ei7omm\run-e4ei7omm.wandb
+2025-07-29 17:55:01,399 INFO    SenderThread:23824 [sender.py:finish():1600] shutting down sender
+2025-07-29 17:55:01,399 INFO    SenderThread:23824 [dir_watcher.py:finish():358] shutting down directory watcher
+2025-07-29 17:55:02,414 INFO    SenderThread:23824 [dir_watcher.py:finish():388] scan: .\wandb\run-20250729_175459-e4ei7omm\files
+2025-07-29 17:55:02,414 INFO    SenderThread:23824 [dir_watcher.py:finish():402] scan save: .\wandb\run-20250729_175459-e4ei7omm\files\config.yaml config.yaml
+2025-07-29 17:55:02,416 INFO    SenderThread:23824 [file_pusher.py:finish():169] shutting down file pusher
+2025-07-29 17:55:02,416 INFO    SenderThread:23824 [file_pusher.py:join():175] waiting for file pusher
+2025-07-29 17:55:03,174 INFO    wandb-upload_0:23824 [upload_job.py:push():130] Uploaded file .\wandb\run-20250729_175459-e4ei7omm\files\config.yaml
+2025-07-29 17:55:03,174 INFO    MainThread:23824 [internal.py:handle_exit():73] Internal process exited

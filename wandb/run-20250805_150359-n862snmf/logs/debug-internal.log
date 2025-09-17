@@ -1,0 +1,4 @@
+2025-08-05 15:03:59,615 INFO    StreamThr :28540 [internal.py:wandb_internal():86] W&B internal server running at pid: 28540, started at: 2025-08-05 15:03:59.607824
+2025-08-05 15:03:59,622 DEBUG   HandlerThread:28540 [handler.py:handle_request():159] handle_request: status
+2025-08-05 15:03:59,792 INFO    WriterThread:28540 [datastore.py:open_for_write():87] open: .\wandb\run-20250805_150359-n862snmf\run-n862snmf.wandb
+2025-08-05 15:03:59,794 DEBUG   SenderThread:28540 [sender.py:send():388] send: header

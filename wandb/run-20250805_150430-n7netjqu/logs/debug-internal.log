@@ -1,0 +1,4 @@
+2025-08-05 15:04:30,834 INFO    StreamThr :17928 [internal.py:wandb_internal():86] W&B internal server running at pid: 17928, started at: 2025-08-05 15:04:30.833431
+2025-08-05 15:04:30,838 DEBUG   HandlerThread:17928 [handler.py:handle_request():159] handle_request: status
+2025-08-05 15:04:30,891 INFO    WriterThread:17928 [datastore.py:open_for_write():87] open: .\wandb\run-20250805_150430-n7netjqu\run-n7netjqu.wandb
+2025-08-05 15:04:30,900 DEBUG   SenderThread:17928 [sender.py:send():388] send: header

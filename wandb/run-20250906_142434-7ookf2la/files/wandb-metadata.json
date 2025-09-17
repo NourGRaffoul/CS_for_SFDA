@@ -1,0 +1,34 @@
+{
+  "os":  "Windows-10-10.0.22621-SP0",
+  "python":  "3.7.0",
+  "startedAt":  "2025-09-06T11:24:34.835375Z",
+  "args":  [
+    "--method",
+    "AFL",
+    "-imb",
+    "1",
+    "--comment",
+    "NRC"
+  ],
+  "program":  "-m main",
+  "email":  "nourgraffoul@gmail.com",
+  "root":  ".",
+  "host":  "LAPTOP-TL2LVGS2",
+  "username":  "owner",
+  "executable":  "C:\\Program Files\\Python37\\python.exe",
+  "cpu_count":  4,
+  "cpu_count_logical":  8,
+  "disk":  {
+    "/":  {
+      "total":  "254580617216",
+      "used":  "247623839744"
+    }
+  },
+  "memory":  {
+    "total":  "16907886592"
+  },
+  "cpu":  {
+    "count":  4,
+    "countLogical":  8
+  }
+}

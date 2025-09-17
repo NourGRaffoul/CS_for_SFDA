@@ -1,0 +1,20 @@
+{"time":"2025-08-08T22:57:51.1773942+02:00","level":"INFO","msg":"using version","core version":"0.18.7"}
+{"time":"2025-08-08T22:57:51.1773942+02:00","level":"INFO","msg":"created symlink","path":"wandb\\run-20250808_225751-pdjn82fs\\logs\\debug-core.log"}
+{"time":"2025-08-08T22:57:51.3027195+02:00","level":"INFO","msg":"created new stream","id":"pdjn82fs"}
+{"time":"2025-08-08T22:57:51.3027195+02:00","level":"INFO","msg":"stream: started","id":"pdjn82fs"}
+{"time":"2025-08-08T22:57:51.3032701+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"pdjn82fs"}
+{"time":"2025-08-08T22:57:51.3038227+02:00","level":"INFO","msg":"sender: started","stream_id":"pdjn82fs"}
+{"time":"2025-08-08T22:57:51.3038227+02:00","level":"INFO","msg":"handler: started","stream_id":"pdjn82fs"}
+{"time":"2025-08-08T22:57:51.8910011+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-08-08T22:57:51.891535+02:00","level":"WARN","msg":"handleCodeSave: program relative path is empty"}
+{"time":"2025-08-08T22:57:51.8916125+02:00","level":"ERROR","msg":"git repo not found","error":"repository does not exist"}
+{"time":"2025-08-09T00:49:32.232051+02:00","level":"INFO","msg":"stream: closing","id":"pdjn82fs"}
+{"time":"2025-08-09T00:49:32.232051+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-08-09T00:49:32.2347077+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-08-09T00:49:32.4879544+02:00","level":"WARN","msg":"No program path found, not creating job artifact. See https://docs.wandb.ai/guides/launch/create-job"}
+{"time":"2025-08-09T00:49:32.4879544+02:00","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2025-08-09T00:49:33.1029285+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-08-09T00:49:33.4630795+02:00","level":"INFO","msg":"handler: closed","stream_id":"pdjn82fs"}
+{"time":"2025-08-09T00:49:33.4630795+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"pdjn82fs"}
+{"time":"2025-08-09T00:49:33.4630795+02:00","level":"INFO","msg":"sender: closed","stream_id":"pdjn82fs"}
+{"time":"2025-08-09T00:49:33.4632461+02:00","level":"INFO","msg":"stream: closed","id":"pdjn82fs"}

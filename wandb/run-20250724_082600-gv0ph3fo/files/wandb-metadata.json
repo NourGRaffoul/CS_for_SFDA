@@ -1,0 +1,46 @@
+{
+  "os":  "Windows-10-10.0.22621-SP0",
+  "python":  "3.7.0",
+  "startedAt":  "2025-07-24T06:26:00.854509Z",
+  "args":  [
+    "--dataset",
+    "HAR",
+    "--model",
+    "HARCNN",
+    "--algorithm",
+    "FedAvg",
+    "--method",
+    "RandomSelect",
+    "--join_ratio",
+    "0.2",
+    "--num_classes",
+    "6",
+    "--imbalance_factor",
+    "50",
+    "--local_epochs",
+    "1",
+    "--comment",
+    "SHOT"
+  ],
+  "program":  "-m main",
+  "email":  "nourgraffoul@gmail.com",
+  "root":  ".",
+  "host":  "LAPTOP-TL2LVGS2",
+  "username":  "owner",
+  "executable":  "C:\\Program Files\\Python37\\python.exe",
+  "cpu_count":  4,
+  "cpu_count_logical":  8,
+  "disk":  {
+    "/":  {
+      "total":  "254580617216",
+      "used":  "251164241920"
+    }
+  },
+  "memory":  {
+    "total":  "16907886592"
+  },
+  "cpu":  {
+    "count":  4,
+    "countLogical":  8
+  }
+}

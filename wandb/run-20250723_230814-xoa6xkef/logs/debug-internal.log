@@ -1,0 +1,20 @@
+{"time":"2025-07-23T23:08:14.3705489+02:00","level":"INFO","msg":"using version","core version":"0.18.7"}
+{"time":"2025-07-23T23:08:14.3705489+02:00","level":"INFO","msg":"created symlink","path":"wandb\\run-20250723_230814-xoa6xkef\\logs\\debug-core.log"}
+{"time":"2025-07-23T23:08:14.5032054+02:00","level":"INFO","msg":"created new stream","id":"xoa6xkef"}
+{"time":"2025-07-23T23:08:14.5032054+02:00","level":"INFO","msg":"stream: started","id":"xoa6xkef"}
+{"time":"2025-07-23T23:08:14.5047741+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"xoa6xkef"}
+{"time":"2025-07-23T23:08:14.505295+02:00","level":"INFO","msg":"handler: started","stream_id":"xoa6xkef"}
+{"time":"2025-07-23T23:08:14.5063333+02:00","level":"INFO","msg":"sender: started","stream_id":"xoa6xkef"}
+{"time":"2025-07-23T23:08:15.1457224+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-07-23T23:08:15.1457224+02:00","level":"WARN","msg":"handleCodeSave: program relative path is empty"}
+{"time":"2025-07-23T23:08:15.1462601+02:00","level":"ERROR","msg":"git repo not found","error":"repository does not exist"}
+{"time":"2025-07-23T23:47:09.3434467+02:00","level":"INFO","msg":"stream: closing","id":"xoa6xkef"}
+{"time":"2025-07-23T23:47:09.3434467+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-07-23T23:47:09.3444956+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-07-23T23:47:09.5580671+02:00","level":"WARN","msg":"No program path found, not creating job artifact. See https://docs.wandb.ai/guides/launch/create-job"}
+{"time":"2025-07-23T23:47:09.5580671+02:00","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2025-07-23T23:47:10.0046476+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-07-23T23:47:10.3281722+02:00","level":"INFO","msg":"handler: closed","stream_id":"xoa6xkef"}
+{"time":"2025-07-23T23:47:10.3281722+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"xoa6xkef"}
+{"time":"2025-07-23T23:47:10.3286786+02:00","level":"INFO","msg":"sender: closed","stream_id":"xoa6xkef"}
+{"time":"2025-07-23T23:47:10.3286786+02:00","level":"INFO","msg":"stream: closed","id":"xoa6xkef"}

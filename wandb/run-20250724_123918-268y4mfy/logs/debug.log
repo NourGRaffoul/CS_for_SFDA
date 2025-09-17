@@ -1,0 +1,26 @@
+2025-07-24 12:39:18,517 INFO    MainThread:22160 [wandb_setup.py:_flush():79] Current SDK version is 0.18.7
+2025-07-24 12:39:18,518 INFO    MainThread:22160 [wandb_setup.py:_flush():79] Configure stats pid to 22160
+2025-07-24 12:39:18,518 INFO    MainThread:22160 [wandb_setup.py:_flush():79] Loading settings from C:\Users\owner\AppData\Roaming\SPB_Data\.config\wandb\settings
+2025-07-24 12:39:18,518 INFO    MainThread:22160 [wandb_setup.py:_flush():79] Loading settings from C:\Users\owner\Downloads\Benchmark_Stage_backup2\Benchmark_Stage\system_shot_imbalance\wandb\settings
+2025-07-24 12:39:18,518 INFO    MainThread:22160 [wandb_setup.py:_flush():79] Loading settings from environment variables: {}
+2025-07-24 12:39:18,518 INFO    MainThread:22160 [wandb_setup.py:_flush():79] Applying setup settings: {'mode': None, '_disable_service': None}
+2025-07-24 12:39:18,519 WARNING MainThread:22160 [wandb_setup.py:_flush():79] Could not find program at -m main
+2025-07-24 12:39:18,519 INFO    MainThread:22160 [wandb_setup.py:_flush():79] Inferring run settings from compute environment: {'program_relpath': None, 'program': '-m main'}
+2025-07-24 12:39:18,519 INFO    MainThread:22160 [wandb_setup.py:_flush():79] Applying login settings: {}
+2025-07-24 12:39:18,520 INFO    MainThread:22160 [wandb_init.py:_log_setup():533] Logging user logs to .\wandb\run-20250724_123918-268y4mfy\logs\debug.log
+2025-07-24 12:39:18,520 INFO    MainThread:22160 [wandb_init.py:_log_setup():534] Logging internal logs to .\wandb\run-20250724_123918-268y4mfy\logs\debug-internal.log
+2025-07-24 12:39:18,520 INFO    MainThread:22160 [wandb_init.py:init():619] calling init triggers
+2025-07-24 12:39:18,521 INFO    MainThread:22160 [wandb_init.py:init():627] wandb.init called with sweep_config: {}
+config: {'goal': 'test', 'device': 'cuda', 'device_id': '0', 'dataset': 'HAR', 'num_classes': 6, 'model': 'HARCNN', 'batch_size': 10, 'local_learning_rate': 0.01, 'learning_rate_decay': False, 'learning_rate_decay_gamma': 0.99, 'global_rounds': 100, 'top_cnt': 100, 'local_epochs': 1, 'algorithm': 'FedAvg', 'join_ratio': 0.2, 'random_join_ratio': False, 'num_clients': 20, 'prev': 0, 'times': 1, 'eval_gap': 1, 'save_folder_name': 'items', 'auto_break': False, 'dlg_eval': False, 'dlg_gap': 100, 'batch_num_per_client': 2, 'num_new_clients': 0, 'fine_tuning_epoch_new': 0, 'feature_dim': 512, 'vocab_size': 80, 'max_len': 200, 'few_shot': 0, 'client_drop_rate': 0.0, 'train_slow_rate': 0.0, 'send_slow_rate': 0.0, 'time_select': False, 'time_threthold': 10000, 'beta': 0.0, 'lamda': 1.0, 'mu': 0.0, 'K': 5, 'p_learning_rate': 0.01, 'M': 5, 'itk': 4000, 'alphaK': 1.0, 'sigma': 1.0, 'alpha': 1.0, 'plocal_epochs': 1, 'tau': 1.0, 'fine_tuning_epochs': 10, 'dr_learning_rate': 0.0, 'L': 1.0, 'noise_dim': 512, 'generator_learning_rate': 0.005, 'hidden_dim': 512, 'server_epochs': 1000, 'localize_feature_extractor': False, 'server_learning_rate': 0.1, 'eta': 1.0, 'rand_percent': 80, 'layer_idx': 2, 'mentee_learning_rate': 0.005, 'T_start': 0.95, 'T_end': 0.98, 'momentum': 0.1, 'kl_weight': 0.0, 'num_candidates': 0, 'method': 'FullPart', 'comment': 'IMB', 'num_clients_per_round': 4, 'num_available': None, 'loss_div_sqrt': False, 'loss_sum': False, 'subset_ratio': 0.1, 'alpha1': 0.75, 'alpha2': 1, 'alpha3': 0.1, 'save_probs': False, 'no_save_results': False, 'src_id': 8, 'imbalance_factor': 50.0, 'total_num_clients': 20, 'num_epoch': 1, 'wandb': True}
+2025-07-24 12:39:18,521 INFO    MainThread:22160 [wandb_init.py:init():669] starting backend
+2025-07-24 12:39:18,521 INFO    MainThread:22160 [wandb_init.py:init():673] sending inform_init request
+2025-07-24 12:39:18,526 INFO    MainThread:22160 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=spawn, using: spawn
+2025-07-24 12:39:18,535 INFO    MainThread:22160 [wandb_init.py:init():686] backend started and connected
+2025-07-24 12:39:18,547 INFO    MainThread:22160 [wandb_init.py:init():781] updated telemetry
+2025-07-24 12:39:18,549 INFO    MainThread:22160 [wandb_init.py:init():814] communicating run to backend with 90.0 second timeout
+2025-07-24 12:39:19,324 INFO    MainThread:22160 [wandb_init.py:init():867] starting run threads in backend
+2025-07-24 12:39:19,587 INFO    MainThread:22160 [wandb_run.py:_console_start():2456] atexit reg
+2025-07-24 12:39:19,588 INFO    MainThread:22160 [wandb_run.py:_redirect():2305] redirect: wrap_raw
+2025-07-24 12:39:19,588 INFO    MainThread:22160 [wandb_run.py:_redirect():2370] Wrapping output streams.
+2025-07-24 12:39:19,589 INFO    MainThread:22160 [wandb_run.py:_redirect():2395] Redirects installed.
+2025-07-24 12:39:19,595 INFO    MainThread:22160 [wandb_init.py:init():911] run started, returning control to user process

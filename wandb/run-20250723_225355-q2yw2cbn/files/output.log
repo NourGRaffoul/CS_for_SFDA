@@ -1,0 +1,183 @@
+
+cuda is not avaiable.
+
+==================================================
+goal = test
+device = cpu
+device_id = 0
+dataset = HAR
+num_classes = 6
+model = HARCNN
+batch_size = 10
+local_learning_rate = 0.01
+learning_rate_decay = False
+learning_rate_decay_gamma = 0.99
+global_rounds = 100
+top_cnt = 100
+local_epochs = 10
+algorithm = FedAvg
+join_ratio = 0.2
+random_join_ratio = False
+num_clients = 20
+prev = 0
+times = 1
+eval_gap = 1
+save_folder_name = items
+auto_break = False
+dlg_eval = False
+dlg_gap = 100
+batch_num_per_client = 2
+num_new_clients = 0
+fine_tuning_epoch_new = 0
+feature_dim = 512
+vocab_size = 80
+max_len = 200
+few_shot = 0
+client_drop_rate = 0.0
+train_slow_rate = 0.0
+send_slow_rate = 0.0
+time_select = False
+time_threthold = 10000
+beta = 0.0
+lamda = 1.0
+mu = 0.0
+K = 5
+p_learning_rate = 0.01
+M = 5
+itk = 4000
+alphaK = 1.0
+sigma = 1.0
+alpha = 1.0
+plocal_epochs = 1
+tau = 1.0
+fine_tuning_epochs = 10
+dr_learning_rate = 0.0
+L = 1.0
+noise_dim = 512
+generator_learning_rate = 0.005
+hidden_dim = 512
+server_epochs = 1000
+localize_feature_extractor = False
+server_learning_rate = 0.1
+eta = 1.0
+rand_percent = 80
+layer_idx = 2
+mentee_learning_rate = 0.005
+T_start = 0.95
+T_end = 0.98
+momentum = 0.1
+kl_weight = 0.0
+num_candidates = 0
+method = RandomSelect
+comment =
+num_clients_per_round = 4
+num_available = None
+loss_div_sqrt = False
+loss_sum = False
+subset_ratio = 0.1
+alpha1 = 0.75
+alpha2 = 1
+alpha3 = 0.1
+save_probs = False
+no_save_results = False
+src_id = 8
+total_num_clients = 20
+num_epoch = 10
+wandb = True
+==================================================
+
+****** Client source: 8 *******
+Accuracy of source client: 80.46%
+
+============= Running time: 0th =============
+Creating server and clients ...
+HARCNN
+Initializing client selection method: RandomSelect
+
+Join ratio / total clients: 0.2 / 20
+Finished creating server and clients.
+
+------------- Round 0-------------
+> Pre-training selection: choosing 4 clients.
+SELECTED INDICES:  [ 4 18  6 13]
+DEBUG: About to index self.clients. Length of self.clients is: 20
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 2.6103
+Averaged Test Accurancy: 0.4761
+Averaged Test AUC: 0.8310
+Std Test Accurancy: 0.1600
+Std Test AUC: 0.0642
+--- Training 4 clients ---
+DEBUG: self.model: SHOT(
+  (cross_entropy): CrossEntropyLabelSmooth(
+    (logsoftmax): LogSoftmax(dim=1)
+  )
+  (feature_extractor): CNN(
+    (conv_block1): Sequential(
+      (0): Conv1d(9, 64, kernel_size=(5,), stride=(1,), padding=(2,), bias=False)
+      (1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU()
+      (3): MaxPool1d(kernel_size=2, stride=2, padding=1, dilation=1, ceil_mode=False)
+      (4): Dropout(p=0.5, inplace=False)
+    )
+    (conv_block2): Sequential(
+      (0): Conv1d(64, 128, kernel_size=(8,), stride=(1,), padding=(4,), bias=False)
+      (1): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU()
+      (3): MaxPool1d(kernel_size=2, stride=2, padding=1, dilation=1, ceil_mode=False)
+    )
+    (conv_block3): Sequential(
+      (0): Conv1d(128, 128, kernel_size=(8,), stride=(1,), padding=(4,), bias=False)
+      (1): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU()
+      (3): MaxPool1d(kernel_size=2, stride=2, padding=1, dilation=1, ceil_mode=False)
+    )
+    (aap): AdaptiveAvgPool1d(output_size=1)
+  )
+  (classifier): classifier(
+    (logits): Linear(in_features=128, out_features=6, bias=True)
+  )
+  (network): Sequential(
+    (0): CNN(
+      (conv_block1): Sequential(
+        (0): Conv1d(9, 64, kernel_size=(5,), stride=(1,), padding=(2,), bias=False)
+        (1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (2): ReLU()
+        (3): MaxPool1d(kernel_size=2, stride=2, padding=1, dilation=1, ceil_mode=False)
+        (4): Dropout(p=0.5, inplace=False)
+      )
+      (conv_block2): Sequential(
+        (0): Conv1d(64, 128, kernel_size=(8,), stride=(1,), padding=(4,), bias=False)
+        (1): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (2): ReLU()
+        (3): MaxPool1d(kernel_size=2, stride=2, padding=1, dilation=1, ceil_mode=False)
+      )
+      (conv_block3): Sequential(
+        (0): Conv1d(128, 128, kernel_size=(8,), stride=(1,), padding=(4,), bias=False)
+        (1): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (2): ReLU()
+        (3): MaxPool1d(kernel_size=2, stride=2, padding=1, dilation=1, ceil_mode=False)
+      )
+      (aap): AdaptiveAvgPool1d(output_size=1)
+    )
+    (1): classifier(
+      (logits): Linear(in_features=128, out_features=6, bias=True)
+    )
+  )
+)
+Traceback (most recent call last):
+  File "C:\Program Files\Python37\lib\runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "C:\Program Files\Python37\lib\runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "C:\Users\owner\Downloads\Benchmark_Stage_backup2\Benchmark_Stage\system_shot\main.py", line 235, in <module>
+    run(args, client_selection)
+  File "C:\Users\owner\Downloads\Benchmark_Stage_backup2\Benchmark_Stage\system_shot\main.py", line 145, in run
+    server.train()
+  File "C:\Users\owner\Downloads\Benchmark_Stage_backup2\Benchmark_Stage\system_shot\flcore\servers\serveravg.py", line 151, in train
+    local_losses, accuracy, local_metrics = self.train_clients(clients_for_training)
+  File "C:\Users\owner\Downloads\Benchmark_Stage_backup2\Benchmark_Stage\system_shot\flcore\servers\serverbase.py", line 456, in train_clients
+    local_losses.append(train_result['loss'])
+TypeError: tuple indices must be integers or slices, not str

@@ -1,0 +1,1353 @@
+
+cuda is not avaiable.
+
+==================================================
+goal = test
+device = cpu
+device_id = 0
+dataset = HAR
+num_classes = 6
+model = CNN
+batch_size = 10
+local_learning_rate = 0.01
+learning_rate_decay = False
+learning_rate_decay_gamma = 0.99
+global_rounds = 60
+top_cnt = 100
+local_epochs = 10
+algorithm = FedAvg
+join_ratio = 0.25
+random_join_ratio = False
+num_clients = 20
+prev = 0
+times = 1
+eval_gap = 1
+save_folder_name = items
+auto_break = False
+dlg_eval = False
+dlg_gap = 100
+batch_num_per_client = 2
+num_new_clients = 0
+fine_tuning_epoch_new = 0
+feature_dim = 512
+vocab_size = 80
+max_len = 200
+few_shot = 0
+client_drop_rate = 0.0
+train_slow_rate = 0.0
+send_slow_rate = 0.0
+time_select = False
+time_threthold = 10000
+beta = 0.0
+lamda = 1.0
+mu = 0.0
+K = 5
+p_learning_rate = 0.01
+M = 5
+itk = 4000
+alphaK = 1.0
+sigma = 1.0
+alpha = 1.0
+plocal_epochs = 1
+tau = 1.0
+fine_tuning_epochs = 10
+dr_learning_rate = 0.0
+L = 1.0
+noise_dim = 512
+generator_learning_rate = 0.005
+hidden_dim = 512
+server_epochs = 1000
+localize_feature_extractor = False
+server_learning_rate = 0.1
+eta = 1.0
+rand_percent = 80
+layer_idx = 2
+mentee_learning_rate = 0.005
+T_start = 0.95
+T_end = 0.98
+momentum = 0.1
+kl_weight = 0.0
+num_candidates = 10
+method = DivFL
+comment = _REDO
+num_clients_per_round = 5
+num_available = None
+loss_div_sqrt = False
+loss_sum = False
+subset_ratio = 0.1
+alpha1 = 0.75
+alpha2 = 1
+alpha3 = 0.1
+save_probs = False
+no_save_results = False
+src_id = 1
+imbalance_factor = 10.0
+total_num_clients = 20
+num_epoch = 10
+wandb = True
+==================================================
+
+****** Client source: 1 *******
+Accuracy of source client: 97.80%
+
+============= Running time: 0th =============
+Creating server and clients ...
+CNN
+Initializing client selection method: DivFL
+Pre-loading and preparing all client data...
+INFO: Simulating imbalance with factor 10.0 for client 0 training data.
+INFO: Simulating imbalance with factor 10.0 for client 1 training data.
+INFO: Simulating imbalance with factor 10.0 for client 2 training data.
+INFO: Simulating imbalance with factor 10.0 for client 3 training data.
+INFO: Simulating imbalance with factor 10.0 for client 4 training data.
+INFO: Simulating imbalance with factor 10.0 for client 5 training data.
+INFO: Simulating imbalance with factor 10.0 for client 6 training data.
+INFO: Simulating imbalance with factor 10.0 for client 7 training data.
+INFO: Simulating imbalance with factor 10.0 for client 8 training data.
+INFO: Simulating imbalance with factor 10.0 for client 9 training data.
+INFO: Simulating imbalance with factor 10.0 for client 10 training data.
+INFO: Simulating imbalance with factor 10.0 for client 11 training data.
+INFO: Simulating imbalance with factor 10.0 for client 12 training data.
+INFO: Simulating imbalance with factor 10.0 for client 13 training data.
+INFO: Simulating imbalance with factor 10.0 for client 14 training data.
+INFO: Simulating imbalance with factor 10.0 for client 15 training data.
+INFO: Simulating imbalance with factor 10.0 for client 16 training data.
+INFO: Simulating imbalance with factor 10.0 for client 17 training data.
+INFO: Simulating imbalance with factor 10.0 for client 18 training data.
+INFO: Simulating imbalance with factor 10.0 for client 19 training data.
+Data loading complete.
+
+Join ratio / total clients: 0.25 / 20
+Finished creating server and clients.
+
+------------- Round 0-------------
+> Post-training selection enabled for method 'DivFL'.
+> Initializing selection method 'DivFL' with the global model.
+> Distributing global model to 20 clients.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.8225
+Averaged Test Accurancy: 0.7609
+Averaged Test AUC: 0.8797
+Std Test Accurancy: 0.1663
+Std Test AUC: 0.0932
+--- Training 20 clients ---
+> Post-training selection: choosing 5 from 20 trained clients.
+>   (Using local models as metric for DivFL)
+>> similarity: 100%|█████████████████████████| 400/400 [00:00<00:00, 400.15it/s]
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [0, 4, 8, 11, 19]
+------------------------- time cost ------------------------- 1373.6138515472412
+
+------------- Round 1-------------
+> Post-training selection enabled for method 'DivFL'.
+> Initializing selection method 'DivFL' with the global model.
+> Distributing global model to 20 clients.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.6473
+Averaged Test Accurancy: 0.6701
+Averaged Test AUC: 0.9306
+Std Test Accurancy: 0.1465
+Std Test AUC: 0.0696
+--- Training 20 clients ---
+> Post-training selection: choosing 5 from 20 trained clients.
+>   (Using local models as metric for DivFL)
+>> similarity: 100%|█████████████████████████| 400/400 [00:00<00:00, 466.54it/s]
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [2, 4, 10, 14, 17]
+------------------------- time cost ------------------------- 1131.743504524231
+
+------------- Round 2-------------
+> Post-training selection enabled for method 'DivFL'.
+> Initializing selection method 'DivFL' with the global model.
+> Distributing global model to 20 clients.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.6603
+Averaged Test Accurancy: 0.8492
+Averaged Test AUC: 0.9459
+Std Test Accurancy: 0.1693
+Std Test AUC: 0.0939
+--- Training 20 clients ---
+> Post-training selection: choosing 5 from 20 trained clients.
+>   (Using local models as metric for DivFL)
+>> similarity: 100%|█████████████████████████| 400/400 [00:00<00:00, 422.20it/s]
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [5, 8, 10, 17, 19]
+------------------------- time cost ------------------------- 977.0480930805206
+
+------------- Round 3-------------
+> Post-training selection enabled for method 'DivFL'.
+> Initializing selection method 'DivFL' with the global model.
+> Distributing global model to 20 clients.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.8109
+Averaged Test Accurancy: 0.8305
+Averaged Test AUC: 0.9347
+Std Test Accurancy: 0.1750
+Std Test AUC: 0.0997
+--- Training 20 clients ---
+> Post-training selection: choosing 5 from 20 trained clients.
+>   (Using local models as metric for DivFL)
+>> similarity: 100%|█████████████████████████| 400/400 [00:00<00:00, 440.84it/s]
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [0, 8, 10, 12, 19]
+------------------------- time cost ------------------------- 1010.6447212696075
+
+------------- Round 4-------------
+> Post-training selection enabled for method 'DivFL'.
+> Initializing selection method 'DivFL' with the global model.
+> Distributing global model to 20 clients.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.9774
+Averaged Test Accurancy: 0.7944
+Averaged Test AUC: 0.9234
+Std Test Accurancy: 0.1675
+Std Test AUC: 0.0998
+--- Training 20 clients ---
+> Post-training selection: choosing 5 from 20 trained clients.
+>   (Using local models as metric for DivFL)
+>> similarity: 100%|█████████████████████████| 400/400 [00:00<00:00, 676.93it/s]
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [9, 10, 15, 16, 19]
+------------------------- time cost ------------------------- 433394.9648325443
+
+------------- Round 5-------------
+> Post-training selection enabled for method 'DivFL'.
+> Initializing selection method 'DivFL' with the global model.
+> Distributing global model to 20 clients.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.7705
+Averaged Test Accurancy: 0.5685
+Averaged Test AUC: 0.8926
+Std Test Accurancy: 0.1797
+Std Test AUC: 0.0688
+--- Training 20 clients ---
+[34m[1mwandb[0m: [33mWARNING[0m Fatal error while uploading data. Some run data will not be synced, but it will still be written to disk. Use `wandb sync` at the end of the run to try uploading.
+> Post-training selection: choosing 5 from 20 trained clients.
+>   (Using local models as metric for DivFL)
+>> similarity: 100%|█████████████████████████| 400/400 [00:00<00:00, 573.54it/s]
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [0, 10, 14, 16, 19]
+------------------------- time cost ------------------------- 964.9007089138031
+
+------------- Round 6-------------
+> Post-training selection enabled for method 'DivFL'.
+> Initializing selection method 'DivFL' with the global model.
+> Distributing global model to 20 clients.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.5181
+Averaged Test Accurancy: 0.5706
+Averaged Test AUC: 0.8041
+Std Test Accurancy: 0.1466
+Std Test AUC: 0.0755
+--- Training 20 clients ---
+> Post-training selection: choosing 5 from 20 trained clients.
+>   (Using local models as metric for DivFL)
+>> similarity: 100%|█████████████████████████| 400/400 [00:00<00:00, 683.33it/s]
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [3, 5, 6, 8, 11]
+------------------------- time cost ------------------------- 787.735916852951
+
+------------- Round 7-------------
+> Post-training selection enabled for method 'DivFL'.
+> Initializing selection method 'DivFL' with the global model.
+> Distributing global model to 20 clients.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.0349
+Averaged Test Accurancy: 0.7756
+Averaged Test AUC: 0.9158
+Std Test Accurancy: 0.1664
+Std Test AUC: 0.1062
+--- Training 20 clients ---
+> Post-training selection: choosing 5 from 20 trained clients.
+>   (Using local models as metric for DivFL)
+>> similarity: 100%|█████████████████████████| 400/400 [00:00<00:00, 687.15it/s]
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [1, 8, 10, 11, 12]
+------------------------- time cost ------------------------- 654.9793019294739
+
+------------- Round 8-------------
+> Post-training selection enabled for method 'DivFL'.
+> Initializing selection method 'DivFL' with the global model.
+> Distributing global model to 20 clients.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.1765
+Averaged Test Accurancy: 0.5173
+Averaged Test AUC: 0.6680
+Std Test Accurancy: 0.1135
+Std Test AUC: 0.1199
+--- Training 20 clients ---
+> Post-training selection: choosing 5 from 20 trained clients.
+>   (Using local models as metric for DivFL)
+>> similarity: 100%|█████████████████████████| 400/400 [00:00<00:00, 828.69it/s]
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [3, 7, 8, 12, 14]
+------------------------- time cost ------------------------- 613.0151488780975
+
+------------- Round 9-------------
+> Post-training selection enabled for method 'DivFL'.
+> Initializing selection method 'DivFL' with the global model.
+> Distributing global model to 20 clients.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.9426
+Averaged Test Accurancy: 0.7462
+Averaged Test AUC: 0.9153
+Std Test Accurancy: 0.1532
+Std Test AUC: 0.1200
+--- Training 20 clients ---
+> Post-training selection: choosing 5 from 20 trained clients.
+>   (Using local models as metric for DivFL)
+>> similarity: 100%|█████████████████████████| 400/400 [00:00<00:00, 862.31it/s]
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [1, 8, 10, 11, 16]
+------------------------- time cost ------------------------- 589.4584746360779
+
+------------- Round 10-------------
+> Post-training selection enabled for method 'DivFL'.
+> Initializing selection method 'DivFL' with the global model.
+> Distributing global model to 20 clients.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.1475
+Averaged Test Accurancy: 0.4853
+Averaged Test AUC: 0.7332
+Std Test Accurancy: 0.1402
+Std Test AUC: 0.1236
+--- Training 20 clients ---
+> Post-training selection: choosing 5 from 20 trained clients.
+>   (Using local models as metric for DivFL)
+>> similarity: 100%|█████████████████████████| 400/400 [00:00<00:00, 866.11it/s]
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [0, 2, 4, 11, 15]
+------------------------- time cost ------------------------- 556.5836789608002
+
+------------- Round 11-------------
+> Post-training selection enabled for method 'DivFL'.
+> Initializing selection method 'DivFL' with the global model.
+> Distributing global model to 20 clients.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.1333
+Averaged Test Accurancy: 0.6360
+Averaged Test AUC: 0.8374
+Std Test Accurancy: 0.1568
+Std Test AUC: 0.1029
+--- Training 20 clients ---
+> Post-training selection: choosing 5 from 20 trained clients.
+>   (Using local models as metric for DivFL)
+>> similarity: 100%|█████████████████████████| 400/400 [00:00<00:00, 408.08it/s]
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [0, 5, 8, 11, 17]
+------------------------- time cost ------------------------- 1006.282053232193
+
+------------- Round 12-------------
+> Post-training selection enabled for method 'DivFL'.
+> Initializing selection method 'DivFL' with the global model.
+> Distributing global model to 20 clients.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.3779
+Averaged Test Accurancy: 0.5462
+Averaged Test AUC: 0.8267
+Std Test Accurancy: 0.1560
+Std Test AUC: 0.0968
+--- Training 20 clients ---
+> Post-training selection: choosing 5 from 20 trained clients.
+>   (Using local models as metric for DivFL)
+>> similarity: 100%|█████████████████████████| 400/400 [00:00<00:00, 494.41it/s]
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [3, 4, 11, 15, 16]
+------------------------- time cost ------------------------- 2203.841503381729
+
+------------- Round 13-------------
+> Post-training selection enabled for method 'DivFL'.
+> Initializing selection method 'DivFL' with the global model.
+> Distributing global model to 20 clients.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.8733
+Averaged Test Accurancy: 0.6650
+Averaged Test AUC: 0.8695
+Std Test Accurancy: 0.1072
+Std Test AUC: 0.1123
+--- Training 20 clients ---
+> Post-training selection: choosing 5 from 20 trained clients.
+>   (Using local models as metric for DivFL)
+>> similarity: 100%|█████████████████████████| 400/400 [00:00<00:00, 404.24it/s]
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [4, 7, 9, 13, 15]
+------------------------- time cost ------------------------- 674.5314910411835
+
+------------- Round 14-------------
+> Post-training selection enabled for method 'DivFL'.
+> Initializing selection method 'DivFL' with the global model.
+> Distributing global model to 20 clients.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.9279
+Averaged Test Accurancy: 0.6609
+Averaged Test AUC: 0.8429
+Std Test Accurancy: 0.1357
+Std Test AUC: 0.0968
+--- Training 20 clients ---
+> Post-training selection: choosing 5 from 20 trained clients.
+>   (Using local models as metric for DivFL)
+>> similarity: 100%|█████████████████████████| 400/400 [00:01<00:00, 343.24it/s]
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [4, 7, 9, 11, 12]
+------------------------- time cost ------------------------- 797.4700453281403
+
+------------- Round 15-------------
+> Post-training selection enabled for method 'DivFL'.
+> Initializing selection method 'DivFL' with the global model.
+> Distributing global model to 20 clients.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.9410
+Averaged Test Accurancy: 0.6584
+Averaged Test AUC: 0.8546
+Std Test Accurancy: 0.1341
+Std Test AUC: 0.0910
+--- Training 20 clients ---
+> Post-training selection: choosing 5 from 20 trained clients.
+>   (Using local models as metric for DivFL)
+>> similarity: 100%|█████████████████████████| 400/400 [00:00<00:00, 794.26it/s]
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [0, 4, 8, 12, 14]
+------------------------- time cost ------------------------- 722.856454372406
+
+------------- Round 16-------------
+> Post-training selection enabled for method 'DivFL'.
+> Initializing selection method 'DivFL' with the global model.
+> Distributing global model to 20 clients.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.3764
+Averaged Test Accurancy: 0.6299
+Averaged Test AUC: 0.7949
+Std Test Accurancy: 0.1398
+Std Test AUC: 0.1024
+--- Training 20 clients ---
+> Post-training selection: choosing 5 from 20 trained clients.
+>   (Using local models as metric for DivFL)
+>> similarity: 100%|█████████████████████████| 400/400 [00:00<00:00, 696.69it/s]
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [3, 5, 8, 11, 13]
+------------------------- time cost ------------------------- 648.4555976390839
+
+------------- Round 17-------------
+> Post-training selection enabled for method 'DivFL'.
+> Initializing selection method 'DivFL' with the global model.
+> Distributing global model to 20 clients.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.0854
+Averaged Test Accurancy: 0.6751
+Averaged Test AUC: 0.8555
+Std Test Accurancy: 0.1156
+Std Test AUC: 0.1028
+--- Training 20 clients ---
+> Post-training selection: choosing 5 from 20 trained clients.
+>   (Using local models as metric for DivFL)
+>> similarity: 100%|█████████████████████████| 400/400 [00:00<00:00, 427.71it/s]
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [3, 4, 7, 8, 15]
+------------------------- time cost ------------------------- 899.2272489070892
+
+------------- Round 18-------------
+> Post-training selection enabled for method 'DivFL'.
+> Initializing selection method 'DivFL' with the global model.
+> Distributing global model to 20 clients.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.9169
+Averaged Test Accurancy: 0.6619
+Averaged Test AUC: 0.8528
+Std Test Accurancy: 0.1171
+Std Test AUC: 0.0964
+--- Training 20 clients ---
+> Post-training selection: choosing 5 from 20 trained clients.
+>   (Using local models as metric for DivFL)
+>> similarity: 100%|█████████████████████████| 400/400 [00:00<00:00, 765.05it/s]
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [0, 3, 11, 13, 15]
+------------------------- time cost ------------------------- 795.102175951004
+
+------------- Round 19-------------
+> Post-training selection enabled for method 'DivFL'.
+> Initializing selection method 'DivFL' with the global model.
+> Distributing global model to 20 clients.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.9980
+Averaged Test Accurancy: 0.6259
+Averaged Test AUC: 0.8094
+Std Test Accurancy: 0.1513
+Std Test AUC: 0.1013
+--- Training 20 clients ---
+> Post-training selection: choosing 5 from 20 trained clients.
+>   (Using local models as metric for DivFL)
+>> similarity: 100%|█████████████████████████| 400/400 [00:01<00:00, 232.29it/s]
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [0, 4, 6, 9, 10]
+------------------------- time cost ------------------------- 891.6426272392273
+
+------------- Round 20-------------
+> Post-training selection enabled for method 'DivFL'.
+> Initializing selection method 'DivFL' with the global model.
+> Distributing global model to 20 clients.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.5078
+Averaged Test Accurancy: 0.6269
+Averaged Test AUC: 0.8072
+Std Test Accurancy: 0.1382
+Std Test AUC: 0.1029
+--- Training 20 clients ---
+> Post-training selection: choosing 5 from 20 trained clients.
+>   (Using local models as metric for DivFL)
+>> similarity: 100%|█████████████████████████| 400/400 [00:00<00:00, 408.78it/s]
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [4, 5, 9, 11, 16]
+------------------------- time cost ------------------------- 942.6965639591217
+
+------------- Round 21-------------
+> Post-training selection enabled for method 'DivFL'.
+> Initializing selection method 'DivFL' with the global model.
+> Distributing global model to 20 clients.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.3118
+Averaged Test Accurancy: 0.5954
+Averaged Test AUC: 0.8180
+Std Test Accurancy: 0.1428
+Std Test AUC: 0.1000
+--- Training 20 clients ---
+> Post-training selection: choosing 5 from 20 trained clients.
+>   (Using local models as metric for DivFL)
+>> similarity: 100%|█████████████████████████| 400/400 [00:01<00:00, 322.74it/s]
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [3, 6, 7, 9, 11]
+------------------------- time cost ------------------------- 1183.7529633045197
+
+------------- Round 22-------------
+> Post-training selection enabled for method 'DivFL'.
+> Initializing selection method 'DivFL' with the global model.
+> Distributing global model to 20 clients.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.9118
+Averaged Test Accurancy: 0.6858
+Averaged Test AUC: 0.8629
+Std Test Accurancy: 0.1188
+Std Test AUC: 0.0897
+--- Training 20 clients ---
+> Post-training selection: choosing 5 from 20 trained clients.
+>   (Using local models as metric for DivFL)
+>> similarity: 100%|█████████████████████████| 400/400 [00:00<00:00, 608.76it/s]
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [3, 7, 8, 12, 14]
+------------------------- time cost ------------------------- 1053.3150918483734
+
+------------- Round 23-------------
+> Post-training selection enabled for method 'DivFL'.
+> Initializing selection method 'DivFL' with the global model.
+> Distributing global model to 20 clients.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.9759
+Averaged Test Accurancy: 0.6371
+Averaged Test AUC: 0.8464
+Std Test Accurancy: 0.1228
+Std Test AUC: 0.0965
+--- Training 20 clients ---
+> Post-training selection: choosing 5 from 20 trained clients.
+>   (Using local models as metric for DivFL)
+>> similarity: 100%|█████████████████████████| 400/400 [00:01<00:00, 298.14it/s]
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [5, 8, 14, 16, 17]
+------------------------- time cost ------------------------- 1077.325140953064
+
+------------- Round 24-------------
+> Post-training selection enabled for method 'DivFL'.
+> Initializing selection method 'DivFL' with the global model.
+> Distributing global model to 20 clients.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.3266
+Averaged Test Accurancy: 0.6168
+Averaged Test AUC: 0.7763
+Std Test Accurancy: 0.1484
+Std Test AUC: 0.1039
+--- Training 20 clients ---
+> Post-training selection: choosing 5 from 20 trained clients.
+>   (Using local models as metric for DivFL)
+>> similarity: 100%|█████████████████████████| 400/400 [00:01<00:00, 301.15it/s]
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [0, 8, 9, 10, 11]
+------------------------- time cost ------------------------- 1178.7132196426392
+
+------------- Round 25-------------
+> Post-training selection enabled for method 'DivFL'.
+> Initializing selection method 'DivFL' with the global model.
+> Distributing global model to 20 clients.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.3679
+Averaged Test Accurancy: 0.6183
+Averaged Test AUC: 0.8302
+Std Test Accurancy: 0.1528
+Std Test AUC: 0.0939
+--- Training 20 clients ---
+> Post-training selection: choosing 5 from 20 trained clients.
+>   (Using local models as metric for DivFL)
+>> similarity: 100%|█████████████████████████| 400/400 [00:01<00:00, 295.66it/s]
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [5, 7, 8, 11, 19]
+------------------------- time cost ------------------------- 1151.7312047481537
+
+------------- Round 26-------------
+> Post-training selection enabled for method 'DivFL'.
+> Initializing selection method 'DivFL' with the global model.
+> Distributing global model to 20 clients.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.0615
+Averaged Test Accurancy: 0.6259
+Averaged Test AUC: 0.8327
+Std Test Accurancy: 0.1248
+Std Test AUC: 0.0896
+--- Training 20 clients ---
+> Post-training selection: choosing 5 from 20 trained clients.
+>   (Using local models as metric for DivFL)
+>> similarity: 100%|█████████████████████████| 400/400 [00:00<00:00, 598.72it/s]
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [4, 5, 8, 16, 18]
+------------------------- time cost ------------------------- 1088.820874452591
+
+------------- Round 27-------------
+> Post-training selection enabled for method 'DivFL'.
+> Initializing selection method 'DivFL' with the global model.
+> Distributing global model to 20 clients.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.9967
+Averaged Test Accurancy: 0.5939
+Averaged Test AUC: 0.8209
+Std Test Accurancy: 0.1404
+Std Test AUC: 0.0936
+--- Training 20 clients ---
+> Post-training selection: choosing 5 from 20 trained clients.
+>   (Using local models as metric for DivFL)
+>> similarity: 100%|█████████████████████████| 400/400 [00:00<00:00, 655.48it/s]
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [5, 7, 10, 15, 17]
+------------------------- time cost ------------------------- 828.9927468299866
+
+------------- Round 28-------------
+> Post-training selection enabled for method 'DivFL'.
+> Initializing selection method 'DivFL' with the global model.
+> Distributing global model to 20 clients.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.0773
+Averaged Test Accurancy: 0.6208
+Averaged Test AUC: 0.8158
+Std Test Accurancy: 0.1489
+Std Test AUC: 0.0912
+--- Training 20 clients ---
+> Post-training selection: choosing 5 from 20 trained clients.
+>   (Using local models as metric for DivFL)
+>> similarity: 100%|█████████████████████████| 400/400 [00:00<00:00, 428.02it/s]
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [2, 4, 5, 6, 15]
+------------------------- time cost ------------------------- 809.3976111412048
+
+------------- Round 29-------------
+> Post-training selection enabled for method 'DivFL'.
+> Initializing selection method 'DivFL' with the global model.
+> Distributing global model to 20 clients.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.0048
+Averaged Test Accurancy: 0.5107
+Averaged Test AUC: 0.7696
+Std Test Accurancy: 0.1670
+Std Test AUC: 0.1191
+--- Training 20 clients ---
+> Post-training selection: choosing 5 from 20 trained clients.
+>   (Using local models as metric for DivFL)
+>> similarity: 100%|█████████████████████████| 400/400 [00:00<00:00, 513.41it/s]
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [1, 5, 7, 9, 17]
+------------------------- time cost ------------------------- 914.1519238948822
+
+------------- Round 30-------------
+> Post-training selection enabled for method 'DivFL'.
+> Initializing selection method 'DivFL' with the global model.
+> Distributing global model to 20 clients.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.1797
+Averaged Test Accurancy: 0.3320
+Averaged Test AUC: 0.6235
+Std Test Accurancy: 0.1080
+Std Test AUC: 0.0876
+--- Training 20 clients ---
+> Post-training selection: choosing 5 from 20 trained clients.
+>   (Using local models as metric for DivFL)
+>> similarity: 100%|█████████████████████████| 400/400 [00:00<00:00, 557.93it/s]
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [6, 7, 8, 11, 17]
+------------------------- time cost ------------------------- 880.8227324485779
+
+------------- Round 31-------------
+> Post-training selection enabled for method 'DivFL'.
+> Initializing selection method 'DivFL' with the global model.
+> Distributing global model to 20 clients.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.8549
+Averaged Test Accurancy: 0.6584
+Averaged Test AUC: 0.8526
+Std Test Accurancy: 0.1186
+Std Test AUC: 0.0769
+--- Training 20 clients ---
+> Post-training selection: choosing 5 from 20 trained clients.
+>   (Using local models as metric for DivFL)
+>> similarity: 100%|█████████████████████████| 400/400 [00:00<00:00, 533.64it/s]
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [3, 4, 8, 17, 19]
+------------------------- time cost ------------------------- 890.5661239624023
+
+------------- Round 32-------------
+> Post-training selection enabled for method 'DivFL'.
+> Initializing selection method 'DivFL' with the global model.
+> Distributing global model to 20 clients.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.0178
+Averaged Test Accurancy: 0.6162
+Averaged Test AUC: 0.8321
+Std Test Accurancy: 0.1339
+Std Test AUC: 0.0934
+--- Training 20 clients ---
+> Post-training selection: choosing 5 from 20 trained clients.
+>   (Using local models as metric for DivFL)
+>> similarity: 100%|█████████████████████████| 400/400 [00:00<00:00, 569.72it/s]
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [5, 7, 9, 13, 15]
+------------------------- time cost ------------------------- 897.0611734390259
+
+------------- Round 33-------------
+> Post-training selection enabled for method 'DivFL'.
+> Initializing selection method 'DivFL' with the global model.
+> Distributing global model to 20 clients.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.8804
+Averaged Test Accurancy: 0.6000
+Averaged Test AUC: 0.7693
+Std Test Accurancy: 0.1471
+Std Test AUC: 0.0943
+--- Training 20 clients ---
+> Post-training selection: choosing 5 from 20 trained clients.
+>   (Using local models as metric for DivFL)
+>> similarity: 100%|█████████████████████████| 400/400 [00:00<00:00, 471.69it/s]
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [4, 7, 15, 16, 19]
+------------------------- time cost ------------------------- 922.2534718513489
+
+------------- Round 34-------------
+> Post-training selection enabled for method 'DivFL'.
+> Initializing selection method 'DivFL' with the global model.
+> Distributing global model to 20 clients.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.0245
+Averaged Test Accurancy: 0.5919
+Averaged Test AUC: 0.7844
+Std Test Accurancy: 0.1489
+Std Test AUC: 0.0909
+--- Training 20 clients ---
+> Post-training selection: choosing 5 from 20 trained clients.
+>   (Using local models as metric for DivFL)
+>> similarity: 100%|█████████████████████████| 400/400 [00:00<00:00, 463.82it/s]
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [3, 5, 14, 16, 19]
+------------------------- time cost ------------------------- 838.8707721233368
+
+------------- Round 35-------------
+> Post-training selection enabled for method 'DivFL'.
+> Initializing selection method 'DivFL' with the global model.
+> Distributing global model to 20 clients.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.2917
+Averaged Test Accurancy: 0.4939
+Averaged Test AUC: 0.7722
+Std Test Accurancy: 0.1611
+Std Test AUC: 0.0925
+--- Training 20 clients ---
+> Post-training selection: choosing 5 from 20 trained clients.
+>   (Using local models as metric for DivFL)
+>> similarity: 100%|█████████████████████████| 400/400 [00:00<00:00, 439.75it/s]
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [4, 5, 7, 9, 15]
+------------------------- time cost ------------------------- 852.582864522934
+
+------------- Round 36-------------
+> Post-training selection enabled for method 'DivFL'.
+> Initializing selection method 'DivFL' with the global model.
+> Distributing global model to 20 clients.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.0743
+Averaged Test Accurancy: 0.6036
+Averaged Test AUC: 0.7956
+Std Test Accurancy: 0.1605
+Std Test AUC: 0.0973
+--- Training 20 clients ---
+> Post-training selection: choosing 5 from 20 trained clients.
+>   (Using local models as metric for DivFL)
+>> similarity: 100%|█████████████████████████| 400/400 [00:00<00:00, 458.16it/s]
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [2, 7, 10, 12, 16]
+------------------------- time cost ------------------------- 856.4852426052094
+
+------------- Round 37-------------
+> Post-training selection enabled for method 'DivFL'.
+> Initializing selection method 'DivFL' with the global model.
+> Distributing global model to 20 clients.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.1503
+Averaged Test Accurancy: 0.5355
+Averaged Test AUC: 0.7654
+Std Test Accurancy: 0.1463
+Std Test AUC: 0.1080
+--- Training 20 clients ---
+> Post-training selection: choosing 5 from 20 trained clients.
+>   (Using local models as metric for DivFL)
+>> similarity: 100%|█████████████████████████| 400/400 [00:00<00:00, 495.99it/s]
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [5, 7, 8, 13, 19]
+------------------------- time cost ------------------------- 815.190655708313
+
+------------- Round 38-------------
+> Post-training selection enabled for method 'DivFL'.
+> Initializing selection method 'DivFL' with the global model.
+> Distributing global model to 20 clients.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.0684
+Averaged Test Accurancy: 0.6005
+Averaged Test AUC: 0.7977
+Std Test Accurancy: 0.1624
+Std Test AUC: 0.0870
+--- Training 20 clients ---
+> Post-training selection: choosing 5 from 20 trained clients.
+>   (Using local models as metric for DivFL)
+>> similarity: 100%|█████████████████████████| 400/400 [00:00<00:00, 539.42it/s]
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [1, 6, 7, 13, 15]
+------------------------- time cost ------------------------- 790.9153354167938
+
+------------- Round 39-------------
+> Post-training selection enabled for method 'DivFL'.
+> Initializing selection method 'DivFL' with the global model.
+> Distributing global model to 20 clients.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.8841
+Averaged Test Accurancy: 0.3685
+Averaged Test AUC: 0.6573
+Std Test Accurancy: 0.1391
+Std Test AUC: 0.0743
+--- Training 20 clients ---
+> Post-training selection: choosing 5 from 20 trained clients.
+>   (Using local models as metric for DivFL)
+>> similarity: 100%|█████████████████████████| 400/400 [00:00<00:00, 467.32it/s]
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [5, 6, 11, 13, 15]
+------------------------- time cost ------------------------- 797.6188933849335
+
+------------- Round 40-------------
+> Post-training selection enabled for method 'DivFL'.
+> Initializing selection method 'DivFL' with the global model.
+> Distributing global model to 20 clients.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.9304
+Averaged Test Accurancy: 0.5807
+Averaged Test AUC: 0.8058
+Std Test Accurancy: 0.1748
+Std Test AUC: 0.1012
+--- Training 20 clients ---
+> Post-training selection: choosing 5 from 20 trained clients.
+>   (Using local models as metric for DivFL)
+>> similarity: 100%|█████████████████████████| 400/400 [00:00<00:00, 482.08it/s]
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [2, 6, 7, 12, 19]
+------------------------- time cost ------------------------- 791.6906516551971
+
+------------- Round 41-------------
+> Post-training selection enabled for method 'DivFL'.
+> Initializing selection method 'DivFL' with the global model.
+> Distributing global model to 20 clients.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.9806
+Averaged Test Accurancy: 0.5467
+Averaged Test AUC: 0.7732
+Std Test Accurancy: 0.1559
+Std Test AUC: 0.1055
+--- Training 20 clients ---
+> Post-training selection: choosing 5 from 20 trained clients.
+>   (Using local models as metric for DivFL)
+>> similarity: 100%|█████████████████████████| 400/400 [00:00<00:00, 510.27it/s]
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [2, 4, 6, 9, 17]
+------------------------- time cost ------------------------- 808.8813629150391
+
+------------- Round 42-------------
+> Post-training selection enabled for method 'DivFL'.
+> Initializing selection method 'DivFL' with the global model.
+> Distributing global model to 20 clients.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.9683
+Averaged Test Accurancy: 0.5868
+Averaged Test AUC: 0.8249
+Std Test Accurancy: 0.1669
+Std Test AUC: 0.1176
+--- Training 20 clients ---
+> Post-training selection: choosing 5 from 20 trained clients.
+>   (Using local models as metric for DivFL)
+>> similarity: 100%|█████████████████████████| 400/400 [00:00<00:00, 530.45it/s]
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [1, 7, 12, 16, 19]
+------------------------- time cost ------------------------- 822.6645994186401
+
+------------- Round 43-------------
+> Post-training selection enabled for method 'DivFL'.
+> Initializing selection method 'DivFL' with the global model.
+> Distributing global model to 20 clients.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.1412
+Averaged Test Accurancy: 0.3792
+Averaged Test AUC: 0.6807
+Std Test Accurancy: 0.1263
+Std Test AUC: 0.0718
+--- Training 20 clients ---
+> Post-training selection: choosing 5 from 20 trained clients.
+>   (Using local models as metric for DivFL)
+>> similarity: 100%|█████████████████████████| 400/400 [00:00<00:00, 531.82it/s]
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [6, 9, 10, 11, 17]
+------------------------- time cost ------------------------- 787.9196002483368
+
+------------- Round 44-------------
+> Post-training selection enabled for method 'DivFL'.
+> Initializing selection method 'DivFL' with the global model.
+> Distributing global model to 20 clients.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.5174
+Averaged Test Accurancy: 0.4817
+Averaged Test AUC: 0.7532
+Std Test Accurancy: 0.1104
+Std Test AUC: 0.0832
+--- Training 20 clients ---
+> Post-training selection: choosing 5 from 20 trained clients.
+>   (Using local models as metric for DivFL)
+>> similarity: 100%|█████████████████████████| 400/400 [00:00<00:00, 525.02it/s]
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [2, 4, 6, 9, 16]
+------------------------- time cost ------------------------- 789.7401750087738
+
+------------- Round 45-------------
+> Post-training selection enabled for method 'DivFL'.
+> Initializing selection method 'DivFL' with the global model.
+> Distributing global model to 20 clients.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.0106
+Averaged Test Accurancy: 0.5533
+Averaged Test AUC: 0.7583
+Std Test Accurancy: 0.1683
+Std Test AUC: 0.1261
+--- Training 20 clients ---
+> Post-training selection: choosing 5 from 20 trained clients.
+>   (Using local models as metric for DivFL)
+>> similarity: 100%|█████████████████████████| 400/400 [00:00<00:00, 469.12it/s]
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [1, 6, 7, 8, 10]
+------------------------- time cost ------------------------- 795.4821436405182
+
+------------- Round 46-------------
+> Post-training selection enabled for method 'DivFL'.
+> Initializing selection method 'DivFL' with the global model.
+> Distributing global model to 20 clients.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.0553
+Averaged Test Accurancy: 0.3447
+Averaged Test AUC: 0.6427
+Std Test Accurancy: 0.1130
+Std Test AUC: 0.0742
+--- Training 20 clients ---
+> Post-training selection: choosing 5 from 20 trained clients.
+>   (Using local models as metric for DivFL)
+>> similarity: 100%|█████████████████████████| 400/400 [00:00<00:00, 527.41it/s]
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [0, 1, 7, 13, 16]
+------------------------- time cost ------------------------- 793.8841052055359
+
+------------- Round 47-------------
+> Post-training selection enabled for method 'DivFL'.
+> Initializing selection method 'DivFL' with the global model.
+> Distributing global model to 20 clients.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.3426
+Averaged Test Accurancy: 0.5645
+Averaged Test AUC: 0.7575
+Std Test Accurancy: 0.1584
+Std Test AUC: 0.0925
+--- Training 20 clients ---
+> Post-training selection: choosing 5 from 20 trained clients.
+>   (Using local models as metric for DivFL)
+>> similarity: 100%|█████████████████████████| 400/400 [00:00<00:00, 431.92it/s]
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [0, 4, 7, 13, 19]
+------------------------- time cost ------------------------- 788.8263952732086
+
+------------- Round 48-------------
+> Post-training selection enabled for method 'DivFL'.
+> Initializing selection method 'DivFL' with the global model.
+> Distributing global model to 20 clients.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.4283
+Averaged Test Accurancy: 0.5898
+Averaged Test AUC: 0.8114
+Std Test Accurancy: 0.1459
+Std Test AUC: 0.1074
+--- Training 20 clients ---
+> Post-training selection: choosing 5 from 20 trained clients.
+>   (Using local models as metric for DivFL)
+>> similarity: 100%|█████████████████████████| 400/400 [00:00<00:00, 545.46it/s]
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [0, 4, 7, 9, 12]
+------------------------- time cost ------------------------- 791.803394317627
+
+------------- Round 49-------------
+> Post-training selection enabled for method 'DivFL'.
+> Initializing selection method 'DivFL' with the global model.
+> Distributing global model to 20 clients.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.3133
+Averaged Test Accurancy: 0.5914
+Averaged Test AUC: 0.7725
+Std Test Accurancy: 0.1602
+Std Test AUC: 0.0889
+--- Training 20 clients ---
+> Post-training selection: choosing 5 from 20 trained clients.
+>   (Using local models as metric for DivFL)
+>> similarity: 100%|█████████████████████████| 400/400 [00:00<00:00, 505.46it/s]
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [4, 6, 7, 16, 19]
+------------------------- time cost ------------------------- 788.5618185997009
+
+------------- Round 50-------------
+> Post-training selection enabled for method 'DivFL'.
+> Initializing selection method 'DivFL' with the global model.
+> Distributing global model to 20 clients.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.9600
+Averaged Test Accurancy: 0.5919
+Averaged Test AUC: 0.7888
+Std Test Accurancy: 0.1640
+Std Test AUC: 0.1075
+--- Training 20 clients ---
+> Post-training selection: choosing 5 from 20 trained clients.
+>   (Using local models as metric for DivFL)
+>> similarity: 100%|█████████████████████████| 400/400 [00:00<00:00, 456.72it/s]
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [0, 5, 6, 11, 15]
+------------------------- time cost ------------------------- 798.3414402008057
+
+------------- Round 51-------------
+> Post-training selection enabled for method 'DivFL'.
+> Initializing selection method 'DivFL' with the global model.
+> Distributing global model to 20 clients.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.9406
+Averaged Test Accurancy: 0.5929
+Averaged Test AUC: 0.7933
+Std Test Accurancy: 0.1760
+Std Test AUC: 0.1088
+--- Training 20 clients ---
+> Post-training selection: choosing 5 from 20 trained clients.
+>   (Using local models as metric for DivFL)
+>> similarity: 100%|█████████████████████████| 400/400 [00:00<00:00, 529.92it/s]
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [3, 6, 7, 12, 16]
+------------------------- time cost ------------------------- 818.6198370456696
+
+------------- Round 52-------------
+> Post-training selection enabled for method 'DivFL'.
+> Initializing selection method 'DivFL' with the global model.
+> Distributing global model to 20 clients.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.0220
+Averaged Test Accurancy: 0.6310
+Averaged Test AUC: 0.7905
+Std Test Accurancy: 0.1396
+Std Test AUC: 0.1122
+--- Training 20 clients ---
+> Post-training selection: choosing 5 from 20 trained clients.
+>   (Using local models as metric for DivFL)
+>> similarity: 100%|█████████████████████████| 400/400 [00:00<00:00, 508.24it/s]
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [5, 6, 7, 9, 16]
+------------------------- time cost ------------------------- 821.6382210254669
+
+------------- Round 53-------------
+> Post-training selection enabled for method 'DivFL'.
+> Initializing selection method 'DivFL' with the global model.
+> Distributing global model to 20 clients.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.0193
+Averaged Test Accurancy: 0.5223
+Averaged Test AUC: 0.7681
+Std Test Accurancy: 0.1542
+Std Test AUC: 0.1155
+--- Training 20 clients ---
+> Post-training selection: choosing 5 from 20 trained clients.
+>   (Using local models as metric for DivFL)
+>> similarity: 100%|█████████████████████████| 400/400 [00:00<00:00, 492.25it/s]
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [6, 10, 13, 16, 17]
+------------------------- time cost ------------------------- 832.6176385879517
+
+------------- Round 54-------------
+> Post-training selection enabled for method 'DivFL'.
+> Initializing selection method 'DivFL' with the global model.
+> Distributing global model to 20 clients.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.3044
+Averaged Test Accurancy: 0.5904
+Averaged Test AUC: 0.7700
+Std Test Accurancy: 0.1483
+Std Test AUC: 0.1055
+--- Training 20 clients ---
+> Post-training selection: choosing 5 from 20 trained clients.
+>   (Using local models as metric for DivFL)
+>> similarity: 100%|█████████████████████████| 400/400 [00:00<00:00, 519.04it/s]
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [0, 1, 5, 7, 17]
+------------------------- time cost ------------------------- 828.8193666934967
+
+------------- Round 55-------------
+> Post-training selection enabled for method 'DivFL'.
+> Initializing selection method 'DivFL' with the global model.
+> Distributing global model to 20 clients.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.4148
+Averaged Test Accurancy: 0.5832
+Averaged Test AUC: 0.7398
+Std Test Accurancy: 0.1550
+Std Test AUC: 0.0851
+--- Training 20 clients ---
+> Post-training selection: choosing 5 from 20 trained clients.
+>   (Using local models as metric for DivFL)
+>> similarity: 100%|█████████████████████████| 400/400 [00:00<00:00, 485.82it/s]
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [1, 5, 7, 9, 16]
+------------------------- time cost ------------------------- 824.9331221580505
+
+------------- Round 56-------------
+> Post-training selection enabled for method 'DivFL'.
+> Initializing selection method 'DivFL' with the global model.
+> Distributing global model to 20 clients.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.3758
+Averaged Test Accurancy: 0.3294
+Averaged Test AUC: 0.6339
+Std Test Accurancy: 0.1096
+Std Test AUC: 0.0721
+--- Training 20 clients ---
+> Post-training selection: choosing 5 from 20 trained clients.
+>   (Using local models as metric for DivFL)
+>> similarity: 100%|█████████████████████████| 400/400 [00:00<00:00, 808.52it/s]
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [0, 6, 7, 9, 11]
+------------------------- time cost ------------------------- 685.238169670105
+
+------------- Round 57-------------
+> Post-training selection enabled for method 'DivFL'.
+> Initializing selection method 'DivFL' with the global model.
+> Distributing global model to 20 clients.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.3117
+Averaged Test Accurancy: 0.5736
+Averaged Test AUC: 0.7417
+Std Test Accurancy: 0.1584
+Std Test AUC: 0.1047
+--- Training 20 clients ---
+> Post-training selection: choosing 5 from 20 trained clients.
+>   (Using local models as metric for DivFL)
+>> similarity: 100%|█████████████████████████| 400/400 [00:00<00:00, 801.32it/s]
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [6, 8, 11, 13, 17]
+------------------------- time cost ------------------------- 583.8036668300629
+
+------------- Round 58-------------
+> Post-training selection enabled for method 'DivFL'.
+> Initializing selection method 'DivFL' with the global model.
+> Distributing global model to 20 clients.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.9942
+Averaged Test Accurancy: 0.6000
+Averaged Test AUC: 0.7322
+Std Test Accurancy: 0.1591
+Std Test AUC: 0.1066
+--- Training 20 clients ---
+> Post-training selection: choosing 5 from 20 trained clients.
+>   (Using local models as metric for DivFL)
+>> similarity: 100%|█████████████████████████| 400/400 [00:00<00:00, 766.14it/s]
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [0, 3, 9, 11, 17]
+------------------------- time cost ------------------------- 668.8718504905701
+
+------------- Round 59-------------
+> Post-training selection enabled for method 'DivFL'.
+> Initializing selection method 'DivFL' with the global model.
+> Distributing global model to 20 clients.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.2569
+Averaged Test Accurancy: 0.5548
+Averaged Test AUC: 0.7666
+Std Test Accurancy: 0.1500
+Std Test AUC: 0.1077
+--- Training 20 clients ---
+> Post-training selection: choosing 5 from 20 trained clients.
+>   (Using local models as metric for DivFL)
+>> similarity: 100%|█████████████████████████| 400/400 [00:00<00:00, 818.20it/s]
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [0, 7, 12, 13, 19]
+------------------------- time cost ------------------------- 624.3607978820801
+
+------------- Round 60-------------
+> Post-training selection enabled for method 'DivFL'.
+> Initializing selection method 'DivFL' with the global model.
+> Distributing global model to 20 clients.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.1313
+Averaged Test Accurancy: 0.5355
+Averaged Test AUC: 0.7833
+Std Test Accurancy: 0.1503
+Std Test AUC: 0.1362
+--- Training 20 clients ---
+> Post-training selection: choosing 5 from 20 trained clients.
+>   (Using local models as metric for DivFL)
+>> similarity: 100%|█████████████████████████| 400/400 [00:00<00:00, 823.03it/s]
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [3, 12, 13, 15, 16]
+------------------------- time cost ------------------------- 615.1073400974274
+
+Average time cost: nans.
+Length:  101
+std for best accurancy: 0.0
+mean for best accurancy: 0.9165861513687601
+All done!
+
+Storage on cpu
+-------------------------------------------------------------------------------
+Total Tensors: 32018691 	Used Memory: 122.34M
+-------------------------------------------------------------------------------

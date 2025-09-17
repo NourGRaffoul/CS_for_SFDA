@@ -1,0 +1,6 @@
+wandb_version: 1
+
+imbalance_factor:
+  value: 200
+method:
+  value: Cluster1

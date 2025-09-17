@@ -1,0 +1,422 @@
+2025-07-18 18:44:29 INFO Running runs: []
+2025-07-18 18:44:31 INFO Agent received command: run
+2025-07-18 18:44:31 INFO Agent starting run with config:
+	algorithm: FedAvg
+	batch_num_per_client: 3
+	batch_size: 5
+	comment: 
+	dataset: HAR
+	fine_tuning_epochs: 6
+	join_ratio: 0.17450408455106836
+	learning_rate_decay: true
+	learning_rate_decay_gamma: 1.0841996992325449
+	local_learning_rate: 0.013082251010050353
+	localize_feature_extractor: true
+	method: RandomSelect
+	model: HARCNN
+	total_num_clients: 28
+2025-07-18 18:44:31 INFO About to run command: python main.py --algorithm=FedAvg --batch_num_per_client=3 --batch_size=5 --comment= --dataset=HAR --fine_tuning_epochs=6 --join_ratio=0.17450408455106836 --learning_rate_decay=true --learning_rate_decay_gamma=1.0841996992325449 --local_learning_rate=0.013082251010050353 --localize_feature_extractor=true --method=RandomSelect --model=HARCNN --total_num_clients=28
+2025-07-18 18:44:36 INFO Running runs: ['m1pr7mtq']
+2025-07-18 18:48:50 INFO Retry attempt failed:
+Traceback (most recent call last):
+  File "C:\Users\owner\AppData\Roaming\Python\Python37\site-packages\urllib3\connection.py", line 175, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "C:\Users\owner\AppData\Roaming\Python\Python37\site-packages\urllib3\util\connection.py", line 95, in create_connection
+    raise err
+  File "C:\Users\owner\AppData\Roaming\Python\Python37\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\owner\AppData\Roaming\Python\Python37\site-packages\urllib3\connectionpool.py", line 723, in urlopen
+    chunked=chunked,
+  File "C:\Users\owner\AppData\Roaming\Python\Python37\site-packages\urllib3\connectionpool.py", line 404, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\owner\AppData\Roaming\Python\Python37\site-packages\urllib3\connectionpool.py", line 1061, in _validate_conn
+    conn.connect()
+  File "C:\Users\owner\AppData\Roaming\Python\Python37\site-packages\urllib3\connection.py", line 363, in connect
+    self.sock = conn = self._new_conn()
+  File "C:\Users\owner\AppData\Roaming\Python\Python37\site-packages\urllib3\connection.py", line 187, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x000001ABBE1572B0>: Failed to establish a new connection: [WinError 10053] An established connection was aborted by the software in your host machine
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\owner\AppData\Roaming\Python\Python37\site-packages\requests\adapters.py", line 497, in send
+    chunked=chunked,
+  File "C:\Users\owner\AppData\Roaming\Python\Python37\site-packages\urllib3\connectionpool.py", line 803, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "C:\Users\owner\AppData\Roaming\Python\Python37\site-packages\urllib3\util\retry.py", line 594, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001ABBE1572B0>: Failed to establish a new connection: [WinError 10053] An established connection was aborted by the software in your host machine'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\owner\AppData\Roaming\Python\Python37\site-packages\wandb\sdk\lib\retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "C:\Users\owner\AppData\Roaming\Python\Python37\site-packages\wandb\sdk\internal\internal_api.py", line 400, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "C:\Users\owner\AppData\Roaming\Python\Python37\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "C:\Users\owner\AppData\Roaming\Python\Python37\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "C:\Users\owner\AppData\Roaming\Python\Python37\site-packages\wandb\sdk\lib\gql_request.py", line 58, in execute
+    request = self.session.post(self.url, **post_args)
+  File "C:\Users\owner\AppData\Roaming\Python\Python37\site-packages\requests\sessions.py", line 637, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+  File "C:\Users\owner\AppData\Roaming\Python\Python37\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\owner\AppData\Roaming\Python\Python37\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\owner\AppData\Roaming\Python\Python37\site-packages\requests\adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001ABBE1572B0>: Failed to establish a new connection: [WinError 10053] An established connection was aborted by the software in your host machine'))
+2025-07-23 23:47:29 INFO Running runs: []
+2025-07-23 23:47:29 INFO Agent received command: run
+2025-07-23 23:47:29 INFO Agent starting run with config:
+	algorithm: FedAvg
+	comment: SHOT
+	dataset: HAR
+	join_ratio: 0.2
+	method: AFL
+	num_classes: 6
+	total_num_clients: 30
+2025-07-23 23:47:29 INFO About to run command: python main.py --algorithm=FedAvg --comment=SHOT --dataset=HAR --join_ratio=0.2 --method=AFL --num_classes=6 --total_num_clients=30
+2025-07-23 23:47:34 INFO Running runs: ['uqp9qy4j']
+2025-07-29 17:52:13 INFO Running runs: []
+2025-07-29 17:52:14 INFO Agent received command: run
+2025-07-29 17:52:14 INFO Agent starting run with config:
+	imbalance_factor: 50
+	method: Cluster1
+2025-07-29 17:52:14 INFO About to run command: python main.py --imbalance_factor=50 --method=Cluster1
+2025-07-29 17:52:19 INFO Running runs: ['4uchkzly']
+2025-07-29 17:54:19 INFO Running runs: []
+2025-07-29 17:54:19 INFO Agent received command: run
+2025-07-29 17:54:19 INFO Agent starting run with config:
+	imbalance_factor: 1
+	method: AFL
+2025-07-29 17:54:19 INFO About to run command: python main.py --imbalance_factor=1 --method=AFL
+2025-07-29 17:54:24 INFO Running runs: ['4t6f8b9t']
+2025-07-29 17:54:50 INFO Running runs: []
+2025-07-29 17:54:50 INFO Agent received command: run
+2025-07-29 17:54:50 INFO Agent starting run with config:
+	imbalance_factor: 50
+	method: FullPart
+2025-07-29 17:54:50 INFO About to run command: python main.py --imbalance_factor=50 --method=FullPart
+2025-07-29 17:54:55 INFO Running runs: ['e4ei7omm']
+2025-07-29 17:55:17 INFO Running runs: []
+2025-07-29 17:55:17 INFO Agent received command: run
+2025-07-29 17:55:17 INFO Agent starting run with config:
+	imbalance_factor: 100
+	method: FullPart
+2025-07-29 17:55:17 INFO About to run command: python main.py --imbalance_factor=100 --method=FullPart
+2025-07-29 17:55:22 INFO Running runs: ['2xgrs79h']
+2025-07-30 16:22:13 INFO Cleaning up finished run: 2xgrs79h
+2025-07-30 16:22:14 INFO Agent received command: run
+2025-07-30 16:22:14 INFO Agent starting run with config:
+	imbalance_factor: 10
+	method: AFL
+2025-07-30 16:22:14 INFO About to run command: python main.py --imbalance_factor=10 --method=AFL
+2025-07-30 16:22:19 INFO Running runs: ['sntypqu3']
+2025-07-31 13:38:22 INFO Running runs: []
+2025-07-31 13:38:47 INFO Agent received command: run
+2025-07-31 13:38:47 INFO Agent starting run with config:
+	imbalance_factor: 50
+	method: DivFL
+2025-07-31 13:38:47 INFO About to run command: python main.py --imbalance_factor=50 --method=DivFL
+2025-07-31 13:38:52 INFO Running runs: ['o4kye3tc']
+2025-07-31 23:44:48 ERROR 500 response executing GraphQL.
+2025-07-31 23:44:48 ERROR {"errors":[{"message":"context deadline exceeded"}]}
+2025-07-31 23:44:50 ERROR 500 response executing GraphQL.
+2025-07-31 23:44:50 ERROR {"errors":[{"message":"context deadline exceeded"}]}
+2025-07-31 23:51:35 ERROR 500 response executing GraphQL.
+2025-07-31 23:51:35 ERROR {"errors":[{"message":"context deadline exceeded"}]}
+2025-08-01 13:20:46 INFO Cleaning up finished run: sntypqu3
+2025-08-01 13:20:47 INFO Agent received command: run
+2025-08-01 13:20:47 INFO Agent starting run with config:
+	imbalance_factor: 100
+	method: FullPart
+2025-08-01 13:20:47 INFO About to run command: python main.py --imbalance_factor=100 --method=FullPart
+2025-08-01 13:20:52 INFO Running runs: ['nlzlzo3y']
+2025-08-01 17:36:54 INFO Cleaning up finished run: o4kye3tc
+2025-08-01 17:36:54 INFO Agent received command: run
+2025-08-01 17:36:54 INFO Agent starting run with config:
+	imbalance_factor: 200
+	method: Cluster1
+2025-08-01 17:36:54 INFO About to run command: python main.py --imbalance_factor=200 --method=Cluster1
+2025-08-01 17:36:59 INFO Running runs: ['2otd607g']
+2025-08-01 20:50:00 INFO Cleaning up finished run: 2otd607g
+2025-08-01 20:50:00 INFO Agent received command: run
+2025-08-01 20:50:00 INFO Agent starting run with config:
+	imbalance_factor: 200
+	method: AFL
+2025-08-01 20:50:00 INFO About to run command: python main.py --imbalance_factor=200 --method=AFL
+2025-08-01 20:50:05 INFO Running runs: ['yruxutsw']
+2025-08-02 05:32:44 ERROR 500 response executing GraphQL.
+2025-08-02 05:32:44 ERROR {"errors":[{"message":"context deadline exceeded"}]}
+2025-08-02 21:44:06 INFO Cleaning up finished run: nlzlzo3y
+2025-08-02 21:44:06 INFO Agent received command: run
+2025-08-02 21:44:06 INFO Agent starting run with config:
+	imbalance_factor: 100
+	method: AFL
+2025-08-02 21:44:06 INFO About to run command: python main.py --imbalance_factor=100 --method=AFL
+2025-08-02 21:44:11 INFO Running runs: ['su22w13z']
+2025-08-03 06:52:08 INFO Cleaning up finished run: yruxutsw
+2025-08-03 06:52:08 INFO Agent received command: run
+2025-08-03 06:52:08 INFO Agent starting run with config:
+	imbalance_factor: 200
+	method: AFL
+2025-08-03 06:52:08 INFO About to run command: python main.py --imbalance_factor=200 --method=AFL
+2025-08-03 06:52:14 INFO Running runs: ['1sxl9vt3']
+2025-08-03 21:34:47 INFO Cleaning up finished run: su22w13z
+2025-08-03 21:34:48 INFO Agent received command: run
+2025-08-03 21:34:48 INFO Agent starting run with config:
+	imbalance_factor: 200
+	method: FullPart
+2025-08-03 21:34:48 INFO About to run command: python main.py --imbalance_factor=200 --method=FullPart
+2025-08-03 21:34:53 INFO Running runs: ['okhqfgiz']
+2025-08-04 03:20:22 INFO Cleaning up finished run: okhqfgiz
+2025-08-04 03:20:22 INFO Agent received command: run
+2025-08-04 03:20:22 INFO Agent starting run with config:
+	imbalance_factor: 10
+	method: FullPart
+2025-08-04 03:20:22 INFO About to run command: python main.py --imbalance_factor=10 --method=FullPart
+2025-08-04 03:20:27 INFO Running runs: ['o50aazud']
+2025-08-04 04:02:19 INFO Cleaning up finished run: 1sxl9vt3
+2025-08-04 04:02:20 INFO Agent received command: run
+2025-08-04 04:02:20 INFO Agent starting run with config:
+	imbalance_factor: 1
+	method: DivFL
+2025-08-04 04:02:20 INFO About to run command: python main.py --imbalance_factor=1 --method=DivFL
+2025-08-04 04:02:25 INFO Running runs: ['j1dx0hqv']
+2025-08-04 06:48:52 INFO Cleaning up finished run: j1dx0hqv
+2025-08-04 06:48:52 INFO Agent received command: run
+2025-08-04 06:48:52 INFO Agent starting run with config:
+	imbalance_factor: 1
+	method: Cluster1
+2025-08-04 06:48:52 INFO About to run command: python main.py --imbalance_factor=1 --method=Cluster1
+2025-08-04 06:48:57 INFO Running runs: ['axmzzxad']
+2025-08-04 06:49:08 INFO Cleaning up finished run: axmzzxad
+2025-08-04 06:49:08 INFO Agent received command: run
+2025-08-04 06:49:08 INFO Agent starting run with config:
+	imbalance_factor: 1
+	method: DivFL
+2025-08-04 06:49:08 INFO About to run command: python main.py --imbalance_factor=1 --method=DivFL
+2025-08-04 06:49:13 INFO Running runs: ['v1ehpivm']
+2025-08-04 06:49:24 INFO Cleaning up finished run: v1ehpivm
+2025-08-04 06:49:24 INFO Agent received command: run
+2025-08-04 06:49:24 INFO Agent starting run with config:
+	imbalance_factor: 1
+	method: DivFL
+2025-08-04 06:49:24 ERROR Exception while processing command: {'run_id': '7c4qbpek', 'program': 'main.py', 'type': 'run', 'args': {'imbalance_factor': {'value': 1}, 'method': {'value': 'DivFL'}}, 'runqueue_item_id': 'UnVuUXVldWVJdGVtOjY2MjQ0ODMzNA==', 'logs': ['expected_improvement: 9.759344e-02', 'predicted_value: -8.036020e-01', 'predicted_value_std_dev: 7.358100e-02', 'success_probability: 2.838770e-01', 'warnings: '], 'run_storage_id': 'UnVuOnYxOjdjNHFicGVrOkFGTC1IQVItNS1Ob25lLTIwOm5vdXJncmFmZm91bC1hbWVyaWNhbi11bml2ZXJzaXR5LW9mLWJlaXJ1dA=='}
+Traceback (most recent call last):
+  File "C:\Users\owner\AppData\Roaming\Python\Python37\site-packages\wandb\wandb_agent.py", line 327, in _process_command
+    result = self._command_run(command)
+  File "C:\Users\owner\AppData\Roaming\Python\Python37\site-packages\wandb\wandb_agent.py", line 387, in _command_run
+    sweep_param_path, command["args"]
+  File "C:\Users\owner\AppData\Roaming\Python\Python37\site-packages\wandb\sdk\lib\config_util.py", line 60, in save_config_file_from_dict
+    with open(config_filename, "w") as conf_file:
+OSError: [Errno 28] No space left on device: 'C:\\Users\\owner\\Downloads\\Benchmark_Stage_backup2\\Benchmark_Stage\\system_shot_imbalance\\wandb\\sweep-sfzpvcv3\\config-7c4qbpek.yaml'
+2025-08-04 06:49:29 INFO Running runs: []
+2025-08-04 06:49:29 INFO Agent received command: run
+2025-08-04 06:49:29 INFO Agent starting run with config:
+	imbalance_factor: 1
+	method: DivFL
+2025-08-04 06:49:29 ERROR Exception while processing command: {'run_id': 'n862snmf', 'program': 'main.py', 'type': 'run', 'args': {'imbalance_factor': {'value': 1}, 'method': {'value': 'DivFL'}}, 'runqueue_item_id': 'UnVuUXVldWVJdGVtOjY2MjQ0ODM0MQ==', 'logs': ['expected_improvement: 1.336336e-01', 'predicted_value: -8.221374e-01', 'predicted_value_std_dev: 7.596316e-02', 'success_probability: 3.784934e-01', 'warnings: '], 'run_storage_id': 'UnVuOnYxOm44NjJzbm1mOkFGTC1IQVItNS1Ob25lLTIwOm5vdXJncmFmZm91bC1hbWVyaWNhbi11bml2ZXJzaXR5LW9mLWJlaXJ1dA=='}
+Traceback (most recent call last):
+  File "C:\Users\owner\AppData\Roaming\Python\Python37\site-packages\wandb\wandb_agent.py", line 327, in _process_command
+    result = self._command_run(command)
+  File "C:\Users\owner\AppData\Roaming\Python\Python37\site-packages\wandb\wandb_agent.py", line 387, in _command_run
+    sweep_param_path, command["args"]
+  File "C:\Users\owner\AppData\Roaming\Python\Python37\site-packages\wandb\sdk\lib\config_util.py", line 60, in save_config_file_from_dict
+    with open(config_filename, "w") as conf_file:
+OSError: [Errno 28] No space left on device: 'C:\\Users\\owner\\Downloads\\Benchmark_Stage_backup2\\Benchmark_Stage\\system_shot_imbalance\\wandb\\sweep-sfzpvcv3\\config-n862snmf.yaml'
+2025-08-04 06:49:35 INFO Agent received command: run
+2025-08-04 06:49:35 INFO Agent starting run with config:
+	imbalance_factor: 1
+	method: DivFL
+2025-08-04 06:49:35 ERROR Exception while processing command: {'run_id': 'of0hrabi', 'program': 'main.py', 'type': 'run', 'args': {'imbalance_factor': {'value': 1}, 'method': {'value': 'DivFL'}}, 'runqueue_item_id': 'UnVuUXVldWVJdGVtOjY2MjQ0ODM1NQ==', 'logs': ['expected_improvement: 1.543543e-01', 'predicted_value: -8.156356e-01', 'predicted_value_std_dev: 9.488675e-02', 'success_probability: 3.759069e-01', 'warnings: '], 'run_storage_id': 'UnVuOnYxOm9mMGhyYWJpOkFGTC1IQVItNS1Ob25lLTIwOm5vdXJncmFmZm91bC1hbWVyaWNhbi11bml2ZXJzaXR5LW9mLWJlaXJ1dA=='}
+Traceback (most recent call last):
+  File "C:\Users\owner\AppData\Roaming\Python\Python37\site-packages\wandb\wandb_agent.py", line 327, in _process_command
+    result = self._command_run(command)
+  File "C:\Users\owner\AppData\Roaming\Python\Python37\site-packages\wandb\wandb_agent.py", line 387, in _command_run
+    sweep_param_path, command["args"]
+  File "C:\Users\owner\AppData\Roaming\Python\Python37\site-packages\wandb\sdk\lib\config_util.py", line 60, in save_config_file_from_dict
+    with open(config_filename, "w") as conf_file:
+OSError: [Errno 28] No space left on device: 'C:\\Users\\owner\\Downloads\\Benchmark_Stage_backup2\\Benchmark_Stage\\system_shot_imbalance\\wandb\\sweep-sfzpvcv3\\config-of0hrabi.yaml'
+2025-08-04 06:49:40 INFO Agent received command: run
+2025-08-04 06:49:40 INFO Agent starting run with config:
+	imbalance_factor: 1
+	method: DivFL
+2025-08-04 06:49:40 ERROR Exception while processing command: {'run_id': 'n7netjqu', 'program': 'main.py', 'type': 'run', 'args': {'imbalance_factor': {'value': 1}, 'method': {'value': 'DivFL'}}, 'runqueue_item_id': 'UnVuUXVldWVJdGVtOjY2MjQ0ODM4Ng==', 'logs': ['expected_improvement: 1.766040e-01', 'predicted_value: -8.334163e-01', 'predicted_value_std_dev: 8.852814e-02', 'success_probability: 4.450746e-01', 'warnings: '], 'run_storage_id': 'UnVuOnYxOm43bmV0anF1OkFGTC1IQVItNS1Ob25lLTIwOm5vdXJncmFmZm91bC1hbWVyaWNhbi11bml2ZXJzaXR5LW9mLWJlaXJ1dA=='}
+Traceback (most recent call last):
+  File "C:\Users\owner\AppData\Roaming\Python\Python37\site-packages\wandb\wandb_agent.py", line 327, in _process_command
+    result = self._command_run(command)
+  File "C:\Users\owner\AppData\Roaming\Python\Python37\site-packages\wandb\wandb_agent.py", line 387, in _command_run
+    sweep_param_path, command["args"]
+  File "C:\Users\owner\AppData\Roaming\Python\Python37\site-packages\wandb\sdk\lib\config_util.py", line 60, in save_config_file_from_dict
+    with open(config_filename, "w") as conf_file:
+OSError: [Errno 28] No space left on device: 'C:\\Users\\owner\\Downloads\\Benchmark_Stage_backup2\\Benchmark_Stage\\system_shot_imbalance\\wandb\\sweep-sfzpvcv3\\config-n7netjqu.yaml'
+2025-08-04 06:50:09 INFO Agent received command: run
+2025-08-04 06:50:09 INFO Agent starting run with config:
+	imbalance_factor: 1
+	method: DivFL
+2025-08-04 06:50:09 ERROR Exception while processing command: {'run_id': 'vc0w4vbi', 'program': 'main.py', 'type': 'run', 'args': {'imbalance_factor': {'value': 1}, 'method': {'value': 'DivFL'}}, 'runqueue_item_id': 'UnVuUXVldWVJdGVtOjY2MjQ0ODQzMw==', 'logs': ['expected_improvement: 1.924285e-01', 'predicted_value: -8.379355e-01', 'predicted_value_std_dev: 9.230705e-02', 'success_probability: 4.667258e-01', 'warnings: '], 'run_storage_id': 'UnVuOnYxOnZjMHc0dmJpOkFGTC1IQVItNS1Ob25lLTIwOm5vdXJncmFmZm91bC1hbWVyaWNhbi11bml2ZXJzaXR5LW9mLWJlaXJ1dA=='}
+Traceback (most recent call last):
+  File "C:\Users\owner\AppData\Roaming\Python\Python37\site-packages\wandb\wandb_agent.py", line 327, in _process_command
+    result = self._command_run(command)
+  File "C:\Users\owner\AppData\Roaming\Python\Python37\site-packages\wandb\wandb_agent.py", line 387, in _command_run
+    sweep_param_path, command["args"]
+  File "C:\Users\owner\AppData\Roaming\Python\Python37\site-packages\wandb\sdk\lib\config_util.py", line 60, in save_config_file_from_dict
+    with open(config_filename, "w") as conf_file:
+OSError: [Errno 28] No space left on device: 'C:\\Users\\owner\\Downloads\\Benchmark_Stage_backup2\\Benchmark_Stage\\system_shot_imbalance\\wandb\\sweep-sfzpvcv3\\config-vc0w4vbi.yaml'
+2025-08-04 06:50:15 INFO Agent received command: run
+2025-08-04 06:50:15 INFO Agent starting run with config:
+	imbalance_factor: 1
+	method: DivFL
+2025-08-04 06:50:20 INFO Agent received command: run
+2025-08-04 06:50:20 INFO Agent starting run with config:
+	imbalance_factor: 1
+	method: DivFL
+2025-08-04 06:50:26 INFO Agent received command: run
+2025-08-04 06:50:26 INFO Agent starting run with config:
+	imbalance_factor: 1
+	method: DivFL
+2025-08-04 06:50:31 INFO Agent received command: run
+2025-08-04 06:53:00 INFO Agent received command: run
+2025-08-04 06:53:00 INFO Agent starting run with config:
+	imbalance_factor: 1
+	method: DivFL
+2025-08-04 06:53:00 INFO About to run command: python main.py --imbalance_factor=1 --method=DivFL
+2025-08-04 06:53:05 INFO Running runs: ['q1a6ve9h']
+2025-08-04 21:14:25 INFO Cleaning up finished run: q1a6ve9h
+2025-08-04 21:14:25 INFO Agent received command: run
+2025-08-04 21:14:25 INFO Agent starting run with config:
+	imbalance_factor: 1
+	method: Cluster1
+2025-08-04 21:14:25 INFO About to run command: python main.py --imbalance_factor=1 --method=Cluster1
+2025-08-04 21:14:30 INFO Running runs: ['axmzzxad']
+2025-08-05 07:37:46 INFO Cleaning up finished run: axmzzxad
+2025-08-05 07:37:46 INFO Agent received command: run
+2025-08-05 07:37:46 INFO Agent starting run with config:
+	imbalance_factor: 1
+	method: DivFL
+2025-08-05 07:37:46 INFO About to run command: python main.py --imbalance_factor=1 --method=DivFL
+2025-08-05 07:37:51 INFO Running runs: ['v1ehpivm']
+2025-08-05 07:51:01 INFO Cleaning up finished run: o50aazud
+2025-08-05 07:51:02 INFO Agent received command: run
+2025-08-05 07:51:02 INFO Agent starting run with config:
+	imbalance_factor: 1
+	method: DivFL
+2025-08-05 07:51:02 INFO About to run command: python main.py --imbalance_factor=1 --method=DivFL
+2025-08-05 07:51:07 INFO Running runs: ['7c4qbpek']
+2025-08-05 15:03:37 INFO Cleaning up finished run: 7c4qbpek
+2025-08-05 15:03:37 INFO Agent received command: run
+2025-08-05 15:03:37 INFO Agent starting run with config:
+	imbalance_factor: 1
+	method: DivFL
+2025-08-05 15:03:37 INFO About to run command: python main.py --imbalance_factor=1 --method=DivFL
+2025-08-05 15:03:42 INFO Running runs: ['n862snmf']
+2025-08-05 15:04:08 INFO Cleaning up finished run: n862snmf
+2025-08-05 15:04:08 INFO Agent received command: run
+2025-08-05 15:04:08 INFO Agent starting run with config:
+	imbalance_factor: 1
+	method: DivFL
+2025-08-05 15:04:08 INFO About to run command: python main.py --imbalance_factor=1 --method=DivFL
+2025-08-05 15:04:13 INFO Running runs: ['of0hrabi']
+2025-08-05 15:04:23 INFO Cleaning up finished run: of0hrabi
+2025-08-05 15:04:23 INFO Agent received command: run
+2025-08-05 15:04:23 INFO Agent starting run with config:
+	imbalance_factor: 1
+	method: DivFL
+2025-08-05 15:04:23 INFO About to run command: python main.py --imbalance_factor=1 --method=DivFL
+2025-08-05 15:04:28 INFO Running runs: ['n7netjqu']
+2025-08-05 15:04:39 INFO Cleaning up finished run: n7netjqu
+2025-08-05 15:04:39 INFO Agent received command: run
+2025-08-05 15:04:39 INFO Agent starting run with config:
+	imbalance_factor: 1
+	method: DivFL
+2025-08-05 15:04:39 INFO About to run command: python main.py --imbalance_factor=1 --method=DivFL
+2025-08-05 15:04:44 INFO Running runs: ['vc0w4vbi']
+2025-08-05 15:04:49 INFO Cleaning up finished run: vc0w4vbi
+2025-08-05 15:04:49 INFO Agent received command: run
+2025-08-05 15:04:49 INFO Agent starting run with config:
+	imbalance_factor: 1
+	method: DivFL
+2025-08-05 15:04:49 INFO About to run command: python main.py --imbalance_factor=1 --method=DivFL
+2025-08-05 15:04:54 INFO Running runs: ['2jyekz8c']
+2025-08-05 15:04:59 INFO Cleaning up finished run: 2jyekz8c
+2025-08-05 15:05:00 INFO Agent received command: run
+2025-08-05 15:05:00 INFO Agent starting run with config:
+	imbalance_factor: 1
+	method: DivFL
+2025-08-05 15:05:00 INFO About to run command: python main.py --imbalance_factor=1 --method=DivFL
+2025-08-05 15:05:05 INFO Running runs: ['hj3z96s5']
+2025-08-05 15:05:10 INFO Cleaning up finished run: hj3z96s5
+2025-08-05 15:05:10 INFO Agent received command: run
+2025-08-05 15:05:10 INFO Agent starting run with config:
+	imbalance_factor: 1
+	method: DivFL
+2025-08-05 15:05:10 INFO About to run command: python main.py --imbalance_factor=1 --method=DivFL
+2025-08-05 15:05:15 INFO Running runs: ['88rka2in']
+2025-08-05 15:05:20 INFO Cleaning up finished run: 88rka2in
+2025-08-05 15:05:21 INFO Agent received command: run
+2025-08-05 15:05:21 INFO Agent starting run with config:
+	imbalance_factor: 1
+	method: DivFL
+2025-08-05 15:05:21 INFO About to run command: python main.py --imbalance_factor=1 --method=DivFL
+2025-08-05 15:05:26 INFO Running runs: ['an7q9sm1']
+2025-08-05 15:05:31 INFO Cleaning up finished run: an7q9sm1
+2025-08-05 15:05:31 INFO Agent received command: run
+2025-08-05 15:05:31 INFO Agent starting run with config:
+	imbalance_factor: 1
+	method: DivFL
+2025-08-05 15:05:31 INFO About to run command: python main.py --imbalance_factor=1 --method=DivFL
+2025-08-05 15:05:36 INFO Running runs: ['qlz06txm']
+2025-08-05 15:52:37 INFO Cleaning up finished run: qlz06txm
+2025-08-05 15:52:37 INFO Agent received command: run
+2025-08-05 15:52:37 INFO Agent starting run with config:
+	imbalance_factor: 1
+	method: DivFL
+2025-08-05 15:52:37 INFO About to run command: python main.py --imbalance_factor=1 --method=DivFL
+2025-08-05 15:52:42 INFO Running runs: ['zeiqa0j3']
+2025-08-06 08:04:32 INFO Cleaning up finished run: zeiqa0j3
+2025-08-06 08:04:32 INFO Agent received command: run
+2025-08-06 08:04:32 INFO Agent starting run with config:
+	imbalance_factor: 1
+	method: DivFL
+2025-08-06 08:04:32 INFO About to run command: python main.py --imbalance_factor=1 --method=DivFL
+2025-08-06 08:04:37 INFO Running runs: ['n862snmf']
+2025-08-06 08:04:37 INFO Cleaning up finished run: n862snmf
+2025-08-06 08:04:38 INFO Agent received command: run
+2025-08-06 08:04:38 INFO Agent starting run with config:
+	imbalance_factor: 1
+	method: DivFL
+2025-08-06 08:04:38 INFO About to run command: python main.py --imbalance_factor=1 --method=DivFL
+2025-08-08 17:45:03 INFO Running runs: []
+2025-08-08 17:45:04 INFO Agent received command: run
+2025-08-08 17:45:04 INFO Agent starting run with config:
+	imbalance_factor: 1
+	method: DivFL
+2025-08-08 17:45:04 INFO About to run command: python main.py --imbalance_factor=1 --method=DivFL
+2025-08-08 17:45:09 INFO Running runs: ['n862snmf']
+2025-08-08 17:45:09 INFO Cleaning up finished run: n862snmf
+2025-08-08 17:45:10 INFO Agent received command: run
+2025-08-08 17:45:10 INFO Agent starting run with config:
+	imbalance_factor: 1
+	method: DivFL
+2025-08-08 17:45:10 INFO About to run command: python main.py --imbalance_factor=1 --method=DivFL
+2025-08-08 17:45:15 INFO Running runs: ['of0hrabi']
+2025-08-08 17:45:20 INFO Cleaning up finished run: of0hrabi
+2025-08-08 17:45:21 INFO Agent received command: run
+2025-08-08 17:45:21 INFO Agent starting run with config:
+	imbalance_factor: 1
+	method: DivFL
+2025-08-08 17:45:21 INFO About to run command: python main.py --imbalance_factor=1 --method=DivFL
+2025-08-08 17:45:26 INFO Running runs: ['n7netjqu']
+2025-09-02 18:31:48 ERROR 403 response executing GraphQL.
+2025-09-02 18:31:48 ERROR <!doctype html><meta charset="utf-8"><meta name=viewport content="width=device-width, initial-scale=1"><title>403</title>403 Forbidden

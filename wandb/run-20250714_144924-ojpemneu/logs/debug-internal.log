@@ -1,0 +1,20 @@
+{"time":"2025-07-14T14:49:24.5783062+02:00","level":"INFO","msg":"using version","core version":"0.18.7"}
+{"time":"2025-07-14T14:49:24.5788178+02:00","level":"INFO","msg":"created symlink","path":"wandb\\run-20250714_144924-ojpemneu\\logs\\debug-core.log"}
+{"time":"2025-07-14T14:49:24.6932928+02:00","level":"INFO","msg":"created new stream","id":"ojpemneu"}
+{"time":"2025-07-14T14:49:24.6932928+02:00","level":"INFO","msg":"stream: started","id":"ojpemneu"}
+{"time":"2025-07-14T14:49:24.6938087+02:00","level":"INFO","msg":"sender: started","stream_id":"ojpemneu"}
+{"time":"2025-07-14T14:49:24.6938087+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"ojpemneu"}
+{"time":"2025-07-14T14:49:24.6942561+02:00","level":"INFO","msg":"handler: started","stream_id":"ojpemneu"}
+{"time":"2025-07-14T14:49:25.2168386+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-07-14T14:49:25.2168386+02:00","level":"WARN","msg":"handleCodeSave: program relative path is empty"}
+{"time":"2025-07-14T14:49:25.2168386+02:00","level":"ERROR","msg":"git repo not found","error":"repository does not exist"}
+{"time":"2025-07-14T14:49:26.5404067+02:00","level":"INFO","msg":"stream: closing","id":"ojpemneu"}
+{"time":"2025-07-14T14:49:26.5404067+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-07-14T14:49:26.5410769+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-07-14T14:49:26.7974693+02:00","level":"WARN","msg":"No program path found, not creating job artifact. See https://docs.wandb.ai/guides/launch/create-job"}
+{"time":"2025-07-14T14:49:26.7974693+02:00","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2025-07-14T14:49:27.3132636+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-07-14T14:49:27.7267463+02:00","level":"INFO","msg":"handler: closed","stream_id":"ojpemneu"}
+{"time":"2025-07-14T14:49:27.7267463+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"ojpemneu"}
+{"time":"2025-07-14T14:49:27.7267463+02:00","level":"INFO","msg":"sender: closed","stream_id":"ojpemneu"}
+{"time":"2025-07-14T14:49:27.7267463+02:00","level":"INFO","msg":"stream: closed","id":"ojpemneu"}

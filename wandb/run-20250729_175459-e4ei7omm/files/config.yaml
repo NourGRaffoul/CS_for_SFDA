@@ -1,0 +1,278 @@
+wandb_version: 1
+
+goal:
+  desc: null
+  value: test
+device:
+  desc: null
+  value: cuda
+device_id:
+  desc: null
+  value: '0'
+dataset:
+  desc: null
+  value: HAR
+num_classes:
+  desc: null
+  value: 6
+model:
+  desc: null
+  value: CNN
+batch_size:
+  desc: null
+  value: 10
+local_learning_rate:
+  desc: null
+  value: 0.01
+learning_rate_decay:
+  desc: null
+  value: false
+learning_rate_decay_gamma:
+  desc: null
+  value: 0.99
+global_rounds:
+  desc: null
+  value: 60
+top_cnt:
+  desc: null
+  value: 100
+local_epochs:
+  desc: null
+  value: 10
+algorithm:
+  desc: null
+  value: FedAvg
+join_ratio:
+  desc: null
+  value: 0.25
+random_join_ratio:
+  desc: null
+  value: false
+num_clients:
+  desc: null
+  value: 20
+prev:
+  desc: null
+  value: 0
+times:
+  desc: null
+  value: 1
+eval_gap:
+  desc: null
+  value: 1
+save_folder_name:
+  desc: null
+  value: items
+auto_break:
+  desc: null
+  value: false
+dlg_eval:
+  desc: null
+  value: false
+dlg_gap:
+  desc: null
+  value: 100
+batch_num_per_client:
+  desc: null
+  value: 2
+num_new_clients:
+  desc: null
+  value: 0
+fine_tuning_epoch_new:
+  desc: null
+  value: 0
+feature_dim:
+  desc: null
+  value: 512
+vocab_size:
+  desc: null
+  value: 80
+max_len:
+  desc: null
+  value: 200
+few_shot:
+  desc: null
+  value: 0
+client_drop_rate:
+  desc: null
+  value: 0.0
+train_slow_rate:
+  desc: null
+  value: 0.0
+send_slow_rate:
+  desc: null
+  value: 0.0
+time_select:
+  desc: null
+  value: false
+time_threthold:
+  desc: null
+  value: 10000
+beta:
+  desc: null
+  value: 0.0
+lamda:
+  desc: null
+  value: 1.0
+mu:
+  desc: null
+  value: 0.0
+K:
+  desc: null
+  value: 5
+p_learning_rate:
+  desc: null
+  value: 0.01
+M:
+  desc: null
+  value: 5
+itk:
+  desc: null
+  value: 4000
+alphaK:
+  desc: null
+  value: 1.0
+sigma:
+  desc: null
+  value: 1.0
+alpha:
+  desc: null
+  value: 1.0
+plocal_epochs:
+  desc: null
+  value: 1
+tau:
+  desc: null
+  value: 1.0
+fine_tuning_epochs:
+  desc: null
+  value: 10
+dr_learning_rate:
+  desc: null
+  value: 0.0
+L:
+  desc: null
+  value: 1.0
+noise_dim:
+  desc: null
+  value: 512
+generator_learning_rate:
+  desc: null
+  value: 0.005
+hidden_dim:
+  desc: null
+  value: 512
+server_epochs:
+  desc: null
+  value: 1000
+localize_feature_extractor:
+  desc: null
+  value: false
+server_learning_rate:
+  desc: null
+  value: 0.1
+eta:
+  desc: null
+  value: 1.0
+rand_percent:
+  desc: null
+  value: 80
+layer_idx:
+  desc: null
+  value: 2
+mentee_learning_rate:
+  desc: null
+  value: 0.005
+T_start:
+  desc: null
+  value: 0.95
+T_end:
+  desc: null
+  value: 0.98
+momentum:
+  desc: null
+  value: 0.1
+kl_weight:
+  desc: null
+  value: 0.0
+num_candidates:
+  desc: null
+  value: 10
+method:
+  desc: null
+  value: FullPart
+comment:
+  desc: null
+  value: ''
+num_clients_per_round:
+  desc: null
+  value: 5
+num_available:
+  desc: null
+  value: null
+loss_div_sqrt:
+  desc: null
+  value: false
+loss_sum:
+  desc: null
+  value: false
+subset_ratio:
+  desc: null
+  value: 0.1
+alpha1:
+  desc: null
+  value: 0.75
+alpha2:
+  desc: null
+  value: 1
+alpha3:
+  desc: null
+  value: 0.1
+save_probs:
+  desc: null
+  value: false
+no_save_results:
+  desc: null
+  value: false
+src_id:
+  desc: null
+  value: 1
+imbalance_factor:
+  desc: null
+  value: 50
+total_num_clients:
+  desc: null
+  value: 20
+num_epoch:
+  desc: null
+  value: 10
+wandb:
+  desc: null
+  value: true
+_wandb:
+  desc: null
+  value:
+    code_path: code/main.py
+    python_version: 3.7.0
+    cli_version: 0.18.7
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1753804499
+    t:
+      1:
+      - 1
+      - 5
+      - 41
+      - 53
+      - 55
+      3:
+      - 13
+      - 16
+      - 23
+      4: 3.7.0
+      5: 0.18.7
+      8:
+      - 3
+      - 5
+      13: windows-amd64

@@ -1,0 +1,1169 @@
+
+cuda is not avaiable.
+
+==================================================
+goal = test
+device = cpu
+device_id = 0
+dataset = HAR
+num_classes = 6
+model = CNN
+batch_size = 10
+local_learning_rate = 0.01
+learning_rate_decay = False
+learning_rate_decay_gamma = 0.99
+global_rounds = 60
+top_cnt = 100
+local_epochs = 10
+algorithm = FedAvg
+join_ratio = 0.25
+random_join_ratio = False
+num_clients = 20
+prev = 0
+times = 1
+eval_gap = 1
+save_folder_name = items
+auto_break = False
+dlg_eval = False
+dlg_gap = 100
+batch_num_per_client = 2
+num_new_clients = 0
+fine_tuning_epoch_new = 0
+feature_dim = 512
+vocab_size = 80
+max_len = 200
+few_shot = 0
+client_drop_rate = 0.0
+train_slow_rate = 0.0
+send_slow_rate = 0.0
+time_select = False
+time_threthold = 10000
+beta = 0.0
+lamda = 1.0
+mu = 0.0
+K = 5
+p_learning_rate = 0.01
+M = 5
+itk = 4000
+alphaK = 1.0
+sigma = 1.0
+alpha = 1.0
+plocal_epochs = 1
+tau = 1.0
+fine_tuning_epochs = 10
+dr_learning_rate = 0.0
+L = 1.0
+noise_dim = 512
+generator_learning_rate = 0.005
+hidden_dim = 512
+server_epochs = 1000
+localize_feature_extractor = False
+server_learning_rate = 0.1
+eta = 1.0
+rand_percent = 80
+layer_idx = 2
+mentee_learning_rate = 0.005
+T_start = 0.95
+T_end = 0.98
+momentum = 0.1
+kl_weight = 0.0
+num_candidates = 10
+method = Cluster1
+comment =
+num_clients_per_round = 5
+num_available = None
+loss_div_sqrt = False
+loss_sum = False
+subset_ratio = 0.1
+alpha1 = 0.75
+alpha2 = 1
+alpha3 = 0.1
+save_probs = False
+no_save_results = False
+src_id = 1
+imbalance_factor = 100.0
+total_num_clients = 20
+num_epoch = 10
+wandb = True
+==================================================
+
+****** Client source: 1 *******
+Accuracy of source client: 97.80%
+
+============= Running time: 0th =============
+Creating server and clients ...
+CNN
+Initializing client selection method: Cluster1
+Pre-loading and preparing all client data...
+INFO: Simulating imbalance with factor 100.0 for client 0 training data.
+INFO: Simulating imbalance with factor 100.0 for client 1 training data.
+INFO: Simulating imbalance with factor 100.0 for client 2 training data.
+INFO: Simulating imbalance with factor 100.0 for client 3 training data.
+INFO: Simulating imbalance with factor 100.0 for client 4 training data.
+INFO: Simulating imbalance with factor 100.0 for client 5 training data.
+INFO: Simulating imbalance with factor 100.0 for client 6 training data.
+INFO: Simulating imbalance with factor 100.0 for client 7 training data.
+INFO: Simulating imbalance with factor 100.0 for client 8 training data.
+INFO: Simulating imbalance with factor 100.0 for client 9 training data.
+INFO: Simulating imbalance with factor 100.0 for client 10 training data.
+INFO: Simulating imbalance with factor 100.0 for client 11 training data.
+INFO: Simulating imbalance with factor 100.0 for client 12 training data.
+INFO: Simulating imbalance with factor 100.0 for client 13 training data.
+INFO: Simulating imbalance with factor 100.0 for client 14 training data.
+INFO: Simulating imbalance with factor 100.0 for client 15 training data.
+INFO: Simulating imbalance with factor 100.0 for client 16 training data.
+INFO: Simulating imbalance with factor 100.0 for client 17 training data.
+INFO: Simulating imbalance with factor 100.0 for client 18 training data.
+INFO: Simulating imbalance with factor 100.0 for client 19 training data.
+Data loading complete.
+
+Join ratio / total clients: 0.25 / 20
+Finished creating server and clients.
+
+------------- Round 0-------------
+> Pre-training selection: choosing 5 clients.
+SELECTED INDICES:  [17 19  5  4  8]
+DEBUG: About to index self.clients. Length of self.clients is: 20
+> Sending global model to 5 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.8154
+Averaged Test Accurancy: 0.7609
+Averaged Test AUC: 0.8797
+Std Test Accurancy: 0.1663
+Std Test AUC: 0.0932
+--- Training 5 clients ---
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [4, 5, 8, 17, 19]
+------------------------- time cost ------------------------- 122.20036768913269
+
+------------- Round 1-------------
+> Pre-training selection: choosing 5 clients.
+SELECTED INDICES:  [15 18 14  3  9]
+DEBUG: About to index self.clients. Length of self.clients is: 20
+> Sending global model to 5 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.4869
+Averaged Test Accurancy: 0.6162
+Averaged Test AUC: 0.8490
+Std Test Accurancy: 0.1754
+Std Test AUC: 0.0908
+--- Training 5 clients ---
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [3, 9, 14, 15, 18]
+------------------------- time cost ------------------------- 121.42090821266174
+
+------------- Round 2-------------
+> Pre-training selection: choosing 5 clients.
+SELECTED INDICES:  [18 19 14  4  8]
+DEBUG: About to index self.clients. Length of self.clients is: 20
+> Sending global model to 5 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.9629
+Averaged Test Accurancy: 0.5782
+Averaged Test AUC: 0.8238
+Std Test Accurancy: 0.1814
+Std Test AUC: 0.0939
+--- Training 5 clients ---
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [4, 8, 14, 18, 19]
+------------------------- time cost ------------------------- 112.77980637550354
+
+------------- Round 3-------------
+> Pre-training selection: choosing 5 clients.
+SELECTED INDICES:  [16 19 12 10  8]
+DEBUG: About to index self.clients. Length of self.clients is: 20
+> Sending global model to 5 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.8764
+Averaged Test Accurancy: 0.4832
+Averaged Test AUC: 0.7725
+Std Test Accurancy: 0.1528
+Std Test AUC: 0.0852
+--- Training 5 clients ---
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [8, 10, 12, 16, 19]
+------------------------- time cost ------------------------- 115.1382315158844
+
+------------- Round 4-------------
+> Pre-training selection: choosing 5 clients.
+SELECTED INDICES:  [15  2 14  3  8]
+DEBUG: About to index self.clients. Length of self.clients is: 20
+> Sending global model to 5 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.8006
+Averaged Test Accurancy: 0.4508
+Averaged Test AUC: 0.7900
+Std Test Accurancy: 0.1486
+Std Test AUC: 0.0758
+--- Training 5 clients ---
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [2, 3, 8, 14, 15]
+------------------------- time cost ------------------------- 119.05542349815369
+
+------------- Round 5-------------
+> Pre-training selection: choosing 5 clients.
+SELECTED INDICES:  [16 18 13  6  7]
+DEBUG: About to index self.clients. Length of self.clients is: 20
+> Sending global model to 5 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 2.0673
+Averaged Test Accurancy: 0.3995
+Averaged Test AUC: 0.7704
+Std Test Accurancy: 0.1370
+Std Test AUC: 0.0672
+--- Training 5 clients ---
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [6, 7, 13, 16, 18]
+------------------------- time cost ------------------------- 118.04392957687378
+
+------------- Round 6-------------
+> Pre-training selection: choosing 5 clients.
+SELECTED INDICES:  [15 18 13  4  8]
+DEBUG: About to index self.clients. Length of self.clients is: 20
+> Sending global model to 5 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.9283
+Averaged Test Accurancy: 0.4599
+Averaged Test AUC: 0.7089
+Std Test Accurancy: 0.1103
+Std Test AUC: 0.0673
+--- Training 5 clients ---
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [4, 8, 13, 15, 18]
+------------------------- time cost ------------------------- 106.97070169448853
+
+------------- Round 7-------------
+> Pre-training selection: choosing 5 clients.
+SELECTED INDICES:  [16 19  5  6  8]
+DEBUG: About to index self.clients. Length of self.clients is: 20
+> Sending global model to 5 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 2.3297
+Averaged Test Accurancy: 0.4848
+Averaged Test AUC: 0.8068
+Std Test Accurancy: 0.1221
+Std Test AUC: 0.0613
+--- Training 5 clients ---
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [5, 6, 8, 16, 19]
+------------------------- time cost ------------------------- 108.63011646270752
+
+------------- Round 8-------------
+> Pre-training selection: choosing 5 clients.
+SELECTED INDICES:  [15  2 12  3  7]
+DEBUG: About to index self.clients. Length of self.clients is: 20
+> Sending global model to 5 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 2.0667
+Averaged Test Accurancy: 0.4990
+Averaged Test AUC: 0.8118
+Std Test Accurancy: 0.1392
+Std Test AUC: 0.0672
+--- Training 5 clients ---
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [2, 3, 7, 12, 15]
+------------------------- time cost ------------------------- 99.54224944114685
+
+------------- Round 9-------------
+> Pre-training selection: choosing 5 clients.
+SELECTED INDICES:  [15  0 13  6  4]
+DEBUG: About to index self.clients. Length of self.clients is: 20
+> Sending global model to 5 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.9191
+Averaged Test Accurancy: 0.5000
+Averaged Test AUC: 0.7436
+Std Test Accurancy: 0.0903
+Std Test AUC: 0.0566
+--- Training 5 clients ---
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [0, 4, 6, 13, 15]
+------------------------- time cost ------------------------- 119.28396677970886
+
+------------- Round 10-------------
+> Pre-training selection: choosing 5 clients.
+SELECTED INDICES:  [17  0 11 11  7]
+DEBUG: About to index self.clients. Length of self.clients is: 20
+> Sending global model to 5 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.9036
+Averaged Test Accurancy: 0.4924
+Averaged Test AUC: 0.7357
+Std Test Accurancy: 0.1068
+Std Test AUC: 0.0674
+--- Training 5 clients ---
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [0, 7, 11, 11, 17]
+------------------------- time cost ------------------------- 125.3433666229248
+
+------------- Round 11-------------
+> Pre-training selection: choosing 5 clients.
+SELECTED INDICES:  [17  0 13 11  7]
+DEBUG: About to index self.clients. Length of self.clients is: 20
+> Sending global model to 5 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.7825
+Averaged Test Accurancy: 0.4619
+Averaged Test AUC: 0.7150
+Std Test Accurancy: 0.0916
+Std Test AUC: 0.0690
+--- Training 5 clients ---
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [0, 7, 11, 13, 17]
+------------------------- time cost ------------------------- 124.30099487304688
+
+------------- Round 12-------------
+> Pre-training selection: choosing 5 clients.
+SELECTED INDICES:  [15 14 13 10  9]
+DEBUG: About to index self.clients. Length of self.clients is: 20
+> Sending global model to 5 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.7548
+Averaged Test Accurancy: 0.4934
+Averaged Test AUC: 0.7330
+Std Test Accurancy: 0.0917
+Std Test AUC: 0.0755
+--- Training 5 clients ---
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [9, 10, 13, 14, 15]
+------------------------- time cost ------------------------- 103.17178559303284
+
+------------- Round 13-------------
+> Pre-training selection: choosing 5 clients.
+SELECTED INDICES:  [16 19 12  3  1]
+DEBUG: About to index self.clients. Length of self.clients is: 20
+> Sending global model to 5 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 2.3763
+Averaged Test Accurancy: 0.5523
+Averaged Test AUC: 0.8021
+Std Test Accurancy: 0.0935
+Std Test AUC: 0.0602
+--- Training 5 clients ---
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [1, 3, 12, 16, 19]
+------------------------- time cost ------------------------- 165.36960363388062
+
+------------- Round 14-------------
+> Pre-training selection: choosing 5 clients.
+SELECTED INDICES:  [15 14 13  3  7]
+DEBUG: About to index self.clients. Length of self.clients is: 20
+> Sending global model to 5 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 4.4350
+Averaged Test Accurancy: 0.3102
+Averaged Test AUC: 0.6391
+Std Test Accurancy: 0.0864
+Std Test AUC: 0.0389
+--- Training 5 clients ---
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [3, 7, 13, 14, 15]
+------------------------- time cost ------------------------- 163.75686240196228
+
+------------- Round 15-------------
+> Pre-training selection: choosing 5 clients.
+SELECTED INDICES:  [15 19 13  6  8]
+DEBUG: About to index self.clients. Length of self.clients is: 20
+> Sending global model to 5 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.6242
+Averaged Test Accurancy: 0.4751
+Averaged Test AUC: 0.7475
+Std Test Accurancy: 0.1020
+Std Test AUC: 0.0671
+--- Training 5 clients ---
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [6, 8, 13, 15, 19]
+------------------------- time cost ------------------------- 139.7032458782196
+
+------------- Round 16-------------
+> Pre-training selection: choosing 5 clients.
+SELECTED INDICES:  [18  0 14  6  7]
+DEBUG: About to index self.clients. Length of self.clients is: 20
+> Sending global model to 5 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 2.5120
+Averaged Test Accurancy: 0.3766
+Averaged Test AUC: 0.7062
+Std Test Accurancy: 0.0850
+Std Test AUC: 0.0548
+--- Training 5 clients ---
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [0, 6, 7, 14, 18]
+------------------------- time cost ------------------------- 152.5311357975006
+
+------------- Round 17-------------
+> Pre-training selection: choosing 5 clients.
+SELECTED INDICES:  [18 19 13 10  8]
+DEBUG: About to index self.clients. Length of self.clients is: 20
+> Sending global model to 5 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.2646
+Averaged Test Accurancy: 0.4650
+Averaged Test AUC: 0.7554
+Std Test Accurancy: 0.1009
+Std Test AUC: 0.0509
+--- Training 5 clients ---
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [8, 10, 13, 18, 19]
+------------------------- time cost ------------------------- 111.83517742156982
+
+------------- Round 18-------------
+> Pre-training selection: choosing 5 clients.
+SELECTED INDICES:  [17  0 12  4  1]
+DEBUG: About to index self.clients. Length of self.clients is: 20
+> Sending global model to 5 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 2.2468
+Averaged Test Accurancy: 0.3721
+Averaged Test AUC: 0.7163
+Std Test Accurancy: 0.0931
+Std Test AUC: 0.0603
+--- Training 5 clients ---
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [0, 1, 4, 12, 17]
+------------------------- time cost ------------------------- 114.69870257377625
+
+------------- Round 19-------------
+> Pre-training selection: choosing 5 clients.
+SELECTED INDICES:  [15 19  5 10  8]
+DEBUG: About to index self.clients. Length of self.clients is: 20
+> Sending global model to 5 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 4.2082
+Averaged Test Accurancy: 0.3102
+Averaged Test AUC: 0.6491
+Std Test Accurancy: 0.0977
+Std Test AUC: 0.0410
+--- Training 5 clients ---
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [5, 8, 10, 15, 19]
+------------------------- time cost ------------------------- 94.67335748672485
+
+------------- Round 20-------------
+> Pre-training selection: choosing 5 clients.
+SELECTED INDICES:  [16 18 14  6  9]
+DEBUG: About to index self.clients. Length of self.clients is: 20
+> Sending global model to 5 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 2.5003
+Averaged Test Accurancy: 0.3076
+Averaged Test AUC: 0.6532
+Std Test Accurancy: 0.0887
+Std Test AUC: 0.0570
+--- Training 5 clients ---
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [6, 9, 14, 16, 18]
+------------------------- time cost ------------------------- 104.28758978843689
+
+------------- Round 21-------------
+> Pre-training selection: choosing 5 clients.
+SELECTED INDICES:  [17  2 11  3  1]
+DEBUG: About to index self.clients. Length of self.clients is: 20
+> Sending global model to 5 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 2.4852
+Averaged Test Accurancy: 0.4538
+Averaged Test AUC: 0.7946
+Std Test Accurancy: 0.0954
+Std Test AUC: 0.0631
+--- Training 5 clients ---
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [1, 2, 3, 11, 17]
+------------------------- time cost ------------------------- 98.25569820404053
+
+------------- Round 22-------------
+> Pre-training selection: choosing 5 clients.
+SELECTED INDICES:  [15  2 11 10  9]
+DEBUG: About to index self.clients. Length of self.clients is: 20
+> Sending global model to 5 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 3.2766
+Averaged Test Accurancy: 0.3518
+Averaged Test AUC: 0.6470
+Std Test Accurancy: 0.0669
+Std Test AUC: 0.0380
+--- Training 5 clients ---
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [2, 9, 10, 11, 15]
+------------------------- time cost ------------------------- 180.754896402359
+
+------------- Round 23-------------
+> Pre-training selection: choosing 5 clients.
+SELECTED INDICES:  [18  0 13  6  9]
+DEBUG: About to index self.clients. Length of self.clients is: 20
+> Sending global model to 5 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 2.2591
+Averaged Test Accurancy: 0.4609
+Averaged Test AUC: 0.7332
+Std Test Accurancy: 0.0947
+Std Test AUC: 0.0545
+--- Training 5 clients ---
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [0, 6, 9, 13, 18]
+------------------------- time cost ------------------------- 159.87220335006714
+
+------------- Round 24-------------
+> Pre-training selection: choosing 5 clients.
+SELECTED INDICES:  [15  2 13  3  4]
+DEBUG: About to index self.clients. Length of self.clients is: 20
+> Sending global model to 5 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 2.0705
+Averaged Test Accurancy: 0.4594
+Averaged Test AUC: 0.7678
+Std Test Accurancy: 0.0777
+Std Test AUC: 0.0495
+--- Training 5 clients ---
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [2, 3, 4, 13, 15]
+------------------------- time cost ------------------------- 115.11869764328003
+
+------------- Round 25-------------
+> Pre-training selection: choosing 5 clients.
+SELECTED INDICES:  [18  2 12  6  9]
+DEBUG: About to index self.clients. Length of self.clients is: 20
+> Sending global model to 5 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 2.0683
+Averaged Test Accurancy: 0.4660
+Averaged Test AUC: 0.7274
+Std Test Accurancy: 0.0956
+Std Test AUC: 0.0475
+--- Training 5 clients ---
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [2, 6, 9, 12, 18]
+------------------------- time cost ------------------------- 127.4054594039917
+
+------------- Round 26-------------
+> Pre-training selection: choosing 5 clients.
+SELECTED INDICES:  [17  0  5 11  7]
+DEBUG: About to index self.clients. Length of self.clients is: 20
+> Sending global model to 5 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 2.2011
+Averaged Test Accurancy: 0.4629
+Averaged Test AUC: 0.7725
+Std Test Accurancy: 0.0802
+Std Test AUC: 0.0579
+--- Training 5 clients ---
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [0, 5, 7, 11, 17]
+------------------------- time cost ------------------------- 136.5728418827057
+
+------------- Round 27-------------
+> Pre-training selection: choosing 5 clients.
+SELECTED INDICES:  [17 14 11  3  9]
+DEBUG: About to index self.clients. Length of self.clients is: 20
+> Sending global model to 5 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.6119
+Averaged Test Accurancy: 0.5030
+Averaged Test AUC: 0.7603
+Std Test Accurancy: 0.0797
+Std Test AUC: 0.0670
+--- Training 5 clients ---
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [3, 9, 11, 14, 17]
+------------------------- time cost ------------------------- 108.15376687049866
+
+------------- Round 28-------------
+> Pre-training selection: choosing 5 clients.
+SELECTED INDICES:  [16 19 13  6  9]
+DEBUG: About to index self.clients. Length of self.clients is: 20
+> Sending global model to 5 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 2.1988
+Averaged Test Accurancy: 0.4579
+Averaged Test AUC: 0.7410
+Std Test Accurancy: 0.0770
+Std Test AUC: 0.0524
+--- Training 5 clients ---
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [6, 9, 13, 16, 19]
+------------------------- time cost ------------------------- 113.96131777763367
+
+------------- Round 29-------------
+> Pre-training selection: choosing 5 clients.
+SELECTED INDICES:  [17  2 11  4  8]
+DEBUG: About to index self.clients. Length of self.clients is: 20
+> Sending global model to 5 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 2.2606
+Averaged Test Accurancy: 0.4619
+Averaged Test AUC: 0.7448
+Std Test Accurancy: 0.0924
+Std Test AUC: 0.0572
+--- Training 5 clients ---
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [2, 4, 8, 11, 17]
+------------------------- time cost ------------------------- 107.53584861755371
+
+------------- Round 30-------------
+> Pre-training selection: choosing 5 clients.
+SELECTED INDICES:  [18  2 13  3  9]
+DEBUG: About to index self.clients. Length of self.clients is: 20
+> Sending global model to 5 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 2.7040
+Averaged Test Accurancy: 0.3635
+Averaged Test AUC: 0.6556
+Std Test Accurancy: 0.1147
+Std Test AUC: 0.0735
+--- Training 5 clients ---
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [2, 3, 9, 13, 18]
+------------------------- time cost ------------------------- 115.48339509963989
+
+------------- Round 31-------------
+> Pre-training selection: choosing 5 clients.
+SELECTED INDICES:  [15  2  5 10  9]
+DEBUG: About to index self.clients. Length of self.clients is: 20
+> Sending global model to 5 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 2.5085
+Averaged Test Accurancy: 0.4452
+Averaged Test AUC: 0.7426
+Std Test Accurancy: 0.0892
+Std Test AUC: 0.0573
+--- Training 5 clients ---
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [2, 5, 9, 10, 15]
+------------------------- time cost ------------------------- 109.40112090110779
+
+------------- Round 32-------------
+> Pre-training selection: choosing 5 clients.
+SELECTED INDICES:  [16  2 12  3  8]
+DEBUG: About to index self.clients. Length of self.clients is: 20
+> Sending global model to 5 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 2.4297
+Averaged Test Accurancy: 0.4178
+Averaged Test AUC: 0.7211
+Std Test Accurancy: 0.0902
+Std Test AUC: 0.0519
+--- Training 5 clients ---
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [2, 3, 8, 12, 16]
+------------------------- time cost ------------------------- 108.18175888061523
+
+------------- Round 33-------------
+> Pre-training selection: choosing 5 clients.
+SELECTED INDICES:  [15 19 13  6  4]
+DEBUG: About to index self.clients. Length of self.clients is: 20
+> Sending global model to 5 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 2.9667
+Averaged Test Accurancy: 0.3543
+Averaged Test AUC: 0.6554
+Std Test Accurancy: 0.0804
+Std Test AUC: 0.0612
+--- Training 5 clients ---
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [4, 6, 13, 15, 19]
+------------------------- time cost ------------------------- 111.68378448486328
+
+------------- Round 34-------------
+> Pre-training selection: choosing 5 clients.
+SELECTED INDICES:  [16 14 14 10  9]
+DEBUG: About to index self.clients. Length of self.clients is: 20
+> Sending global model to 5 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 2.3467
+Averaged Test Accurancy: 0.4401
+Averaged Test AUC: 0.7315
+Std Test Accurancy: 0.1011
+Std Test AUC: 0.0520
+--- Training 5 clients ---
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [9, 10, 14, 14, 16]
+------------------------- time cost ------------------------- 110.99785161018372
+
+------------- Round 35-------------
+> Pre-training selection: choosing 5 clients.
+SELECTED INDICES:  [18  2  5  6  7]
+DEBUG: About to index self.clients. Length of self.clients is: 20
+> Sending global model to 5 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 2.6141
+Averaged Test Accurancy: 0.4020
+Averaged Test AUC: 0.7386
+Std Test Accurancy: 0.0756
+Std Test AUC: 0.0577
+--- Training 5 clients ---
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [2, 5, 6, 7, 18]
+------------------------- time cost ------------------------- 109.05968046188354
+
+------------- Round 36-------------
+> Pre-training selection: choosing 5 clients.
+SELECTED INDICES:  [18 14 11 10  8]
+DEBUG: About to index self.clients. Length of self.clients is: 20
+> Sending global model to 5 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.7084
+Averaged Test Accurancy: 0.4675
+Averaged Test AUC: 0.7391
+Std Test Accurancy: 0.0906
+Std Test AUC: 0.0572
+--- Training 5 clients ---
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [8, 10, 11, 14, 18]
+------------------------- time cost ------------------------- 121.67650890350342
+
+------------- Round 37-------------
+> Pre-training selection: choosing 5 clients.
+SELECTED INDICES:  [18  0 12 10  7]
+DEBUG: About to index self.clients. Length of self.clients is: 20
+> Sending global model to 5 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 4.2798
+Averaged Test Accurancy: 0.3538
+Averaged Test AUC: 0.6737
+Std Test Accurancy: 0.0879
+Std Test AUC: 0.0652
+--- Training 5 clients ---
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [0, 7, 10, 12, 18]
+------------------------- time cost ------------------------- 135.89590620994568
+
+------------- Round 38-------------
+> Pre-training selection: choosing 5 clients.
+SELECTED INDICES:  [16 18 12  3  9]
+DEBUG: About to index self.clients. Length of self.clients is: 20
+> Sending global model to 5 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.5745
+Averaged Test Accurancy: 0.4832
+Averaged Test AUC: 0.7386
+Std Test Accurancy: 0.0826
+Std Test AUC: 0.0629
+--- Training 5 clients ---
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [3, 9, 12, 16, 18]
+------------------------- time cost ------------------------- 115.63354730606079
+
+------------- Round 39-------------
+> Pre-training selection: choosing 5 clients.
+SELECTED INDICES:  [16 19 14  3  7]
+DEBUG: About to index self.clients. Length of self.clients is: 20
+> Sending global model to 5 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 2.4646
+Averaged Test Accurancy: 0.4066
+Averaged Test AUC: 0.7202
+Std Test Accurancy: 0.0776
+Std Test AUC: 0.0716
+--- Training 5 clients ---
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [3, 7, 14, 16, 19]
+------------------------- time cost ------------------------- 105.20838379859924
+
+------------- Round 40-------------
+> Pre-training selection: choosing 5 clients.
+SELECTED INDICES:  [17  0 11  6  9]
+DEBUG: About to index self.clients. Length of self.clients is: 20
+> Sending global model to 5 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.5716
+Averaged Test Accurancy: 0.4624
+Averaged Test AUC: 0.7311
+Std Test Accurancy: 0.0790
+Std Test AUC: 0.0556
+--- Training 5 clients ---
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [0, 6, 9, 11, 17]
+------------------------- time cost ------------------------- 121.99699330329895
+
+------------- Round 41-------------
+> Pre-training selection: choosing 5 clients.
+SELECTED INDICES:  [15  0 12  6  8]
+DEBUG: About to index self.clients. Length of self.clients is: 20
+> Sending global model to 5 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 2.5178
+Averaged Test Accurancy: 0.3893
+Averaged Test AUC: 0.6932
+Std Test Accurancy: 0.1175
+Std Test AUC: 0.0658
+--- Training 5 clients ---
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [0, 6, 8, 12, 15]
+------------------------- time cost ------------------------- 115.75626730918884
+
+------------- Round 42-------------
+> Pre-training selection: choosing 5 clients.
+SELECTED INDICES:  [18 14  5  6  8]
+DEBUG: About to index self.clients. Length of self.clients is: 20
+> Sending global model to 5 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 6.0094
+Averaged Test Accurancy: 0.3178
+Averaged Test AUC: 0.6134
+Std Test Accurancy: 0.1130
+Std Test AUC: 0.0835
+--- Training 5 clients ---
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [5, 6, 8, 14, 18]
+------------------------- time cost ------------------------- 108.24796056747437
+
+------------- Round 43-------------
+> Pre-training selection: choosing 5 clients.
+SELECTED INDICES:  [16 18 11  3  8]
+DEBUG: About to index self.clients. Length of self.clients is: 20
+> Sending global model to 5 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 6.4943
+Averaged Test Accurancy: 0.3213
+Averaged Test AUC: 0.6014
+Std Test Accurancy: 0.1001
+Std Test AUC: 0.0654
+--- Training 5 clients ---
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [3, 8, 11, 16, 18]
+------------------------- time cost ------------------------- 110.0487003326416
+
+------------- Round 44-------------
+> Pre-training selection: choosing 5 clients.
+SELECTED INDICES:  [15  0 12  3  8]
+DEBUG: About to index self.clients. Length of self.clients is: 20
+> Sending global model to 5 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 5.9011
+Averaged Test Accurancy: 0.2898
+Averaged Test AUC: 0.5606
+Std Test Accurancy: 0.0935
+Std Test AUC: 0.0594
+--- Training 5 clients ---
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [0, 3, 8, 12, 15]
+------------------------- time cost ------------------------- 113.99984908103943
+
+------------- Round 45-------------
+> Pre-training selection: choosing 5 clients.
+SELECTED INDICES:  [16  0  5  3  8]
+DEBUG: About to index self.clients. Length of self.clients is: 20
+> Sending global model to 5 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 6.2408
+Averaged Test Accurancy: 0.2711
+Averaged Test AUC: 0.5912
+Std Test Accurancy: 0.0994
+Std Test AUC: 0.0651
+--- Training 5 clients ---
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [0, 3, 5, 8, 16]
+------------------------- time cost ------------------------- 125.04256820678711
+
+------------- Round 46-------------
+> Pre-training selection: choosing 5 clients.
+SELECTED INDICES:  [18 18 12  3  9]
+DEBUG: About to index self.clients. Length of self.clients is: 20
+> Sending global model to 5 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 6.7744
+Averaged Test Accurancy: 0.3107
+Averaged Test AUC: 0.5853
+Std Test Accurancy: 0.0980
+Std Test AUC: 0.0632
+--- Training 5 clients ---
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [3, 9, 12, 18, 18]
+------------------------- time cost ------------------------- 125.0697226524353
+
+------------- Round 47-------------
+> Pre-training selection: choosing 5 clients.
+SELECTED INDICES:  [18 18  5  3  8]
+DEBUG: About to index self.clients. Length of self.clients is: 20
+> Sending global model to 5 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 2.5326
+Averaged Test Accurancy: 0.3574
+Averaged Test AUC: 0.6601
+Std Test Accurancy: 0.0897
+Std Test AUC: 0.0595
+--- Training 5 clients ---
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [3, 5, 8, 18, 18]
+------------------------- time cost ------------------------- 107.68578863143921
+
+------------- Round 48-------------
+> Pre-training selection: choosing 5 clients.
+SELECTED INDICES:  [18 14 12  3  8]
+DEBUG: About to index self.clients. Length of self.clients is: 20
+> Sending global model to 5 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 7.8169
+Averaged Test Accurancy: 0.2482
+Averaged Test AUC: 0.5720
+Std Test Accurancy: 0.0929
+Std Test AUC: 0.0563
+--- Training 5 clients ---
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [3, 8, 12, 14, 18]
+------------------------- time cost ------------------------- 100.73512625694275
+
+------------- Round 49-------------
+> Pre-training selection: choosing 5 clients.
+SELECTED INDICES:  [18  0 13 11  7]
+DEBUG: About to index self.clients. Length of self.clients is: 20
+> Sending global model to 5 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 5.1188
+Averaged Test Accurancy: 0.2695
+Averaged Test AUC: 0.6006
+Std Test Accurancy: 0.1029
+Std Test AUC: 0.0671
+--- Training 5 clients ---
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [0, 7, 11, 13, 18]
+------------------------- time cost ------------------------- 117.8430016040802
+
+------------- Round 50-------------
+> Pre-training selection: choosing 5 clients.
+SELECTED INDICES:  [18 19 11 10  9]
+DEBUG: About to index self.clients. Length of self.clients is: 20
+> Sending global model to 5 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.6458
+Averaged Test Accurancy: 0.4442
+Averaged Test AUC: 0.6799
+Std Test Accurancy: 0.1360
+Std Test AUC: 0.0743
+--- Training 5 clients ---
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [9, 10, 11, 18, 19]
+------------------------- time cost ------------------------- 107.165114402771
+
+------------- Round 51-------------
+> Pre-training selection: choosing 5 clients.
+SELECTED INDICES:  [16 18  5 11  1]
+DEBUG: About to index self.clients. Length of self.clients is: 20
+> Sending global model to 5 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 2.8142
+Averaged Test Accurancy: 0.3437
+Averaged Test AUC: 0.6200
+Std Test Accurancy: 0.1077
+Std Test AUC: 0.0706
+--- Training 5 clients ---
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [1, 5, 11, 16, 18]
+------------------------- time cost ------------------------- 110.04621362686157
+
+------------- Round 52-------------
+> Pre-training selection: choosing 5 clients.
+SELECTED INDICES:  [16 18  5  3  4]
+DEBUG: About to index self.clients. Length of self.clients is: 20
+> Sending global model to 5 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 4.2827
+Averaged Test Accurancy: 0.2944
+Averaged Test AUC: 0.6343
+Std Test Accurancy: 0.0664
+Std Test AUC: 0.0357
+--- Training 5 clients ---
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [3, 4, 5, 16, 18]
+------------------------- time cost ------------------------- 108.39938831329346
+
+------------- Round 53-------------
+> Pre-training selection: choosing 5 clients.
+SELECTED INDICES:  [18  2  5 10  8]
+DEBUG: About to index self.clients. Length of self.clients is: 20
+> Sending global model to 5 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 2.7514
+Averaged Test Accurancy: 0.3492
+Averaged Test AUC: 0.6384
+Std Test Accurancy: 0.1044
+Std Test AUC: 0.0714
+--- Training 5 clients ---
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [2, 5, 8, 10, 18]
+------------------------- time cost ------------------------- 97.10341930389404
+
+------------- Round 54-------------
+> Pre-training selection: choosing 5 clients.
+SELECTED INDICES:  [15  2  5 10  9]
+DEBUG: About to index self.clients. Length of self.clients is: 20
+> Sending global model to 5 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 4.4868
+Averaged Test Accurancy: 0.3020
+Averaged Test AUC: 0.6035
+Std Test Accurancy: 0.0899
+Std Test AUC: 0.0696
+--- Training 5 clients ---
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [2, 5, 9, 10, 15]
+------------------------- time cost ------------------------- 98.84629559516907
+
+------------- Round 55-------------
+> Pre-training selection: choosing 5 clients.
+SELECTED INDICES:  [16 18  5 10  9]
+DEBUG: About to index self.clients. Length of self.clients is: 20
+> Sending global model to 5 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 2.7437
+Averaged Test Accurancy: 0.3142
+Averaged Test AUC: 0.6223
+Std Test Accurancy: 0.1030
+Std Test AUC: 0.0725
+--- Training 5 clients ---
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [5, 9, 10, 16, 18]
+------------------------- time cost ------------------------- 107.79293966293335
+
+------------- Round 56-------------
+> Pre-training selection: choosing 5 clients.
+SELECTED INDICES:  [17  2 14  3  4]
+DEBUG: About to index self.clients. Length of self.clients is: 20
+> Sending global model to 5 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 2.8033
+Averaged Test Accurancy: 0.3558
+Averaged Test AUC: 0.6409
+Std Test Accurancy: 0.1039
+Std Test AUC: 0.0695
+--- Training 5 clients ---
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [2, 3, 4, 14, 17]
+------------------------- time cost ------------------------- 105.47281384468079
+
+------------- Round 57-------------
+> Pre-training selection: choosing 5 clients.
+SELECTED INDICES:  [17  0 12  3  1]
+DEBUG: About to index self.clients. Length of self.clients is: 20
+> Sending global model to 5 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 2.8666
+Averaged Test Accurancy: 0.3457
+Averaged Test AUC: 0.6928
+Std Test Accurancy: 0.1045
+Std Test AUC: 0.0832
+--- Training 5 clients ---
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [0, 1, 3, 12, 17]
+------------------------- time cost ------------------------- 121.40400505065918
+
+------------- Round 58-------------
+> Pre-training selection: choosing 5 clients.
+SELECTED INDICES:  [18 18  5  6  7]
+DEBUG: About to index self.clients. Length of self.clients is: 20
+> Sending global model to 5 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 3.8130
+Averaged Test Accurancy: 0.3168
+Averaged Test AUC: 0.6636
+Std Test Accurancy: 0.0604
+Std Test AUC: 0.0367
+--- Training 5 clients ---
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [5, 6, 7, 18, 18]
+------------------------- time cost ------------------------- 131.22319149971008
+
+------------- Round 59-------------
+> Pre-training selection: choosing 5 clients.
+SELECTED INDICES:  [16 18 13 11  1]
+DEBUG: About to index self.clients. Length of self.clients is: 20
+> Sending global model to 5 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.9361
+Averaged Test Accurancy: 0.4513
+Averaged Test AUC: 0.7142
+Std Test Accurancy: 0.1435
+Std Test AUC: 0.0844
+--- Training 5 clients ---
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [1, 11, 13, 16, 18]
+------------------------- time cost ------------------------- 158.00301265716553
+
+------------- Round 60-------------
+> Pre-training selection: choosing 5 clients.
+SELECTED INDICES:  [15  0  5  6  9]
+DEBUG: About to index self.clients. Length of self.clients is: 20
+> Sending global model to 5 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 5.5887
+Averaged Test Accurancy: 0.2868
+Averaged Test AUC: 0.6197
+Std Test Accurancy: 0.0723
+Std Test AUC: 0.0289
+--- Training 5 clients ---
+> Aggregating models from 5 final selected clients.
+> Selected client IDs for this round: [0, 5, 6, 9, 15]
+------------------------- time cost ------------------------- 161.38621258735657
+
+Average time cost: nans.
+Length:  101
+std for best accurancy: 0.0
+mean for best accurancy: 0.9165861513687601
+All done!
+
+Storage on cpu
+-------------------------------------------------------------------------------
+Total Tensors: 6425953 	Used Memory: 24.55M
+-------------------------------------------------------------------------------

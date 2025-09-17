@@ -1,0 +1,20 @@
+{"time":"2025-07-24T12:39:55.3276377+02:00","level":"INFO","msg":"using version","core version":"0.18.7"}
+{"time":"2025-07-24T12:39:55.3276377+02:00","level":"INFO","msg":"created symlink","path":"wandb\\run-20250724_123955-6mqjxw30\\logs\\debug-core.log"}
+{"time":"2025-07-24T12:39:55.4689132+02:00","level":"INFO","msg":"created new stream","id":"6mqjxw30"}
+{"time":"2025-07-24T12:39:55.4689132+02:00","level":"INFO","msg":"stream: started","id":"6mqjxw30"}
+{"time":"2025-07-24T12:39:55.4689132+02:00","level":"INFO","msg":"handler: started","stream_id":"6mqjxw30"}
+{"time":"2025-07-24T12:39:55.4689132+02:00","level":"INFO","msg":"sender: started","stream_id":"6mqjxw30"}
+{"time":"2025-07-24T12:39:55.4689132+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"6mqjxw30"}
+{"time":"2025-07-24T12:39:55.9994311+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-07-24T12:39:55.9994311+02:00","level":"WARN","msg":"handleCodeSave: program relative path is empty"}
+{"time":"2025-07-24T12:39:55.9994311+02:00","level":"ERROR","msg":"git repo not found","error":"repository does not exist"}
+{"time":"2025-07-24T13:31:33.7867267+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-07-24T13:31:33.7874758+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/nourgraffoul-american-university-of-beirut/AFL-HAR-4-None-20/6mqjxw30/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-07-24T13:31:45.1015863+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-07-24T13:31:45.1020892+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/nourgraffoul-american-university-of-beirut/AFL-HAR-4-None-20/6mqjxw30/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-07-24T13:31:49.2052306+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/nourgraffoul-american-university-of-beirut/AFL-HAR-4-None-20/6mqjxw30/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-07-24T13:31:49.6011609+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-07-24T13:31:57.469711+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/nourgraffoul-american-university-of-beirut/AFL-HAR-4-None-20/6mqjxw30/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-07-24T13:31:58.7360499+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-07-24T13:32:28.6578208+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/nourgraffoul-american-university-of-beirut/AFL-HAR-4-None-20/6mqjxw30/file_stream\": read tcp [2a04:cec0:c02c:9b22:b9ae:ad77:e03a:c066]:63710->[64:ff9b::23ba:e431]:443: wsarecv: An established connection was aborted by the software in your host machine."}
+{"time":"2025-07-24T13:32:28.7104889+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp [64:ff9b::23ba:e431]:443: connectex: An established connection was aborted by the software in your host machine."}

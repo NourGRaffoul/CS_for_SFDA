@@ -1,0 +1,20 @@
+{"time":"2025-07-29T17:23:43.3286392+02:00","level":"INFO","msg":"using version","core version":"0.18.7"}
+{"time":"2025-07-29T17:23:43.3286392+02:00","level":"INFO","msg":"created symlink","path":"wandb\\run-20250729_172343-om0bacld\\logs\\debug-core.log"}
+{"time":"2025-07-29T17:23:44.0051157+02:00","level":"INFO","msg":"created new stream","id":"om0bacld"}
+{"time":"2025-07-29T17:23:44.0056232+02:00","level":"INFO","msg":"stream: started","id":"om0bacld"}
+{"time":"2025-07-29T17:23:44.0056232+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"om0bacld"}
+{"time":"2025-07-29T17:23:44.0056232+02:00","level":"INFO","msg":"sender: started","stream_id":"om0bacld"}
+{"time":"2025-07-29T17:23:44.0056232+02:00","level":"INFO","msg":"handler: started","stream_id":"om0bacld"}
+{"time":"2025-07-29T17:23:44.6957224+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-07-29T17:23:44.696228+02:00","level":"WARN","msg":"handleCodeSave: program relative path is empty"}
+{"time":"2025-07-29T17:23:44.6973474+02:00","level":"ERROR","msg":"git repo not found","error":"repository does not exist"}
+{"time":"2025-07-29T17:24:47.77846+02:00","level":"INFO","msg":"stream: closing","id":"om0bacld"}
+{"time":"2025-07-29T17:24:47.77846+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-07-29T17:24:47.7790526+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-07-29T17:24:48.2038544+02:00","level":"WARN","msg":"No program path found, not creating job artifact. See https://docs.wandb.ai/guides/launch/create-job"}
+{"time":"2025-07-29T17:24:48.2043646+02:00","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2025-07-29T17:24:48.7862475+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-07-29T17:24:49.2026212+02:00","level":"INFO","msg":"handler: closed","stream_id":"om0bacld"}
+{"time":"2025-07-29T17:24:49.2026212+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"om0bacld"}
+{"time":"2025-07-29T17:24:49.2026212+02:00","level":"INFO","msg":"sender: closed","stream_id":"om0bacld"}
+{"time":"2025-07-29T17:24:49.2031318+02:00","level":"INFO","msg":"stream: closed","id":"om0bacld"}

@@ -1,0 +1,21 @@
+{"time":"2025-07-15T17:30:45.5457452+02:00","level":"INFO","msg":"using version","core version":"0.18.7"}
+{"time":"2025-07-15T17:30:45.5457452+02:00","level":"INFO","msg":"created symlink","path":"wandb\\run-20250715_173045-jzk018ch\\logs\\debug-core.log"}
+{"time":"2025-07-15T17:30:45.6635917+02:00","level":"INFO","msg":"created new stream","id":"jzk018ch"}
+{"time":"2025-07-15T17:30:45.6641371+02:00","level":"INFO","msg":"stream: started","id":"jzk018ch"}
+{"time":"2025-07-15T17:30:45.6645944+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"jzk018ch"}
+{"time":"2025-07-15T17:30:45.6645944+02:00","level":"INFO","msg":"sender: started","stream_id":"jzk018ch"}
+{"time":"2025-07-15T17:30:45.6651656+02:00","level":"INFO","msg":"handler: started","stream_id":"jzk018ch"}
+{"time":"2025-07-15T17:30:46.165075+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-07-15T17:30:46.1655836+02:00","level":"WARN","msg":"handleCodeSave: program relative path is empty"}
+{"time":"2025-07-15T17:30:46.1657716+02:00","level":"ERROR","msg":"git repo not found","error":"repository does not exist"}
+{"time":"2025-07-15T17:51:19.0845783+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp [2a04:cec0:f076:825b:dd4:4e65:18f6:e665]:50247->[64:ff9b::23ba:e431]:443: wsarecv: An existing connection was forcibly closed by the remote host."}
+{"time":"2025-07-15T17:51:29.225833+02:00","level":"INFO","msg":"stream: closing","id":"jzk018ch"}
+{"time":"2025-07-15T17:51:29.2263362+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-07-15T17:51:29.227031+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-07-15T17:51:29.6549872+02:00","level":"WARN","msg":"No program path found, not creating job artifact. See https://docs.wandb.ai/guides/launch/create-job"}
+{"time":"2025-07-15T17:51:29.6549872+02:00","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2025-07-15T17:51:30.1341769+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-07-15T17:51:30.5257462+02:00","level":"INFO","msg":"handler: closed","stream_id":"jzk018ch"}
+{"time":"2025-07-15T17:51:30.5262883+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"jzk018ch"}
+{"time":"2025-07-15T17:51:30.5262883+02:00","level":"INFO","msg":"sender: closed","stream_id":"jzk018ch"}
+{"time":"2025-07-15T17:51:30.5262883+02:00","level":"INFO","msg":"stream: closed","id":"jzk018ch"}

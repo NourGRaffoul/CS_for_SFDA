@@ -1,0 +1,6 @@
+wandb_version: 1
+
+imbalance_factor:
+  value: 1
+method:
+  value: AFL

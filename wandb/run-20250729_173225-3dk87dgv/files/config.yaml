@@ -1,0 +1,197 @@
+_wandb:
+    value:
+        cli_version: 0.18.7
+        m: []
+        python_version: 3.7.0
+        t:
+            "1":
+                - 1
+                - 5
+                - 41
+                - 53
+                - 55
+            "2":
+                - 1
+                - 5
+                - 41
+                - 53
+                - 55
+            "3":
+                - 13
+                - 16
+                - 23
+                - 55
+                - 61
+            "4": 3.7.0
+            "5": 0.18.7
+            "8":
+                - 3
+                - 5
+            "12": 0.18.7
+            "13": windows-amd64
+K:
+    value: 5
+L:
+    value: 1
+M:
+    value: 5
+T_end:
+    value: 0.98
+T_start:
+    value: 0.95
+algorithm:
+    value: FedAvg
+alpha:
+    value: 1
+alpha1:
+    value: 0.75
+alpha2:
+    value: 1
+alpha3:
+    value: 0.1
+alphaK:
+    value: 1
+auto_break:
+    value: false
+batch_num_per_client:
+    value: 2
+batch_size:
+    value: 10
+beta:
+    value: 0
+client_drop_rate:
+    value: 0
+comment:
+    value: IMB
+dataset:
+    value: HAR
+device:
+    value: cuda
+device_id:
+    value: "0"
+dlg_eval:
+    value: false
+dlg_gap:
+    value: 100
+dr_learning_rate:
+    value: 0
+eta:
+    value: 1
+eval_gap:
+    value: 1
+feature_dim:
+    value: 512
+few_shot:
+    value: 0
+fine_tuning_epoch_new:
+    value: 0
+fine_tuning_epochs:
+    value: 10
+generator_learning_rate:
+    value: 0.005
+global_rounds:
+    value: 100
+goal:
+    value: test
+hidden_dim:
+    value: 512
+imbalance_factor:
+    value: 50
+itk:
+    value: 4000
+join_ratio:
+    value: 0.25
+kl_weight:
+    value: 0
+lamda:
+    value: 1
+layer_idx:
+    value: 2
+learning_rate_decay:
+    value: false
+learning_rate_decay_gamma:
+    value: 0.99
+local_epochs:
+    value: 1
+local_learning_rate:
+    value: 0.01
+localize_feature_extractor:
+    value: false
+loss_div_sqrt:
+    value: false
+loss_sum:
+    value: false
+max_len:
+    value: 200
+mentee_learning_rate:
+    value: 0.005
+method:
+    value: AFL
+model:
+    value: HARCNN
+momentum:
+    value: 0.1
+mu:
+    value: 0
+no_save_results:
+    value: false
+noise_dim:
+    value: 512
+num_available:
+    value: null
+num_candidates:
+    value: 0
+num_classes:
+    value: 6
+num_clients:
+    value: 20
+num_clients_per_round:
+    value: 5
+num_epoch:
+    value: 1
+num_new_clients:
+    value: 0
+p_learning_rate:
+    value: 0.01
+plocal_epochs:
+    value: 1
+prev:
+    value: 0
+rand_percent:
+    value: 80
+random_join_ratio:
+    value: false
+save_folder_name:
+    value: items
+save_probs:
+    value: false
+send_slow_rate:
+    value: 0
+server_epochs:
+    value: 1000
+server_learning_rate:
+    value: 0.1
+sigma:
+    value: 1
+src_id:
+    value: 1
+subset_ratio:
+    value: 0.1
+tau:
+    value: 1
+time_select:
+    value: false
+time_threthold:
+    value: 10000
+times:
+    value: 1
+top_cnt:
+    value: 100
+total_num_clients:
+    value: 20
+train_slow_rate:
+    value: 0
+vocab_size:
+    value: 80
+wandb:
+    value: true

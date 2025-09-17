@@ -1,0 +1,19 @@
+{"time":"2025-09-05T01:04:22.808385+03:00","level":"INFO","msg":"using version","core version":"0.18.7"}
+{"time":"2025-09-05T01:04:22.808385+03:00","level":"INFO","msg":"created symlink","path":"wandb\\run-20250905_010422-jhnc5tjl\\logs\\debug-core.log"}
+{"time":"2025-09-05T01:04:23.2428839+03:00","level":"INFO","msg":"created new stream","id":"jhnc5tjl"}
+{"time":"2025-09-05T01:04:23.2428839+03:00","level":"INFO","msg":"stream: started","id":"jhnc5tjl"}
+{"time":"2025-09-05T01:04:23.2434652+03:00","level":"INFO","msg":"handler: started","stream_id":"jhnc5tjl"}
+{"time":"2025-09-05T01:04:23.2434652+03:00","level":"INFO","msg":"sender: started","stream_id":"jhnc5tjl"}
+{"time":"2025-09-05T01:04:23.2434652+03:00","level":"INFO","msg":"writer: Do: started","stream_id":"jhnc5tjl"}
+{"time":"2025-09-05T01:04:28.9810125+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-09-05T01:04:31.0489121+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-09-05T01:04:35.5123781+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-09-05T01:04:56.0976491+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-09-05T01:05:25.2909746+03:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-09-05T01:05:53.6167083+03:00","level":"INFO","msg":"stream: closing","id":"jhnc5tjl"}
+{"time":"2025-09-05T01:05:53.6169637+03:00","level":"ERROR","msg":"sender: upsertRun:","error":"failed to upsert bucket: api: failed sending: context canceled"}
+{"time":"2025-09-05T01:05:53.6169637+03:00","level":"INFO","msg":"handler: closed","stream_id":"jhnc5tjl"}
+{"time":"2025-09-05T01:05:53.6169637+03:00","level":"INFO","msg":"writer: Close: closed","stream_id":"jhnc5tjl"}
+{"time":"2025-09-05T01:05:53.6169637+03:00","level":"WARN","msg":"runwork: ignoring record after close","work":{"Record":{"RecordType":{"Request":{"RequestType":{"Defer":{}}}},"control":{"always_send":true}}}}
+{"time":"2025-09-05T01:05:53.6169637+03:00","level":"INFO","msg":"sender: closed","stream_id":"jhnc5tjl"}
+{"time":"2025-09-05T01:05:53.6174898+03:00","level":"INFO","msg":"stream: closed","id":"jhnc5tjl"}

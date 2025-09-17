@@ -1,0 +1,135 @@
+
+cuda is not avaiable.
+
+==================================================
+goal = test
+device = cpu
+device_id = 0
+dataset = HAR
+num_classes = 10
+model = HARCNN
+batch_size = 10
+local_learning_rate = 0.01
+learning_rate_decay = False
+learning_rate_decay_gamma = 0.99
+global_rounds = 100
+top_cnt = 100
+local_epochs = 10
+algorithm = FedAvg
+join_ratio = 0.2
+random_join_ratio = False
+num_clients = 20
+prev = 0
+times = 1
+eval_gap = 1
+save_folder_name = items
+auto_break = False
+dlg_eval = False
+dlg_gap = 100
+batch_num_per_client = 2
+num_new_clients = 0
+fine_tuning_epoch_new = 0
+feature_dim = 512
+vocab_size = 80
+max_len = 200
+few_shot = 0
+client_drop_rate = 0.0
+train_slow_rate = 0.0
+send_slow_rate = 0.0
+time_select = False
+time_threthold = 10000
+beta = 0.0
+lamda = 1.0
+mu = 0.0
+K = 5
+p_learning_rate = 0.01
+M = 5
+itk = 4000
+alphaK = 1.0
+sigma = 1.0
+alpha = 1.0
+plocal_epochs = 1
+tau = 1.0
+fine_tuning_epochs = 10
+dr_learning_rate = 0.0
+L = 1.0
+noise_dim = 512
+generator_learning_rate = 0.005
+hidden_dim = 512
+server_epochs = 1000
+localize_feature_extractor = False
+server_learning_rate = 0.1
+eta = 1.0
+rand_percent = 80
+layer_idx = 2
+mentee_learning_rate = 0.005
+T_start = 0.95
+T_end = 0.98
+momentum = 0.1
+kl_weight = 0.0
+num_candidates = 0
+method = RandomSelect
+comment =
+num_clients_per_round = 4
+num_available = None
+loss_div_sqrt = False
+loss_sum = False
+subset_ratio = 0.1
+alpha1 = 0.75
+alpha2 = 1
+alpha3 = 0.1
+save_probs = False
+no_save_results = False
+src_id = 8
+total_num_clients = 20
+num_epoch = 10
+wandb = True
+==================================================
+
+****** Client source: 8 *******
+Accuracy of source client: 89.66%
+
+============= Running time: 0th =============
+Creating server and clients ...
+HARCNN
+Initializing client selection method: RandomSelect
+
+Join ratio / total clients: 0.2 / 20
+Finished creating server and clients.
+
+------------- Round 0-------------
+> Pre-training selection: choosing 4 clients.
+SELECTED INDICES:  [ 6  1  2 10]
+> Sending global model to 4 clients for local training.
+
+Evaluating global model before training...
+Traceback (most recent call last):
+  File "C:\Program Files\Python37\lib\runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "C:\Program Files\Python37\lib\runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "C:\Users\owner\Downloads\Benchmark_Stage_backup2\Benchmark_Stage\system_shot\main.py", line 235, in <module>
+    run(args, client_selection)
+  File "C:\Users\owner\Downloads\Benchmark_Stage_backup2\Benchmark_Stage\system_shot\main.py", line 145, in run
+    server.train()
+  File "C:\Users\owner\Downloads\Benchmark_Stage_backup2\Benchmark_Stage\system_shot\flcore\servers\serveravg.py", line 148, in train
+    self.evaluate(current_round=i)
+  File "C:\Users\owner\Downloads\Benchmark_Stage_backup2\Benchmark_Stage\system_shot\flcore\servers\serverbase.py", line 293, in evaluate
+    stats = self.test_metrics(self.global_model, current_round=current_round)
+  File "C:\Users\owner\Downloads\Benchmark_Stage_backup2\Benchmark_Stage\system_shot\flcore\servers\serverbase.py", line 260, in test_metrics
+    ct, ns, auc, loss = c.test_metrics(model_to_test, current_round=current_round)
+  File "C:\Users\owner\Downloads\Benchmark_Stage_backup2\Benchmark_Stage\system_shot\flcore\clients\clientbase.py", line 205, in test_metrics
+    auc = metrics.roc_auc_score(y_true_binarized, y_prob, average='micro')
+  File "C:\Users\owner\AppData\Roaming\Python\Python37\site-packages\sklearn\metrics\_ranking.py", line 580, in roc_auc_score
+    sample_weight=sample_weight,
+  File "C:\Users\owner\AppData\Roaming\Python\Python37\site-packages\sklearn\metrics\_base.py", line 118, in _average_binary_score
+    score[c] = binary_metric(y_true_c, y_score_c, sample_weight=score_weight)
+  File "C:\Users\owner\AppData\Roaming\Python\Python37\site-packages\sklearn\metrics\_ranking.py", line 342, in _binary_roc_auc_score
+    fpr, tpr, _ = roc_curve(y_true, y_score, sample_weight=sample_weight)
+  File "C:\Users\owner\AppData\Roaming\Python\Python37\site-packages\sklearn\metrics\_ranking.py", line 963, in roc_curve
+    y_true, y_score, pos_label=pos_label, sample_weight=sample_weight
+  File "C:\Users\owner\AppData\Roaming\Python\Python37\site-packages\sklearn\metrics\_ranking.py", line 733, in _binary_clf_curve
+    check_consistent_length(y_true, y_score, sample_weight)
+  File "C:\Users\owner\AppData\Roaming\Python\Python37\site-packages\sklearn\utils\validation.py", line 334, in check_consistent_length
+    % [int(l) for l in lengths]
+ValueError: Found input variables with inconsistent numbers of samples: [1050, 630]

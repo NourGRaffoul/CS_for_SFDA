@@ -1,0 +1,1941 @@
+
+cuda is not avaiable.
+
+==================================================
+goal = test
+device = cpu
+device_id = 0
+dataset = HAR
+num_classes = 10
+model = HARCNN
+batch_size = 10
+local_learning_rate = 0.01
+learning_rate_decay = False
+learning_rate_decay_gamma = 0.99
+global_rounds = 100
+top_cnt = 100
+local_epochs = 10
+algorithm = FedAvg
+join_ratio = 0.2
+random_join_ratio = False
+num_clients = 20
+prev = 0
+times = 1
+eval_gap = 1
+save_folder_name = items
+auto_break = False
+dlg_eval = False
+dlg_gap = 100
+batch_num_per_client = 2
+num_new_clients = 0
+fine_tuning_epoch_new = 0
+feature_dim = 512
+vocab_size = 80
+max_len = 200
+few_shot = 0
+client_drop_rate = 0.0
+train_slow_rate = 0.0
+send_slow_rate = 0.0
+time_select = False
+time_threthold = 10000
+beta = 0.0
+lamda = 1.0
+mu = 0.0
+K = 5
+p_learning_rate = 0.01
+M = 5
+itk = 4000
+alphaK = 1.0
+sigma = 1.0
+alpha = 1.0
+plocal_epochs = 1
+tau = 1.0
+fine_tuning_epochs = 10
+dr_learning_rate = 0.0
+L = 1.0
+noise_dim = 512
+generator_learning_rate = 0.005
+hidden_dim = 512
+server_epochs = 1000
+localize_feature_extractor = False
+server_learning_rate = 1.0
+eta = 1.0
+rand_percent = 80
+layer_idx = 2
+mentee_learning_rate = 0.005
+T_start = 0.95
+T_end = 0.98
+momentum = 0.1
+kl_weight = 0.0
+num_candidates = 0
+method = AFL
+comment =
+num_clients_per_round = 4
+num_available = None
+loss_div_sqrt = False
+loss_sum = False
+subset_ratio = 0.1
+alpha1 = 0.75
+alpha2 = 1
+alpha3 = 0.1
+save_probs = False
+no_save_results = False
+total_num_clients = 20
+num_epoch = 10
+wandb = True
+==================================================
+
+============= Running time: 0th =============
+Creating server and clients ...
+HARCNN(
+  (conv1): Sequential(
+    (0): Conv2d(9, 32, kernel_size=(1, 9), stride=(1, 1))
+    (1): ReLU()
+    (2): MaxPool2d(kernel_size=(1, 2), stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (conv2): Sequential(
+    (0): Conv2d(32, 64, kernel_size=(1, 9), stride=(1, 1))
+    (1): ReLU()
+    (2): MaxPool2d(kernel_size=(1, 2), stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (fc): Sequential(
+    (0): Linear(in_features=1664, out_features=1024, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=1024, out_features=512, bias=True)
+    (3): ReLU()
+    (4): Linear(in_features=512, out_features=10, bias=True)
+  )
+)
+Initializing client selection method: AFL
+
+Join ratio / total clients: 0.2 / 20
+Finished creating server and clients.
+
+------------- Round 0-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 2.3169
+Averaged Test Accurancy: 0.0000
+Averaged Test AUC: 0.2801
+Std Test Accurancy: 0.0000
+Std Test AUC: 0.0148
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [12 10 13  6]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [6, 10, 12, 13]
+------------------------- time cost ------------------------- 231.64559888839722
+
+------------- Round 1-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.6538
+Averaged Test Accurancy: 0.2812
+Averaged Test AUC: 0.7863
+Std Test Accurancy: 0.0723
+Std Test AUC: 0.0115
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [11  2  5 16]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [2, 5, 11, 16]
+------------------------- time cost ------------------------- 219.5954146385193
+
+------------- Round 2-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 1.1165
+Averaged Test Accurancy: 0.4371
+Averaged Test AUC: 0.8839
+Std Test Accurancy: 0.0861
+Std Test AUC: 0.0274
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [ 9  5 12 11]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [5, 9, 11, 12]
+------------------------- time cost ------------------------- 220.04357242584229
+
+------------- Round 3-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.6957
+Averaged Test Accurancy: 0.5685
+Averaged Test AUC: 0.9118
+Std Test Accurancy: 0.1189
+Std Test AUC: 0.0335
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [ 6  0 15  8]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [0, 6, 8, 15]
+------------------------- time cost ------------------------- 218.9370539188385
+
+------------- Round 4-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.4202
+Averaged Test Accurancy: 0.5284
+Averaged Test AUC: 0.8932
+Std Test Accurancy: 0.1323
+Std Test AUC: 0.0457
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [ 4  0  8 18]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [0, 4, 8, 18]
+------------------------- time cost ------------------------- 218.50564622879028
+
+------------- Round 5-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.2803
+Averaged Test Accurancy: 0.5305
+Averaged Test AUC: 0.9083
+Std Test Accurancy: 0.1415
+Std Test AUC: 0.0364
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [ 9 13 15 19]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [9, 13, 15, 19]
+------------------------- time cost ------------------------- 222.2818899154663
+
+------------- Round 6-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.1254
+Averaged Test Accurancy: 0.5807
+Averaged Test AUC: 0.9037
+Std Test Accurancy: 0.1507
+Std Test AUC: 0.0379
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [17  0 16  3]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [0, 3, 16, 17]
+------------------------- time cost ------------------------- 225.45334649085999
+
+------------- Round 7-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0871
+Averaged Test Accurancy: 0.5731
+Averaged Test AUC: 0.8950
+Std Test Accurancy: 0.1266
+Std Test AUC: 0.0632
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [ 2  4 10 15]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [2, 4, 10, 15]
+------------------------- time cost ------------------------- 243.97594618797302
+
+------------- Round 8-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0644
+Averaged Test Accurancy: 0.5127
+Averaged Test AUC: 0.8972
+Std Test Accurancy: 0.1413
+Std Test AUC: 0.0450
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [ 9 13 11  3]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [3, 9, 11, 13]
+------------------------- time cost ------------------------- 179.9563024044037
+
+------------- Round 9-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0642
+Averaged Test Accurancy: 0.5680
+Averaged Test AUC: 0.9029
+Std Test Accurancy: 0.1072
+Std Test AUC: 0.0361
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [ 1 10  8  7]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [1, 7, 8, 10]
+------------------------- time cost ------------------------- 211.17985033988953
+
+------------- Round 10-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0371
+Averaged Test Accurancy: 0.5147
+Averaged Test AUC: 0.9011
+Std Test Accurancy: 0.1056
+Std Test AUC: 0.0418
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [ 8  6  3 16]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [3, 6, 8, 16]
+------------------------- time cost ------------------------- 223.05695366859436
+
+------------- Round 11-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0441
+Averaged Test Accurancy: 0.6127
+Averaged Test AUC: 0.9105
+Std Test Accurancy: 0.1318
+Std Test AUC: 0.0539
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [10  4 15 19]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [4, 10, 15, 19]
+------------------------- time cost ------------------------- 242.7776243686676
+
+------------- Round 12-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0285
+Averaged Test Accurancy: 0.5056
+Averaged Test AUC: 0.8966
+Std Test Accurancy: 0.1505
+Std Test AUC: 0.0461
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [11 13 12  8]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [8, 11, 12, 13]
+------------------------- time cost ------------------------- 257.265193939209
+
+------------- Round 13-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0301
+Averaged Test Accurancy: 0.6005
+Averaged Test AUC: 0.9066
+Std Test Accurancy: 0.1167
+Std Test AUC: 0.0606
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [ 9 11  4 14]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [4, 9, 11, 14]
+------------------------- time cost ------------------------- 260.99821043014526
+
+------------- Round 14-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0281
+Averaged Test Accurancy: 0.5066
+Averaged Test AUC: 0.9010
+Std Test Accurancy: 0.0980
+Std Test AUC: 0.0370
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [17 16  7 13]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [7, 13, 16, 17]
+------------------------- time cost ------------------------- 287.3134582042694
+
+------------- Round 15-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0321
+Averaged Test Accurancy: 0.5629
+Averaged Test AUC: 0.8721
+Std Test Accurancy: 0.1497
+Std Test AUC: 0.0783
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [ 9 11  3 17]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [3, 9, 11, 17]
+------------------------- time cost ------------------------- 274.58355140686035
+
+------------- Round 16-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0240
+Averaged Test Accurancy: 0.5985
+Averaged Test AUC: 0.9077
+Std Test Accurancy: 0.1081
+Std Test AUC: 0.0548
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [17  8  4  5]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [4, 5, 8, 17]
+------------------------- time cost ------------------------- 291.7625207901001
+
+------------- Round 17-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0200
+Averaged Test Accurancy: 0.6548
+Averaged Test AUC: 0.9159
+Std Test Accurancy: 0.1500
+Std Test AUC: 0.0497
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [16  9  8  7]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [7, 8, 9, 16]
+------------------------- time cost ------------------------- 476.98316860198975
+
+------------- Round 18-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0208
+Averaged Test Accurancy: 0.6015
+Averaged Test AUC: 0.9241
+Std Test Accurancy: 0.1076
+Std Test AUC: 0.0272
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [ 7  3 10  4]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [3, 4, 7, 10]
+------------------------- time cost ------------------------- 951.2248380184174
+
+------------- Round 19-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0214
+Averaged Test Accurancy: 0.5766
+Averaged Test AUC: 0.9002
+Std Test Accurancy: 0.1477
+Std Test AUC: 0.0580
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [15 11  4 18]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [4, 11, 15, 18]
+------------------------- time cost ------------------------- 443.4341948032379
+
+------------- Round 20-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0170
+Averaged Test Accurancy: 0.5355
+Averaged Test AUC: 0.9008
+Std Test Accurancy: 0.1551
+Std Test AUC: 0.0431
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [ 9 15  3  6]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [3, 6, 9, 15]
+------------------------- time cost ------------------------- 396.07498931884766
+
+------------- Round 21-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0173
+Averaged Test Accurancy: 0.5345
+Averaged Test AUC: 0.9130
+Std Test Accurancy: 0.1201
+Std Test AUC: 0.0387
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [ 2 16 10  0]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [0, 2, 10, 16]
+------------------------- time cost ------------------------- 391.4395706653595
+
+------------- Round 22-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0173
+Averaged Test Accurancy: 0.5503
+Averaged Test AUC: 0.8821
+Std Test Accurancy: 0.1258
+Std Test AUC: 0.0571
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [ 3 10  9 17]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [3, 9, 10, 17]
+------------------------- time cost ------------------------- 400.83992552757263
+
+------------- Round 23-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0173
+Averaged Test Accurancy: 0.5193
+Averaged Test AUC: 0.8997
+Std Test Accurancy: 0.1076
+Std Test AUC: 0.0601
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [6 2 4 3]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [2, 3, 4, 6]
+------------------------- time cost ------------------------- 417.8873200416565
+
+------------- Round 24-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0187
+Averaged Test Accurancy: 0.5711
+Averaged Test AUC: 0.8995
+Std Test Accurancy: 0.1774
+Std Test AUC: 0.0633
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [ 4 15  1  7]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [1, 4, 7, 15]
+------------------------- time cost ------------------------- 1046.9362680912018
+
+------------- Round 25-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0134
+Averaged Test Accurancy: 0.5503
+Averaged Test AUC: 0.8971
+Std Test Accurancy: 0.1412
+Std Test AUC: 0.0524
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [ 7 15  5  9]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [5, 7, 9, 15]
+------------------------- time cost ------------------------- 286.04594349861145
+
+------------- Round 26-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0140
+Averaged Test Accurancy: 0.5645
+Averaged Test AUC: 0.9138
+Std Test Accurancy: 0.1176
+Std Test AUC: 0.0309
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [11  3 10 17]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [3, 10, 11, 17]
+------------------------- time cost ------------------------- 69946.5246694088
+
+------------- Round 27-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0183
+Averaged Test Accurancy: 0.5244
+Averaged Test AUC: 0.8869
+Std Test Accurancy: 0.1550
+Std Test AUC: 0.0711
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [16 17  6  5]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [5, 6, 16, 17]
+------------------------- time cost ------------------------- 242.29796695709229
+
+------------- Round 28-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0125
+Averaged Test Accurancy: 0.6817
+Averaged Test AUC: 0.9011
+Std Test Accurancy: 0.1531
+Std Test AUC: 0.0722
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [ 6 16  2  4]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [2, 4, 6, 16]
+------------------------- time cost ------------------------- 240.918035030365
+
+------------- Round 29-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0119
+Averaged Test Accurancy: 0.6102
+Averaged Test AUC: 0.9023
+Std Test Accurancy: 0.1496
+Std Test AUC: 0.0564
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [14  7  8 11]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [7, 8, 11, 14]
+------------------------- time cost ------------------------- 250.12871313095093
+
+------------- Round 30-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0098
+Averaged Test Accurancy: 0.5523
+Averaged Test AUC: 0.9043
+Std Test Accurancy: 0.1018
+Std Test AUC: 0.0354
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [ 6 11 17  2]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [2, 6, 11, 17]
+------------------------- time cost ------------------------- 220.3067331314087
+
+------------- Round 31-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0194
+Averaged Test Accurancy: 0.6259
+Averaged Test AUC: 0.8957
+Std Test Accurancy: 0.1519
+Std Test AUC: 0.0759
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [ 6  5 17  8]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [5, 6, 8, 17]
+------------------------- time cost ------------------------- 225.49718832969666
+
+------------- Round 32-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0094
+Averaged Test Accurancy: 0.6457
+Averaged Test AUC: 0.9083
+Std Test Accurancy: 0.1437
+Std Test AUC: 0.0675
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [ 2  6 17 13]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [2, 6, 13, 17]
+------------------------- time cost ------------------------- 233.18119478225708
+
+------------- Round 33-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0104
+Averaged Test Accurancy: 0.5924
+Averaged Test AUC: 0.8802
+Std Test Accurancy: 0.1628
+Std Test AUC: 0.0893
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [ 8  3 12 16]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [3, 8, 12, 16]
+------------------------- time cost ------------------------- 189.3980827331543
+
+------------- Round 34-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0085
+Averaged Test Accurancy: 0.6315
+Averaged Test AUC: 0.9005
+Std Test Accurancy: 0.1672
+Std Test AUC: 0.0650
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [ 4  6 16  5]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [4, 5, 6, 16]
+------------------------- time cost ------------------------- 167.7714285850525
+
+------------- Round 35-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0081
+Averaged Test Accurancy: 0.6685
+Averaged Test AUC: 0.9239
+Std Test Accurancy: 0.1534
+Std Test AUC: 0.0478
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [12  8  1 18]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [1, 8, 12, 18]
+------------------------- time cost ------------------------- 163.11305952072144
+
+------------- Round 36-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0148
+Averaged Test Accurancy: 0.6096
+Averaged Test AUC: 0.8916
+Std Test Accurancy: 0.1689
+Std Test AUC: 0.0635
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [16  4  6 19]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [4, 6, 16, 19]
+------------------------- time cost ------------------------- 150.6651599407196
+
+------------- Round 37-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0086
+Averaged Test Accurancy: 0.6518
+Averaged Test AUC: 0.9064
+Std Test Accurancy: 0.1645
+Std Test AUC: 0.0579
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [ 6 10 12  9]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [6, 9, 10, 12]
+------------------------- time cost ------------------------- 152.50384640693665
+
+------------- Round 38-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0073
+Averaged Test Accurancy: 0.5563
+Averaged Test AUC: 0.9077
+Std Test Accurancy: 0.1031
+Std Test AUC: 0.0502
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [15  4  2  8]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [2, 4, 8, 15]
+------------------------- time cost ------------------------- 144.27659440040588
+
+------------- Round 39-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0134
+Averaged Test Accurancy: 0.5386
+Averaged Test AUC: 0.8964
+Std Test Accurancy: 0.1474
+Std Test AUC: 0.0583
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [ 3 16  1 17]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [1, 3, 16, 17]
+------------------------- time cost ------------------------- 146.11608695983887
+
+------------- Round 40-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0070
+Averaged Test Accurancy: 0.5442
+Averaged Test AUC: 0.8827
+Std Test Accurancy: 0.1121
+Std Test AUC: 0.0856
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [12 10  9 19]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [9, 10, 12, 19]
+------------------------- time cost ------------------------- 142.5436885356903
+
+------------- Round 41-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0094
+Averaged Test Accurancy: 0.5924
+Averaged Test AUC: 0.8993
+Std Test Accurancy: 0.1075
+Std Test AUC: 0.0557
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [10 11  4 13]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [4, 10, 11, 13]
+------------------------- time cost ------------------------- 131.48817372322083
+
+------------- Round 42-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0078
+Averaged Test Accurancy: 0.5822
+Averaged Test AUC: 0.9059
+Std Test Accurancy: 0.1157
+Std Test AUC: 0.0489
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [5 4 8 1]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [1, 4, 5, 8]
+------------------------- time cost ------------------------- 133.5605912208557
+
+------------- Round 43-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0081
+Averaged Test Accurancy: 0.6320
+Averaged Test AUC: 0.9111
+Std Test Accurancy: 0.1576
+Std Test AUC: 0.0492
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [4 3 8 1]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [1, 3, 4, 8]
+------------------------- time cost ------------------------- 131.06728649139404
+
+------------- Round 44-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0065
+Averaged Test Accurancy: 0.6000
+Averaged Test AUC: 0.8962
+Std Test Accurancy: 0.1742
+Std Test AUC: 0.0626
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [3 6 2 9]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [2, 3, 6, 9]
+------------------------- time cost ------------------------- 133.19548964500427
+
+------------- Round 45-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0072
+Averaged Test Accurancy: 0.5685
+Averaged Test AUC: 0.9084
+Std Test Accurancy: 0.1231
+Std Test AUC: 0.0554
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [ 3 15  6 13]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [3, 6, 13, 15]
+------------------------- time cost ------------------------- 135.61614561080933
+
+------------- Round 46-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0069
+Averaged Test Accurancy: 0.5330
+Averaged Test AUC: 0.8901
+Std Test Accurancy: 0.1440
+Std Test AUC: 0.0657
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [ 3  1  9 15]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [1, 3, 9, 15]
+------------------------- time cost ------------------------- 137.7477741241455
+
+------------- Round 47-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0053
+Averaged Test Accurancy: 0.5624
+Averaged Test AUC: 0.9048
+Std Test Accurancy: 0.1199
+Std Test AUC: 0.0435
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [10  7 11 15]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [7, 10, 11, 15]
+------------------------- time cost ------------------------- 136.17620158195496
+
+------------- Round 48-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0052
+Averaged Test Accurancy: 0.5447
+Averaged Test AUC: 0.9019
+Std Test Accurancy: 0.1127
+Std Test AUC: 0.0413
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [15  1  6  8]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [1, 6, 8, 15]
+------------------------- time cost ------------------------- 127.49445605278015
+
+------------- Round 49-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0050
+Averaged Test Accurancy: 0.6259
+Averaged Test AUC: 0.8984
+Std Test Accurancy: 0.1589
+Std Test AUC: 0.0644
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [10 17  3  4]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [3, 4, 10, 17]
+------------------------- time cost ------------------------- 119.12156510353088
+
+------------- Round 50-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0074
+Averaged Test Accurancy: 0.5797
+Averaged Test AUC: 0.8939
+Std Test Accurancy: 0.1784
+Std Test AUC: 0.0724
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [ 5 11  7 15]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [5, 7, 11, 15]
+------------------------- time cost ------------------------- 115.92653965950012
+
+------------- Round 51-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0045
+Averaged Test Accurancy: 0.6041
+Averaged Test AUC: 0.9148
+Std Test Accurancy: 0.1086
+Std Test AUC: 0.0391
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [ 8  7 15  9]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [7, 8, 9, 15]
+------------------------- time cost ------------------------- 118.96861577033997
+
+------------- Round 52-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0044
+Averaged Test Accurancy: 0.5655
+Averaged Test AUC: 0.9158
+Std Test Accurancy: 0.1040
+Std Test AUC: 0.0344
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [ 6  3  5 10]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [3, 5, 6, 10]
+------------------------- time cost ------------------------- 122.42974901199341
+
+------------- Round 53-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0043
+Averaged Test Accurancy: 0.6056
+Averaged Test AUC: 0.9035
+Std Test Accurancy: 0.1188
+Std Test AUC: 0.0745
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [ 7 11 10 12]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [7, 10, 11, 12]
+------------------------- time cost ------------------------- 134.56464385986328
+
+------------- Round 54-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0040
+Averaged Test Accurancy: 0.6533
+Averaged Test AUC: 0.9039
+Std Test Accurancy: 0.1267
+Std Test AUC: 0.0608
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [16 15  9  3]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [3, 9, 15, 16]
+------------------------- time cost ------------------------- 122.2803726196289
+
+------------- Round 55-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0076
+Averaged Test Accurancy: 0.5807
+Averaged Test AUC: 0.9061
+Std Test Accurancy: 0.0747
+Std Test AUC: 0.0363
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [10 11 17  5]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [5, 10, 11, 17]
+------------------------- time cost ------------------------- 134.3027606010437
+
+------------- Round 56-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0039
+Averaged Test Accurancy: 0.6640
+Averaged Test AUC: 0.9009
+Std Test Accurancy: 0.1335
+Std Test AUC: 0.0676
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [ 5 12  1  3]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [1, 3, 5, 12]
+------------------------- time cost ------------------------- 139.0964093208313
+
+------------- Round 57-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0039
+Averaged Test Accurancy: 0.7081
+Averaged Test AUC: 0.9060
+Std Test Accurancy: 0.1186
+Std Test AUC: 0.0824
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [ 5  6 15  4]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [4, 5, 6, 15]
+------------------------- time cost ------------------------- 117.43074154853821
+
+------------- Round 58-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0035
+Averaged Test Accurancy: 0.5807
+Averaged Test AUC: 0.9209
+Std Test Accurancy: 0.1090
+Std Test AUC: 0.0477
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [17  3  7 19]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [3, 7, 17, 19]
+------------------------- time cost ------------------------- 116.53356337547302
+
+------------- Round 59-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0041
+Averaged Test Accurancy: 0.6152
+Averaged Test AUC: 0.8920
+Std Test Accurancy: 0.1638
+Std Test AUC: 0.0792
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [ 2  7  8 11]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [2, 7, 8, 11]
+------------------------- time cost ------------------------- 129.43282055854797
+
+------------- Round 60-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0031
+Averaged Test Accurancy: 0.6371
+Averaged Test AUC: 0.9115
+Std Test Accurancy: 0.1516
+Std Test AUC: 0.0453
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [ 7  8 12  3]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [3, 7, 8, 12]
+------------------------- time cost ------------------------- 133.67518162727356
+
+------------- Round 61-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0030
+Averaged Test Accurancy: 0.6147
+Averaged Test AUC: 0.9021
+Std Test Accurancy: 0.1494
+Std Test AUC: 0.0661
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [16  7  8 13]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [7, 8, 13, 16]
+------------------------- time cost ------------------------- 184.72403717041016
+
+------------- Round 62-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0028
+Averaged Test Accurancy: 0.5665
+Averaged Test AUC: 0.8958
+Std Test Accurancy: 0.1315
+Std Test AUC: 0.0588
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [ 3  7  4 17]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [3, 4, 7, 17]
+------------------------- time cost ------------------------- 154.36612462997437
+
+------------- Round 63-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0028
+Averaged Test Accurancy: 0.5914
+Averaged Test AUC: 0.8993
+Std Test Accurancy: 0.1704
+Std Test AUC: 0.0674
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [ 3 10 15  4]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [3, 4, 10, 15]
+------------------------- time cost ------------------------- 152.64163303375244
+
+------------- Round 64-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0032
+Averaged Test Accurancy: 0.5269
+Averaged Test AUC: 0.9010
+Std Test Accurancy: 0.1258
+Std Test AUC: 0.0554
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [ 7 16  2 14]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [2, 7, 14, 16]
+------------------------- time cost ------------------------- 145.24002194404602
+
+------------- Round 65-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0029
+Averaged Test Accurancy: 0.6381
+Averaged Test AUC: 0.8907
+Std Test Accurancy: 0.1292
+Std Test AUC: 0.0530
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [ 1  8 11  6]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [1, 6, 8, 11]
+------------------------- time cost ------------------------- 143.84230089187622
+
+------------- Round 66-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0027
+Averaged Test Accurancy: 0.6360
+Averaged Test AUC: 0.9067
+Std Test Accurancy: 0.1786
+Std Test AUC: 0.0630
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [ 6  4 12 11]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [4, 6, 11, 12]
+------------------------- time cost ------------------------- 147.5833969116211
+
+------------- Round 67-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0026
+Averaged Test Accurancy: 0.6005
+Averaged Test AUC: 0.9033
+Std Test Accurancy: 0.1468
+Std Test AUC: 0.0577
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [ 1 17 12 13]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [1, 12, 13, 17]
+------------------------- time cost ------------------------- 144.6837010383606
+
+------------- Round 68-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0027
+Averaged Test Accurancy: 0.5269
+Averaged Test AUC: 0.8630
+Std Test Accurancy: 0.1412
+Std Test AUC: 0.0929
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [ 3  9 15  7]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [3, 7, 9, 15]
+------------------------- time cost ------------------------- 162.19461822509766
+
+------------- Round 69-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0078
+Averaged Test Accurancy: 0.5655
+Averaged Test AUC: 0.9097
+Std Test Accurancy: 0.1034
+Std Test AUC: 0.0389
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [ 7 16  2  0]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [0, 2, 7, 16]
+------------------------- time cost ------------------------- 155.39313864707947
+
+------------- Round 70-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0036
+Averaged Test Accurancy: 0.5462
+Averaged Test AUC: 0.8778
+Std Test Accurancy: 0.1502
+Std Test AUC: 0.0587
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [ 3  9 17  7]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [3, 7, 9, 17]
+------------------------- time cost ------------------------- 154.29429364204407
+
+------------- Round 71-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0041
+Averaged Test Accurancy: 0.5970
+Averaged Test AUC: 0.9054
+Std Test Accurancy: 0.1071
+Std Test AUC: 0.0563
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [15  2  8 17]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [2, 8, 15, 17]
+------------------------- time cost ------------------------- 152.29395151138306
+
+------------- Round 72-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0033
+Averaged Test Accurancy: 0.6381
+Averaged Test AUC: 0.9081
+Std Test Accurancy: 0.1828
+Std Test AUC: 0.0584
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [ 4  8  9 16]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [4, 8, 9, 16]
+------------------------- time cost ------------------------- 166.9101870059967
+
+------------- Round 73-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0026
+Averaged Test Accurancy: 0.6284
+Averaged Test AUC: 0.9191
+Std Test Accurancy: 0.1193
+Std Test AUC: 0.0213
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [ 1  9 15  6]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [1, 6, 9, 15]
+------------------------- time cost ------------------------- 160.81519675254822
+
+------------- Round 74-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0329
+Averaged Test Accurancy: 0.5990
+Averaged Test AUC: 0.9054
+Std Test Accurancy: 0.1171
+Std Test AUC: 0.0513
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [ 2  6  9 16]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [2, 6, 9, 16]
+------------------------- time cost ------------------------- 149.21195316314697
+
+------------- Round 75-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0072
+Averaged Test Accurancy: 0.6716
+Averaged Test AUC: 0.9160
+Std Test Accurancy: 0.1190
+Std Test AUC: 0.0425
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [ 1  6  8 13]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [1, 6, 8, 13]
+------------------------- time cost ------------------------- 149.84697318077087
+
+------------- Round 76-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0043
+Averaged Test Accurancy: 0.5792
+Averaged Test AUC: 0.8936
+Std Test Accurancy: 0.1522
+Std Test AUC: 0.0665
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [10  9  3  8]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [3, 8, 9, 10]
+------------------------- time cost ------------------------- 146.34194016456604
+
+------------- Round 77-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0034
+Averaged Test Accurancy: 0.5472
+Averaged Test AUC: 0.9022
+Std Test Accurancy: 0.1326
+Std Test AUC: 0.0467
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [12  7 11  5]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [5, 7, 11, 12]
+------------------------- time cost ------------------------- 138.27159118652344
+
+------------- Round 78-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0034
+Averaged Test Accurancy: 0.6431
+Averaged Test AUC: 0.9105
+Std Test Accurancy: 0.1405
+Std Test AUC: 0.0572
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [ 4  1  3 18]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [1, 3, 4, 18]
+------------------------- time cost ------------------------- 134.86424732208252
+
+------------- Round 79-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0057
+Averaged Test Accurancy: 0.5538
+Averaged Test AUC: 0.8910
+Std Test Accurancy: 0.1718
+Std Test AUC: 0.0621
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [ 6  5  2 14]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [2, 5, 6, 14]
+------------------------- time cost ------------------------- 133.34254050254822
+
+------------- Round 80-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0028
+Averaged Test Accurancy: 0.6041
+Averaged Test AUC: 0.8971
+Std Test Accurancy: 0.1137
+Std Test AUC: 0.0591
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [9 1 7 6]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [1, 6, 7, 9]
+------------------------- time cost ------------------------- 132.18598461151123
+
+------------- Round 81-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0028
+Averaged Test Accurancy: 0.6685
+Averaged Test AUC: 0.9249
+Std Test Accurancy: 0.1491
+Std Test AUC: 0.0329
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [10  6 11 15]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [6, 10, 11, 15]
+------------------------- time cost ------------------------- 129.875385761261
+
+------------- Round 82-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0036
+Averaged Test Accurancy: 0.5350
+Averaged Test AUC: 0.9099
+Std Test Accurancy: 0.1268
+Std Test AUC: 0.0485
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [12 17  4 13]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [4, 12, 13, 17]
+------------------------- time cost ------------------------- 126.01033210754395
+
+------------- Round 83-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0069
+Averaged Test Accurancy: 0.5878
+Averaged Test AUC: 0.8906
+Std Test Accurancy: 0.1448
+Std Test AUC: 0.0769
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [3 4 2 6]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [2, 3, 4, 6]
+------------------------- time cost ------------------------- 127.42602300643921
+
+------------- Round 84-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0024
+Averaged Test Accurancy: 0.5701
+Averaged Test AUC: 0.8991
+Std Test Accurancy: 0.1817
+Std Test AUC: 0.0647
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [ 6 15  2  5]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [2, 5, 6, 15]
+------------------------- time cost ------------------------- 119.63327503204346
+
+------------- Round 85-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0021
+Averaged Test Accurancy: 0.6376
+Averaged Test AUC: 0.9128
+Std Test Accurancy: 0.1196
+Std Test AUC: 0.0559
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [16 15  8 17]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [8, 15, 16, 17]
+------------------------- time cost ------------------------- 118.98969507217407
+
+------------- Round 86-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0020
+Averaged Test Accurancy: 0.5538
+Averaged Test AUC: 0.8966
+Std Test Accurancy: 0.1459
+Std Test AUC: 0.0626
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [16  9 15 18]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [9, 15, 16, 18]
+------------------------- time cost ------------------------- 126.37887954711914
+
+------------- Round 87-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0039
+Averaged Test Accurancy: 0.5604
+Averaged Test AUC: 0.8983
+Std Test Accurancy: 0.1009
+Std Test AUC: 0.0382
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [11  6  1  9]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [1, 6, 9, 11]
+------------------------- time cost ------------------------- 131.24148845672607
+
+------------- Round 88-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0038
+Averaged Test Accurancy: 0.6812
+Averaged Test AUC: 0.9301
+Std Test Accurancy: 0.1281
+Std Test AUC: 0.0419
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [ 8  9  7 19]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [7, 8, 9, 19]
+------------------------- time cost ------------------------- 120.21835517883301
+
+------------- Round 89-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0016
+Averaged Test Accurancy: 0.6198
+Averaged Test AUC: 0.9223
+Std Test Accurancy: 0.1545
+Std Test AUC: 0.0223
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [ 8  3 17 16]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [3, 8, 16, 17]
+------------------------- time cost ------------------------- 116.9983377456665
+
+------------- Round 90-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0013
+Averaged Test Accurancy: 0.6284
+Averaged Test AUC: 0.9006
+Std Test Accurancy: 0.1700
+Std Test AUC: 0.0685
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [ 7 17 15  2]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [2, 7, 15, 17]
+------------------------- time cost ------------------------- 118.7306797504425
+
+------------- Round 91-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0054
+Averaged Test Accurancy: 0.6020
+Averaged Test AUC: 0.8848
+Std Test Accurancy: 0.1814
+Std Test AUC: 0.0702
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [12  1  5  3]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [1, 3, 5, 12]
+------------------------- time cost ------------------------- 118.23474836349487
+
+------------- Round 92-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0064
+Averaged Test Accurancy: 0.7076
+Averaged Test AUC: 0.9058
+Std Test Accurancy: 0.1195
+Std Test AUC: 0.0828
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [ 7 16  8 13]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [7, 8, 13, 16]
+------------------------- time cost ------------------------- 121.91485738754272
+
+------------- Round 93-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0021
+Averaged Test Accurancy: 0.5782
+Averaged Test AUC: 0.9016
+Std Test Accurancy: 0.1373
+Std Test AUC: 0.0532
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [ 7 15 16  5]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [5, 7, 15, 16]
+------------------------- time cost ------------------------- 117.07654428482056
+
+------------- Round 94-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0011
+Averaged Test Accurancy: 0.5279
+Averaged Test AUC: 0.8934
+Std Test Accurancy: 0.1368
+Std Test AUC: 0.0468
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [ 3 16 11  0]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [0, 3, 11, 16]
+------------------------- time cost ------------------------- 125.78281021118164
+
+------------- Round 95-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0011
+Averaged Test Accurancy: 0.6330
+Averaged Test AUC: 0.9071
+Std Test Accurancy: 0.1202
+Std Test AUC: 0.0544
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [ 6  1  9 15]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [1, 6, 9, 15]
+------------------------- time cost ------------------------- 129.9362735748291
+
+------------- Round 96-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0019
+Averaged Test Accurancy: 0.6071
+Averaged Test AUC: 0.9119
+Std Test Accurancy: 0.1272
+Std Test AUC: 0.0442
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [12 10 11 18]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [10, 11, 12, 18]
+------------------------- time cost ------------------------- 120.8244469165802
+
+------------- Round 97-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0008
+Averaged Test Accurancy: 0.5898
+Averaged Test AUC: 0.8865
+Std Test Accurancy: 0.1405
+Std Test AUC: 0.0612
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [10  3  5  2]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [2, 3, 5, 10]
+------------------------- time cost ------------------------- 117.14269280433655
+
+------------- Round 98-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0009
+Averaged Test Accurancy: 0.7046
+Averaged Test AUC: 0.8977
+Std Test Accurancy: 0.1294
+Std Test AUC: 0.0791
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [ 5  3  4 15]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [3, 4, 5, 15]
+------------------------- time cost ------------------------- 115.93233680725098
+
+------------- Round 99-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0008
+Averaged Test Accurancy: 0.5543
+Averaged Test AUC: 0.9086
+Std Test Accurancy: 0.1222
+Std Test AUC: 0.0498
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [11  9  6 18]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [6, 9, 11, 18]
+------------------------- time cost ------------------------- 117.3748607635498
+
+------------- Round 100-------------
+> Post-training selection enabled for method 'AFL'.
+> Sending global model to 20 clients for local training.
+
+Evaluating global model before training...
+Averaged Train Loss: 0.0007
+Averaged Test Accurancy: 0.5949
+Averaged Test AUC: 0.9125
+Std Test Accurancy: 0.1319
+Std Test AUC: 0.0372
+--- Training 20 clients ---
+> Post-training selection: choosing 4 from 20 trained clients.
+>   (Using local losses as metric for AFL)
+4 selected users: [ 6  8 15 14]
+> Aggregating models from 4 final selected clients.
+> Selected client IDs for this round: [6, 8, 14, 15]
+------------------------- time cost ------------------------- 121.19033169746399
+
+Average time cost: 89477.48s.
+Length:  101
+std for best accurancy: 0.0
+mean for best accurancy: 0.9165861513687601
+All done!
+
+Storage on cpu
+-------------------------------------------------------------------------------
+Total Tensors: 94752420 	Used Memory: 361.51M
+-------------------------------------------------------------------------------

@@ -1,0 +1,66 @@
+{"time":"2025-07-17T14:00:03.9639111+02:00","level":"INFO","msg":"using version","core version":"0.18.7"}
+{"time":"2025-07-17T14:00:03.9639111+02:00","level":"INFO","msg":"created symlink","path":"wandb\\run-20250717_140003-4i7rspfb\\logs\\debug-core.log"}
+{"time":"2025-07-17T14:00:04.0890272+02:00","level":"INFO","msg":"created new stream","id":"4i7rspfb"}
+{"time":"2025-07-17T14:00:04.0890272+02:00","level":"INFO","msg":"stream: started","id":"4i7rspfb"}
+{"time":"2025-07-17T14:00:04.0890272+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"4i7rspfb"}
+{"time":"2025-07-17T14:00:04.0895385+02:00","level":"INFO","msg":"handler: started","stream_id":"4i7rspfb"}
+{"time":"2025-07-17T14:00:04.0918112+02:00","level":"INFO","msg":"sender: started","stream_id":"4i7rspfb"}
+{"time":"2025-07-17T14:00:04.6312468+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-07-17T14:00:04.6317752+02:00","level":"WARN","msg":"handleCodeSave: program relative path is empty"}
+{"time":"2025-07-17T14:00:04.6319427+02:00","level":"ERROR","msg":"git repo not found","error":"repository does not exist"}
+{"time":"2025-07-17T15:39:44.0065204+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 10.0.82.156:52285->35.186.228.49:443: wsarecv: An existing connection was forcibly closed by the remote host."}
+{"time":"2025-07-17T16:29:57.3979579+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/nourgraffoul-american-university-of-beirut/AFL-HAR-4-None-20/4i7rspfb/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-07-17T16:29:59.7629241+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/nourgraffoul-american-university-of-beirut/AFL-HAR-4-None-20/4i7rspfb/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-07-17T16:30:04.5390723+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/nourgraffoul-american-university-of-beirut/AFL-HAR-4-None-20/4i7rspfb/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-07-17T16:30:09.1138205+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-07-17T16:30:11.2205413+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-07-17T16:30:13.0130392+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/nourgraffoul-american-university-of-beirut/AFL-HAR-4-None-20/4i7rspfb/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-07-17T16:30:15.7564161+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-07-17T16:30:25.0840186+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-07-18T11:11:06.5641842+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/nourgraffoul-american-university-of-beirut/AFL-HAR-4-None-20/4i7rspfb/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-07-18T11:11:06.5646861+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-07-18T11:11:07.9345793+02:00","level":"WARN","msg":"sender: taking a long time","seconds":67257.4299703,"work":"WorkRecord(*service_go_proto.Request_StopStatus); Control(local:true  mailbox_slot:\"yzlgz5tbxj4m\"  connection_id:\"127.0.0.1:50721\")"}
+{"time":"2025-07-18T11:11:59.2851214+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-07-18T11:11:59.2859712+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/nourgraffoul-american-university-of-beirut/AFL-HAR-4-None-20/4i7rspfb/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-07-18T11:12:59.2915848+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/nourgraffoul-american-university-of-beirut/AFL-HAR-4-None-20/4i7rspfb/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-07-18T11:12:59.2921174+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-07-18T11:13:59.3078068+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/nourgraffoul-american-university-of-beirut/AFL-HAR-4-None-20/4i7rspfb/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-07-18T11:13:59.3078068+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-07-18T11:14:59.3181264+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-07-18T11:14:59.3181264+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/nourgraffoul-american-university-of-beirut/AFL-HAR-4-None-20/4i7rspfb/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-07-18T11:15:59.3328072+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-07-18T11:15:59.3333154+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/nourgraffoul-american-university-of-beirut/AFL-HAR-4-None-20/4i7rspfb/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-07-18T11:16:59.3509175+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-07-18T11:16:59.3509175+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/nourgraffoul-american-university-of-beirut/AFL-HAR-4-None-20/4i7rspfb/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-07-18T11:17:59.3645525+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/nourgraffoul-american-university-of-beirut/AFL-HAR-4-None-20/4i7rspfb/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-07-18T11:17:59.3645525+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-07-18T11:18:59.3773391+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-07-18T11:18:59.3773391+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/nourgraffoul-american-university-of-beirut/AFL-HAR-4-None-20/4i7rspfb/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-07-18T11:19:59.3902606+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-07-18T11:19:59.3907834+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/nourgraffoul-american-university-of-beirut/AFL-HAR-4-None-20/4i7rspfb/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-07-18T11:20:59.4074131+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-07-18T11:20:59.4079448+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/nourgraffoul-american-university-of-beirut/AFL-HAR-4-None-20/4i7rspfb/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-07-18T11:21:07.9350763+02:00","level":"WARN","msg":"sender: taking a long time","seconds":67858.8217809,"work":"WorkRecord(*service_go_proto.Request_StopStatus); Control(local:true  mailbox_slot:\"yzlgz5tbxj4m\"  connection_id:\"127.0.0.1:50721\")"}
+{"time":"2025-07-18T11:21:59.4180541+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-07-18T11:21:59.4180541+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/nourgraffoul-american-university-of-beirut/AFL-HAR-4-None-20/4i7rspfb/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-07-18T11:22:33.1322615+02:00","level":"WARN","msg":"runwork: taking a long time","seconds":600.0006601,"work":"WorkRecord(*service_go_proto.Request_Keepalive); Control(local:true  connection_id:\"127.0.0.1:50721\")"}
+{"time":"2025-07-18T11:22:34.6360897+02:00","level":"WARN","msg":"runwork: taking a long time","seconds":600.0015835,"work":"WorkRecord(*service_go_proto.Record_Stats); Control(always_send:true)"}
+{"time":"2025-07-18T11:22:34.6371263+02:00","level":"WARN","msg":"runwork: taking a long time","seconds":600.0005002,"work":"WorkRecord(*service_go_proto.Record_Stats); Control(always_send:true)"}
+{"time":"2025-07-18T11:22:34.6514604+02:00","level":"WARN","msg":"runwork: taking a long time","seconds":600.0019747,"work":"WorkRecord(*service_go_proto.Record_Stats); Control(always_send:true)"}
+{"time":"2025-07-18T11:22:34.6819364+02:00","level":"WARN","msg":"runwork: taking a long time","seconds":600.0019218,"work":"WorkRecord(*service_go_proto.Record_Stats); Control(always_send:true)"}
+{"time":"2025-07-18T11:23:21.3657416+02:00","level":"INFO","msg":"sender: succeeded after taking longer than expected","seconds":67992.2524462,"work":"WorkRecord(*service_go_proto.Request_StopStatus); Control(local:true  mailbox_slot:\"yzlgz5tbxj4m\"  connection_id:\"127.0.0.1:50721\")"}
+{"time":"2025-07-18T11:23:21.3682179+02:00","level":"INFO","msg":"runwork: succeeded after taking longer than expected","seconds":646.7337117,"work":"WorkRecord(*service_go_proto.Record_Stats); Control(always_send:true)"}
+{"time":"2025-07-18T11:23:21.3688852+02:00","level":"INFO","msg":"runwork: succeeded after taking longer than expected","seconds":648.2372838,"work":"WorkRecord(*service_go_proto.Request_Keepalive); Control(local:true  connection_id:\"127.0.0.1:50721\")"}
+{"time":"2025-07-18T11:23:21.3738951+02:00","level":"INFO","msg":"runwork: succeeded after taking longer than expected","seconds":646.7377903,"work":"WorkRecord(*service_go_proto.Record_Stats); Control(always_send:true)"}
+{"time":"2025-07-18T11:23:21.3738951+02:00","level":"INFO","msg":"runwork: succeeded after taking longer than expected","seconds":646.7244094,"work":"WorkRecord(*service_go_proto.Record_Stats); Control(always_send:true)"}
+{"time":"2025-07-18T11:23:21.3850451+02:00","level":"INFO","msg":"runwork: succeeded after taking longer than expected","seconds":646.7055486,"work":"WorkRecord(*service_go_proto.Record_Stats); Control(always_send:true)"}
+{"time":"2025-07-18T11:41:35.8823864+02:00","level":"INFO","msg":"stream: closing","id":"4i7rspfb"}
+{"time":"2025-07-18T11:41:35.8823864+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-07-18T11:41:35.8834457+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-07-18T11:41:36.0935731+02:00","level":"WARN","msg":"No program path found, not creating job artifact. See https://docs.wandb.ai/guides/launch/create-job"}
+{"time":"2025-07-18T11:41:36.0935731+02:00","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2025-07-18T11:41:36.6558614+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-07-18T11:41:37.1073862+02:00","level":"INFO","msg":"handler: closed","stream_id":"4i7rspfb"}
+{"time":"2025-07-18T11:41:37.1073862+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"4i7rspfb"}
+{"time":"2025-07-18T11:41:37.1123251+02:00","level":"INFO","msg":"sender: closed","stream_id":"4i7rspfb"}
+{"time":"2025-07-18T11:41:37.1128355+02:00","level":"INFO","msg":"stream: closed","id":"4i7rspfb"}
